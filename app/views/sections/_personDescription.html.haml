@@ -1,0 +1,10 @@
+.container
+  .row
+    .col-sm-offset-2
+      %section.widget
+        %legend.section
+          %h3 Person(s) Description
+        = simple_form_for :person_descriptions do |f|
+          = f.input :pbso_case_num
+          = f.input :unit,:collection => TrifoldEnums::Unit.unit_codes,:label => "Unit" ,:include_blank => true, :class =>"form-control input-transparent"
+

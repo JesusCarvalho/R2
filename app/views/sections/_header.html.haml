@@ -1,0 +1,9 @@
+%legend.section
+  %h3 Header
+
+  = simple_form_for :header do |f|
+    = f.input :pbso_case_num,:label => false, input_html: {class:'input-transparent', placeholder:'Case #'}
+    = f.input :unit,:collection => TrifoldEnums::Unit.unit_codes,:label => false ,:include_blank => 'Unit', input_html: { class: 'form-control btn-default chzn-select' }
+    = f.input :unit,:collection => TrifoldEnums::Unit.unit_codes,:label => "Unit" ,:include_blank => 'Unit', :class => "form-control input-transparent", id: "transparent-field"
+    = f.input :date_reported
+    = f.input :day_of_the_week,:collection => TrifoldEnums::Day.days,:label => "Day" ,:include_blank => true, :class => "input-transparent", wrapper_html: { id: "transparent-field" }

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rule 2 - New IRF</title>
+    <link href="../stylesheets/application.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <script src="../javascripts/jquery-2.0.3.min.js"></script>
+    <script src="../javascripts/underscore-min.js"></script>
+    <script src="../javascripts/settings.js"></script>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+<div class="row">
+  <div class="col-sm-9 col-lg-6 text-danger">
+    I am the main content.
+  </div>
+  <div class="col-sm-3 text-warning">
+    I am the main sidebar.
+  </div>
+  <div class="col-lg-3 visible-lg text-success">
+    I am the secondary sidebar that only shows up on LARGE devices.
+  </div>
+</div>
+<div class="row">
+    <div class="col-sm-3 column">
+      <nav id="sidebar" class="sidebar">
+        <ul id="side-nav" class="side-nav">
+      <div class="tabbable" id="tabs-943506">
+
+
+          <li class="active">
+            <a href="#panel-757512" data-toggle="tab">Header</a>
+          </li>
+          <li>
+            <a href="#panel-95914" data-toggle="tab">Offenses</a>
+          </li>
+          <li>
+            <a href="#panel-95914" data-toggle="tab">Victim Info</a>
+          </li>
+          <li>
+            <a href="#panel-95914" data-toggle="tab">Names List</a>
+          </li>
+          <li>
+            <a href="#panel-95914" data-toggle="tab">Narrative</a>
+          </li>
+          <li>
+            <a href="#panel-95914" data-toggle="tab">Addtl Info</a>
+          </li>
+          <li>
+            <a href="#panel-95914" data-toggle="tab">Missing Person</a>
+          </li>
+          <li>
+            <a href="#panel-95914" data-toggle="tab">Person Description</a>
+          </li>
+          <li>
+            <a href="#panel-95914" data-toggle="tab">Officer Assaulted/Killed</a>
+          </li>
+          <li>
+            <a href="#panel-95914" data-toggle="tab">Property Crime</a>
+          </li>
+          <li>
+            <a href="#panel-95914" data-toggle="tab">Vehicle/Vessel Info</a>
+          </li>
+          <li>
+            <a href="#panel-95914" data-toggle="tab">Death Investigation</a>
+          </li>
+          <li>
+            <a href="#panel-95914" data-toggle="tab">URLs</a>
+          </li>
+          <li>
+            <a href="#panel-95914" data-toggle="tab">Multimedia</a>
+          </li>
+        </ul>
+            </nav>
+
+        </div>
+    </div>
+
+
+      <div class="col-lg-12">
+        <div class="tab-content">
+          <div class="tab-pane active" id="panel-757512">
+
+
+                  <section class="widget">
+
+
+                    <div class="body">
+                      <form class="form-horizontal" method="post">
+                        <fieldset>
+                          <legend class="section"><h3>Header</h3></legend>
+                          <div class="control-group">
+                            <label class="control-label" for="normal-field">Normal field</label>
+                            <div class="controls form-group">
+                              <div class="col-sm-8">
+                                <input type="text" id="normal-field" class="form-control" placeholder="May have placeholder">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="control-group">
+                            <label class="control-label" for="normal-field">Transparent input</label>
+                            <div class="controls form-group">
+                              <div class="col-sm-8">
+                                <input type="text" id="transparent-field" class="form-control input-transparent" placeholder="Stylish, huh??">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="control-group">
+                            <label class="control-label" for="hint-field">
+                              Label hint
+                              <span class="help-block">Some help text</span>
+                            </label>
+                            <div class="controls form-group">
+                              <div class="col-sm-8"><input type="text" id="hint-field" class="form-control"></div>
+                            </div>
+                          </div>
+                          <div class="control-group">
+                            <label class="control-label " for="tooltip-enabled">Tooltip enabled</label>
+                            <div class="controls form-group">
+                              <div class="col-sm-8"><input type="text" id="tooltip-enabled" class="form-control"
+                                                           data-placement="top" data-original-title="Some explanation text here"
+                                                           placeholder="Hover over me.."></div>
+                            </div>
+                          </div>
+                          <div class="control-group">
+                            <label class="control-label " for="disabled-input">Disabled input</label>
+                            <div class="controls form-group">
+                              <div class="col-sm-8"><input type="text" id="disabled-input" class="form-control"
+                                                           disabled="disabled" value="Default value" ></div>
+                            </div>
+                          </div>
+                          <div class="control-group">
+                            <label class="control-label " for="max-length">Max length</label>
+                            <div class="controls form-group">
+                              <div class="col-sm-8"><input type="text" id="max-length" maxlength="3"
+                                                           class="form-control"
+                                                           placeholder="Max length 3 characters"
+                                                           data-placement="top" data-original-title="You cannot write more than 3 characters."></div>
+                            </div>
+                          </div>
+                          <div class="control-group">
+                            <label class="control-label" for="prepended-input">Prepended input</label>
+                            <div class="controls form-group">
+                              <div class="input-group col-sm-8">
+                                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                                <input id="prepended-input" class="form-control" size="16" type="text" placeholder="Username">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="control-group">
+                            <label class="control-label" for="password-field">Password</label>
+                            <div class="controls form-group">
+                              <div class="input-group col-sm-8">
+                                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                                <input type="password" class="form-control" id="password-field" placeholder="Password">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="control-group">
+                            <label class="control-label" for="appended-input">Appended input</label>
+                            <div class="controls form-group">
+                              <div class="input-group col-sm-8">
+                                <input id="appended-input" class="form-control" size="16" type="text">
+                                <span class="input-group-addon input-transparent">.00</span> </div>
+                            </div>
+                          </div>
+                          <div class="control-group">
+                            <label class="control-label" for="combined-input">Combined</label>
+                            <div class="controls form-group">
+                              <div class="input-group col-sm-8">
+                                <span class="input-group-addon">$</span>
+                                <input id="combined-input" class="form-control" size="16" type="text">
+                                <span class="input-group-addon">.00</span> </div>
+                            </div>
+                          </div>
+                        </fieldset>
+                        <fieldset>
+                          <legend>Personal Information</legend>
+                          <div class='row'>
+                            <div class='col-sm-4'>
+                              <div class='form-group'>
+                                <label for="user_title">Title</label>
+                                <input class="form-control" id="user_title" name="user[title]" size="30" type="text" />
+                              </div>
+                            </div>
+                            <div class='col-sm-4'>
+                              <div class='form-group'>
+                                <label for="user_firstname">First name</label>
+                                <input class="form-control" id="user_firstname" name="user[firstname]" required="true" size="30" type="text" />
+                              </div>
+                            </div>
+                            <div class='col-sm-4'>
+                              <div class='form-group'>
+                                <label for="user_lastname">Last name</label>
+                                <input class="form-control" id="user_lastname" name="user[lastname]" required="true" size="30" type="text" />
+                              </div>
+                            </div>
+                          </div>
+                          <div class='row'>
+                            <div class='col-sm-12'>
+                              <div class='form-group'>
+
+                                <label for="user_email">Email</label>
+                                <input class="form-control required email" id="user_email" name="user[email]" required="true" size="30" type="text" />
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+
+                        <div class="form-actions">
+                          <div>
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                            <button type="button" class="btn btn-default">Cancel</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane" id="panel-95914">
+            <p>
+              Howdy, I'm in Section 2.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+            </div>
+</div>
+</body>

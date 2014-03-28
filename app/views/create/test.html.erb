@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rule2 - Create New IRF</title>
+  <link href="application.css" rel="stylesheet">
+
+
+</head>
+<body class="background-dark">
+<div class="container">
+
+<div class="row">
+
+<div class=""><h3>New IRF</h3>
+
+<!-- tabs left -->
+
+
+<!-- Start form here -->
+<%= form_tag do %>
+
+
+<div class="tabbable tabs-left">
+<ul class="nav nav-tabs">
+  <li><a href="#HeaderTab"                  data-toggle="tab">Header</a></li>
+  <li><a href="#OffensesTab"                data-toggle="tab">Offenses</a></li>
+  <li><a href="#VictimTab"                  data-toggle="tab">Vic Info</a></li>
+  <li><a href="#NameListTab"                data-toggle="tab">Name List</a></li>
+  <li><a href="#PropertyCrimeTab"           data-toggle="tab">Prop Crime</a></li>
+  <li><a href="#MissingPersonTab"           data-toggle="tab">Missing Person</a></li>
+  <li><a href="#PersonDescriptionTab"       data-toggle="tab">Person Description</a></li>
+  <li><a href="#OfficerAssaultedKilledTab"  data-toggle="tab">Officer Assaulted/Killed</a></li>
+  <li><a href="#VehicleVesselTab"           data-toggle="tab">Vehicle/Vessel</a></li>
+  <li><a href="#DeathInvestigationTab"      data-toggle="tab">Death Investigation</a></li>
+  <li><a href="#AdditionalInfoTab"          data-toggle="tab">Addt'l Info</a></li>
+  <li><a href="#NarrativeTab"               data-toggle="tab">Narrative</a></li>
+  <li><a href="#UrlsTab"                    data-toggle="tab">URLs</a></li>
+  <li><a href="#MultimediaTab"              data-toggle="tab">Multimedia</a></li>
+  <li>
+    <div class="form-actions">
+      <div>
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+      </div>
+    </div>
+  </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active" id="HeaderTab">
+        <%= render 'sections/header'%>
+    </div>
+    <div class="tab-pane" id="OffensesTab">
+        <%= render 'sections/offenses'%>
+    </div>
+    <div class="tab-pane" id="VictimTab">
+        <%= render 'sections/victimInfo'%>
+    </div>
+    <div class="tab-pane" id="NameListTab">
+        <%= render 'sections/nameList'%>
+    </div>
+    <div class="tab-pane" id="PropertyCrimeTab">
+        <%= render 'sections/propertyCrimeDetails'%>
+    </div>
+    <div class="tab-pane" id="MissingPersonTab">
+        <%= render 'sections/missingPerson'%>
+    </div>
+    <div class="tab-pane" id="PersonDescriptionTab">
+        <%= render 'sections/personDescription'%>
+    </div>
+    <div class="tab-pane" id="OfficerAssaultedKilledTab">
+        <%= render 'sections/officerAssaultedKilled'%>
+    </div>
+    <div class="tab-pane" id="VehicleVesselTab">
+        <%= render 'sections/vehicleVessel'%>
+    </div>
+    <div class="tab-pane" id="DeathInvestigationTab">
+        <%= render 'sections/deathInvestigation'%>
+    </div>
+    <div class="tab-pane" id="AdditionalInfoTab">
+        <%= render 'sections/additionalInfo'%>
+    </div>
+    <div class="tab-pane" id="NarrativeTab">
+        <%= render 'sections/narrative'%>
+    </div>
+    <div class="tab-pane" id="UrlsTab">
+        <%= render 'sections/urls'%>
+    </div>
+    <div class="tab-pane" id="MultimediaTab">
+        <%= render 'sections/multimedia'%>
+    </div>
+</div>
+
+
+<!-- /tabs -->
+
+</div>
+<!-- End form tag here-->
+<% end %>
+
+
+</div>
+
+</div>
+<!-- /row -->
+</div>
+
+
+</body>
+</html>

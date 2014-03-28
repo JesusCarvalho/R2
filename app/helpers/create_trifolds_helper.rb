@@ -1,0 +1,2 @@
+module CreateTrifoldsHelper
+end

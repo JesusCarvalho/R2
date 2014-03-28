@@ -1,0 +1,8 @@
+.row
+  %section.widget
+    %legend.section
+      %h3 Offense(s)
+  = simple_form_for :offense do |f|
+    = f.input :pbso_case_num
+    = f.input :unit,:collection => TrifoldEnums::Unit.unit_codes,:label => "Unit" ,:include_blank => true, :class =>"form-control input-transparent"
+
