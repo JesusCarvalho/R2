@@ -1,7 +1,7 @@
 .col-sm-offset-2
   %section.widget
     %legend.section
-      %h3 Header
+      %h3 Officer Assaulted or Killed
     = simple_form_for :header do |f|
       = f.input :pbso_case_num,:label => false, input_html: {class:'input-transparent', placeholder:'Case #'}
       = f.input :unit,:collection => TrifoldEnums::Unit.unit_codes,:label => false ,:include_blank => 'Unit', input_html: { class: 'btn-default' }
