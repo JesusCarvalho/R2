@@ -29,5 +29,10 @@ module R2
     # Added for pg_search gem compatibility
     config.active_record.schema_format = :sql
 
+    # Add bootstrap theme to asset pipeline
+    config.assets.paths << Rails.root.join("app", "assets", "theme")
+
+
+
   end
 end

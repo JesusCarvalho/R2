@@ -1,10 +1,7 @@
-.container
-  .row
-    .col-sm-offset-2
-      %section.widget
-        %legend.section
-          %h3 Victim Info
-        = simple_form_for :victim_info do |f|
-          = f.input :pbso_case_num
-          = f.input :unit,:collection => TrifoldEnums::Unit.unit_codes,:label => "Unit" ,:include_blank => true, :class =>"form-control input-transparent"
-
+.col-sm-offset-2
+  %section.widget
+    %legend.section
+      %h3 Header
+    = simple_form_for :header do |f|
+      = f.input :pbso_case_num,:label => false, input_html: {class:'input-transparent', placeholder:'Case #'}
+      = f.input :unit,:collection => TrifoldEnums::Unit.unit_codes,:label => false ,:include_blank => 'Unit', input_html: { class: 'btn-default' }

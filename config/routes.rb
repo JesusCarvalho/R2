@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   #match '/menu',                      to:'application#menu',      via: [:get]
   match '/new',                       to:'create#new',            via: [:get]
   match '/old',                       to:'create#old',            via: [:get]
-  match '/test',                      to:'create#test',:as => :headers_path, via: [:get,:post]
+  match '/test',                      to:'create#test',           via: [:get,:post]
   match '/vt',                        to:'create#vt',             via: [:get]
   #match '/search',                    to:'search#basicSearch',    via: [:get]
   #match '/view/:pbso_case_num',       to:'view#openIRF',          via: [:get]
