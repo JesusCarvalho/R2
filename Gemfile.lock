@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/rails/rails.git
-  revision: 03bf81a5040f08970fc5d091af38d6e2afc7113c
+  revision: 4d441e37c2bea0fe1817c3aafe0f82410a4d787c
   specs:
     actionmailer (4.2.0.alpha)
       actionpack (= 4.2.0.alpha)
@@ -55,6 +55,8 @@ GEM
     better_errors (1.1.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
+    bootstrap-datepicker-rails (1.3.0.1)
+      railties (>= 3.0)
     builder (3.2.2)
     cocoon (1.2.6)
     coderay (1.1.0)
@@ -160,6 +162,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt-ruby
   better_errors
+  bootstrap-datepicker-rails
   cocoon
   coffee-rails (~> 4.0.0)
   faye-websocket

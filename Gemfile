@@ -12,13 +12,16 @@ gem 'pg_search'
 # Form builder dsl
 gem 'simple_form'
 
+# bootstrap datepicker
+gem 'bootstrap-datepicker-rails'
+
 # placeholder hack for IE
 gem 'placeholder-gem'
 
 # for dynamic nested forms
 gem 'cocoon'
 
-# for cocoon gem (see http://haml.info for tutorial)
+# simplified html markup (for cocoon gem (see http://haml.info for tutorial))
 gem 'haml'
 
 # Use font-awesome-rails instead of bootstrap glyphicons
