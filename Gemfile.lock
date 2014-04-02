@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/rails/rails.git
-  revision: 4d441e37c2bea0fe1817c3aafe0f82410a4d787c
+  revision: c82483a10abd30310f3360f6ebb6a4dddafdb2ba
   specs:
     actionmailer (4.2.0.alpha)
       actionpack (= 4.2.0.alpha)
@@ -127,7 +127,7 @@ GEM
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
-    simple_form (1.4.1)
+    simple_form (3.0.1)
     sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)

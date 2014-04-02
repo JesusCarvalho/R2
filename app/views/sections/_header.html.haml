@@ -7,9 +7,9 @@
     = simple_form_for :header do |f|
       = f.input :pbso_case_num,:label => false, input_html: {class:'input-transparent', placeholder:'Case #'}
       = f.input :unit,:collection => TrifoldEnums::Unit.unit_codes,:label => false ,:include_blank => 'Unit', input_html: { class: 'btn-default' }
-      = f.input :date_reported, as: :date,:label => false, input_html: {name:'in-place-date',class:'form-control date-picker', id:'in-place-date',  type:'text', value:''}
+      = f.input :date_reported, :label => 'Date Reported', input_html: {name:'in-place-date',class:'form-control date-picker', id:'in-place-date',  type:'text', :onClick=>'datepicker();' }
 
-<input id="in-place-date" class="form-control date-picker" type="text" name="in-place-date" value="">
+
 
 
 

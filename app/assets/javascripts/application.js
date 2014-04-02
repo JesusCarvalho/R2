@@ -11,9 +11,24 @@
 // about supported directives.
 //
 //= require placeholder
+//= require bootstrap-datepicker
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require_tree ../theme/lib
+//= require_tree ../theme/js
+//= require_tree ../theme/lib/backbone
+//= require_tree ../theme/lib/backgrid
+//= require_tree ../theme/lib/bootstrap
+//= require_tree ../theme/lib/bootstrap-select
+//= require_tree ../theme/lib/bootstrap-wysihtml5
+//= require_tree ../theme/lib/fullcalendar
+//= require_tree ../theme/lib/icheck.js
+//= require_tree ../theme/lib/jquery
+//= require_tree ../theme/lib/jquery-maskedinput
+//= require_tree ../theme/lib/nvd3
+//= require_tree ../theme/lib/parsley
+//= require_tree ../theme/lib/rickshaw
 
 
