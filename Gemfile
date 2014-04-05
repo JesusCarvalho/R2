@@ -19,7 +19,8 @@ gem 'bootstrap-sass', :github => 'twbs/bootstrap-sass'
 gem 'cancan'
 
 # bootstrap datetime picker for rails
-gem 'datetimepicker-rails', :require => 'datetimepicker-rails', :git => 'git://github.com/zpaulovics/datetimepicker-rails.git'
+gem 'momentjs-rails', '~> 2.5.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 3.0.0'
 
 # placeholder hack for IE
 gem 'placeholder-gem'

@@ -17,6 +17,7 @@
 //= require turbolinks
 //= require placeholder
 //= require bootstrap
+//= require moment
 //= require bootstrap-datetimepicker
 
 
