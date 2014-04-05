@@ -30,8 +30,11 @@ module R2
     config.active_record.schema_format = :sql
 
     # Add bootstrap theme to asset pipeline
-    config.assets.paths << Rails.root.join("app", "assets", "theme")
-
+    config.assets.paths << Rails.root.join('app', 'assets', 'theme')
+    config.assets.paths << Rails.root.join('app', 'assets', 'theme', 'css')
+    config.assets.paths << Rails.root.join('app', 'assets', 'theme', 'img')
+    config.assets.paths << Rails.root.join('app', 'assets', 'theme', 'js')
+    config.assets.paths << Rails.root.join('app', 'assets', 'theme', 'lib')
 
 
   end

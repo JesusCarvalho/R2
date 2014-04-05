@@ -1,4 +1,3 @@
-<script src="bootstrap-datepicker.js"></script>
 
 .col-sm-offset-2
   %section.widget
@@ -6,10 +5,31 @@
       %h3 Header
     = simple_form_for :header do |f|
       = f.input :pbso_case_num,:label => false, input_html: {class:'input-transparent', placeholder:'Case #'}
-      = f.input :unit,:collection => TrifoldEnums::Unit.unit_codes,:label => false ,:include_blank => 'Unit', input_html: { class: 'btn-default' }
-      = f.input :date_reported, :label => 'Date Reported', input_html: {name:'in-place-date',class:'form-control date-picker', id:'in-place-date',  type:'text', :onClick=>'datepicker();' }
+      = f.input :unit,:collection => TrifoldEnums::Unit.unit_codes,:label => false ,:include_blank => 'Unit', input_html: { class: 'input-transparent btn-default' }
+      = f.input :date_reported, :label=>false, :wrapper_html => { class:'input-transparent date', value:"Date Reported: #{Date.today}",id: 'datetimepicker1' }
+      = f.input :occurred_from, :label=>false, :wrapper_html => { class:'input-transparent date', value:"Occurred From: #{Date.today}",id: 'datetimepicker2' }
+      = f.input :occurred_to,   :label=>false, :wrapper_html => { class:'input-transparent date', value:"Occurred To: #{Date.today}",id: 'datetimepicker3' }
 
 
+<script type="text/javascript">
+$(function() {
+$('#datetimepicker1').datetimepicker({
+pickTime: false
+});
+});
+</script>
 
+<script type="text/javascript">
+$(function() {
+$('#datetimepicker2').datetimepicker({
+pickTime: false
+});
+});
+</script>
 
-
+<script type="text/javascript">
+$(function() {
+$('#datetimepicker3').datetimepicker({
+});
+});
+</script>

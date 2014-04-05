@@ -10,10 +10,16 @@ gem 'pg'
 gem 'pg_search'
 
 # Form builder dsl
-gem 'simple_form'
+gem 'simple_form', :github => 'plataformatec/simple_form'
 
-# bootstrap datepicker
-gem 'bootstrap-datepicker-rails'
+# bootstrap for rails
+gem 'bootstrap-sass', :github => 'twbs/bootstrap-sass'
+
+# gem for ACL
+gem 'cancan'
+
+# bootstrap datetime picker for rails
+gem 'datetimepicker-rails', :require => 'datetimepicker-rails', :git => 'git://github.com/zpaulovics/datetimepicker-rails.git'
 
 # placeholder hack for IE
 gem 'placeholder-gem'
@@ -56,6 +62,9 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+
+# Use jquery-ui
+gem 'jquery-ui-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'

@@ -25,3 +25,7 @@ class CreateController < ApplicationController
 
 
 end
+
+##
+# TODO
+# Generate day_of_week from user-entered date_reported
