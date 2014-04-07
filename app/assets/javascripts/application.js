@@ -13,11 +13,13 @@
 //= require_tree .
 //= require jquery
 //= require jquery_ujs
-//= require jquery.ui.all
-//= require turbolinks
 //= require placeholder
 //= require bootstrap
 //= require moment
 //= require bootstrap-datetimepicker
+
+
+
+
 
 

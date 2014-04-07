@@ -18,9 +18,9 @@ gem 'bootstrap-sass', :github => 'twbs/bootstrap-sass'
 # gem for ACL
 gem 'cancan'
 
-# bootstrap datetime picker for rails
-gem 'momentjs-rails', '~> 2.5.0'
-gem 'bootstrap3-datetimepicker-rails', '~> 3.0.0'
+# datetime picker for rails (https://github.com/Eonasdan/bootstrap-datetimepicker))
+gem 'momentjs-rails'
+gem 'bootstrap3-datetimepicker-rails'
 
 # placeholder hack for IE
 gem 'placeholder-gem'
@@ -50,7 +50,7 @@ gem 'prawn'
 gem 'gmaps4rails'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0.rc1'
+gem 'sass-rails', :github => 'rails/sass-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -65,10 +65,10 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 
 # Use jquery-ui
-gem 'jquery-ui-rails'
+#gem 'jquery-ui-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+#gem 'turbolinks', :github =>'rails/turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder'
