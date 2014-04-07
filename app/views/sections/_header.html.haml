@@ -8,22 +8,38 @@
       = f.input :unit,:collection => TrifoldEnums::Unit.unit_codes,:label => false ,:include_blank => 'Unit', input_html: { class: 'input-transparent btn-default' }
       = f.input :date_reported, :label=>false, input_html: { class:'input-transparent date', id: 'date_reported', placeholder:'Date Reported:' }
       = f.input :occurred_from, :label=>false, input_html: { class:'input-transparent date', id: 'occurred_from', placeholder:'Occurred From:'}
-      = f.input :occurred_to,   :label=>false, input_html: { class:'input-transparent date',   placeholder:'Occurred To:', id:'occurred_to'}
+      = f.input :occurred_to,   :label=>false, tooltip:'WTF', input_html: { class:'input-transparent',   placeholder:'Occurred To:', id:'occurred_to'}
 
 <script type="text/javascript">
 $(function () {
-$('#date_reported').datetimepicker();
+$('#date_reported').datetimepicker({
+pickTime: false
+});
 });
 </script>
 
 <script type="text/javascript">
 $(function () {
-$('#occurred_from').datetimepicker();
+$('#occurred_from').datetimepicker({
+icons: {
+time: "fa fa-clock-o",
+date: "fa fa-calendar",
+up: "fa fa-arrow-up",
+down: "fa fa-arrow-down"
+}
+});
 });
 </script>
 
 <script type="text/javascript">
 $(function () {
-$('#occurred_to').datetimepicker();
+$('#occurred_to').datetimepicker({
+icons: {
+time: "fa fa-clock-o",
+date: "fa fa-calendar",
+up: "fa fa-arrow-up",
+down: "fa fa-arrow-down"
+}
+});
 });
 </script>

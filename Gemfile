@@ -9,6 +9,9 @@ gem 'pg'
 # Full text search for pg and rails
 gem 'pg_search'
 
+# breadcrumb on rails
+gem 'breadcrumbs_on_rails'
+
 # Form builder dsl
 gem 'simple_form', :github => 'plataformatec/simple_form'
 
@@ -63,9 +66,6 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-
-# Use jquery-ui
-#gem 'jquery-ui-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 #gem 'turbolinks', :github =>'rails/turbolinks'
