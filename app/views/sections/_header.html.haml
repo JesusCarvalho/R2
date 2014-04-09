@@ -4,37 +4,96 @@
       %h3 Header
     = simple_form_for :header do |f|
       .row
-        = f.input :pbso_case_num,:label => false, input_html: {class:'input-transparent', placeholder:'Case #'}, wrapper_html:{class:'col-xs-4'}
-
-        = f.input :date_reported, :label=>false, input_html: { class:'input-transparent', id: 'date_reported', placeholder:'Date Reported:' }, wrapper_html:{class:'col-xs-4'}
-        = f.input :unit,:collection => TrifoldEnums::Unit.unit_codes,:label => false ,:include_blank => 'Unit', input_html: { class: 'btn-transparent' }, wrapper_html:{class:'col-xs-4'}
-        = f.input :occurred_from, :label=>false, input_html: { class:'input-transparent date', id: 'occurred_from', placeholder:'Occurred From:'}, wrapper_html:{class:'col-xs-4'}
-        = f.input :occurred_to,   :label=>false, input_html: { class:'input-transparent',   placeholder:'Occurred To:', id:'occurred_to'}, wrapper_html:{class:'col-xs-4'}
-        = f.input :disposition,:collection => TrifoldEnums::Disposition.disposition_codes,:label => false ,:include_blank => 'Disposition', input_html: { class: 'btn-transparent' }, wrapper_html:{class:'col-xs-4'}
-        = f.input :zone, :label => false, input_html: {class:'input-transparent', placeholder:'Zone'}, wrapper_html:{class:'col-xs-4'}
-        = f.input :ds_id,:label => false, input_html: {class:'input-transparent', placeholder:'D/S ID#'}, wrapper_html:{class:'col-xs-4'}
-        = f.input :exception_type,:collection => TrifoldEnums::ExceptionType.exception_type_codes,:label => false ,:include_blank => 'Exception Type', input_html: { class: 'btn-transparent' }, wrapper_html:{class:'col-md-4'}
-        = f.input :incident_location_address,:label => false, input_html: {class:'input-transparent', placeholder:'Incident Location Address'}, wrapper_html:{class:'col-xs-4'}
-        = f.input :apartment_number,:label => false, input_html: {class:'input-transparent', placeholder:'Apt #'}, wrapper_html:{class:'col-xs-4'}
-        = f.input :disposition,:collection => TrifoldEnums::LocationType.location_type_codes,:label => false ,:include_blank => 'Location Type', input_html: { class: 'btn-transparent' }, wrapper_html:{class:'col-xs-4'}
-        = f.input :city,:label => false, input_html: {class:'input-transparent', placeholder:'City'}, wrapper_html:{class:'col-xs-4'}
-        = f.input :state,:label => false, input_html: {class:'input-transparent', placeholder:'State'}, wrapper_html:{class:'col-xs-4'}
-        = f.input :weapon_type,:collection => TrifoldEnums::Weapon.weapon_types,:label => false ,:include_blank => 'Weapon Type', input_html: { class: 'btn-transparent' }, wrapper_html:{class:'col-xs-4'}
-        = f.input :zip_code,:label => false, input_html: {class:'input-transparent', placeholder:'Zip'}, wrapper_html:{class:'col-xs-4'}
-        = f.input :number_arrested,:label => false, input_html: {class:'input-transparent', placeholder:'# Arrested'}, wrapper_html:{class:'col-xs-4'}
-        = f.input :crime_code,:collection => TrifoldEnums::Crime.crime_codes,:label => false ,:include_blank => 'Crime Code', input_html: { class: 'btn-transparent' }, wrapper_html:{class:'col-xs-4'}
-        = f.input :number_of_offenses,:label => false, input_html: {class:'input-transparent', placeholder:'# of Offenses'}, wrapper_html:{class:'col-xs-4'}
-        = f.input :number_of_victims,:label => false, input_html: {class:'input-transparent', placeholder:'# of Victims'}, wrapper_html:{class:'col-xs-4'}
-        = f.input :non_crime_code,:collection => TrifoldEnums::NonCrime.non_crime_codes,:label => false ,:include_blank => 'Non Crime Code', input_html: { class: 'btn-transparent' }, wrapper_html:{class:'col-xs-4'}
-        = f.input :number_of_suspects,:label => false, input_html: {class:'input-transparent', placeholder:'# of Suspects'}, wrapper_html:{class:'col-xs-4'}
-        = f.input :number_of_premises_entered,:label => false, input_html: {class:'input-transparent', placeholder:'# Premises Entered'}, wrapper_html:{class:'col-xs-4'}
-        = f.input :drug_activity,:collection => TrifoldEnums::DrugActivity.drug_activities,:label => false ,:include_blank => 'Drug Activity', input_html: { class: 'btn-transparent' }, wrapper_html:{class:'col-xs-4'}
-        = f.input :number_of_vehicles_stolen,:label => false, input_html: {class:'input-transparent', placeholder:'# Vehicles Stolen'}, wrapper_html:{class:'col-xs-4'}
-        = f.input :zulu_code,:label => false, input_html: {class:'input-transparent', placeholder:'Zulu Code'}, wrapper_html:{class:'col-xs-4'}
-        = f.input :drug_type,:collection => TrifoldEnums::DrugType.drug_types,:label => false ,:include_blank => 'Drug Type', input_html: { class: 'btn-transparent' }, wrapper_html:{class:'col-xs-4'}
-        = f.input :charge,:label => false, input_html: {class:'input-transparent', placeholder:'Charge'}, wrapper_html:{class:'col-xs-6'}
-        = f.input :juvenile_arrest,:label=>false,:include_blank => 'Juvenile Arrested?',as: :boolean, input_html: {class:'input-transparent btn-default',id:'isJuvenile'}, wrapper_html: {class:'col-xs-4'}
-        = f.input :prior_similar_incident,:label=>false,:include_blank => 'Similar Priors?',as: :boolean, input_html: {class:'input-transparent btn-default',id:'hasSimilarPriors'}, wrapper_html: {class:'col-xs-4'}
+        = f.input :pbso_case_num,:label => false,
+            input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'PBSO Case #', placeholder:'PBSO Case #'},
+            wrapper_html:{class:'col-xs-4'}
+        = f.input :date_reported, :label=>false,
+            input_html: { class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Date Reported #', id: 'date_reported', placeholder:'Date Reported:' },
+            wrapper_html:{class:'col-xs-4'}
+        = f.input :unit,:collection => TrifoldEnums::Unit.unit_codes,:label => false ,:include_blank => 'Unit',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Unit' },
+            wrapper_html:{class:'col-xs-4'}
+        = f.input :occurred_from, :label=>false,
+            input_html: { class:'input-transparent date', id: 'occurred_from', placeholder:'Occurred From:','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Occurred From'},
+            wrapper_html:{class:'col-xs-4'}
+        = f.input :occurred_to,   :label=>false,
+            input_html: { class:'input-transparent',   placeholder:'Occurred To:', id:'occurred_to','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Occurred To'},
+            wrapper_html:{class:'col-xs-4'}
+        = f.input :disposition,:collection => TrifoldEnums::Disposition.disposition_codes,:label => false ,:include_blank => 'Disposition',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Disposition' },
+            wrapper_html:{class:'col-xs-4'}
+        = f.input :zone, :label => false,
+            input_html: {class:'input-transparent', placeholder:'Zone','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Zone'},
+            wrapper_html:{class:'col-xs-4'}
+        = f.input :ds_id,:label => false,
+            input_html: {class:'input-transparent', placeholder:'D/S ID#','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'D/S ID'},
+            wrapper_html:{class:'col-xs-4'}
+        = f.input :exception_type,:collection => TrifoldEnums::ExceptionType.exception_type_codes,:label => false ,:include_blank => 'Exception Type',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Exception Type' },
+            wrapper_html:{class:'col-md-4'}
+        = f.input :incident_location_address,:label => false,
+            input_html: {class:'input-transparent', placeholder:'Incident Location Address', 'data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Incident Location Address'},
+            wrapper_html:{class:'col-xs-4'}
+        = f.input :apartment_number,:label => false,
+            input_html: {class:'input-transparent', placeholder:'Apt #','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Apt #'},
+            wrapper_html:{class:'col-xs-4'}
+        = f.input :disposition,:collection => TrifoldEnums::LocationType.location_type_codes,:label => false ,:include_blank => 'Location Type',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Location Type' },
+            wrapper_html:{class:'col-xs-4'}
+        = f.input :city,:label => false,
+            input_html: {class:'input-transparent', placeholder:'City','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'City'},
+            wrapper_html:{class:'col-xs-4'}
+        = f.input :state,:label => false,
+            input_html: {class:'input-transparent', placeholder:'State','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'State'},
+            wrapper_html:{class:'col-xs-4'}
+        = f.input :weapon_type,:collection => TrifoldEnums::Weapon.weapon_types,:label => false ,:include_blank => 'Weapon Type',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Weapon Type' },
+            wrapper_html:{class:'col-xs-4'}
+        = f.input :zip_code,:label => false,
+            input_html: {class:'input-transparent', placeholder:'Zip','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Zip code'},
+            wrapper_html:{class:'col-xs-4'}
+        = f.input :number_arrested,:label => false,
+            input_html: {class:'input-transparent', placeholder:'# Arrested','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Number Arrested'},
+            wrapper_html:{class:'col-xs-4'}
+        = f.input :crime_code,:collection => TrifoldEnums::Crime.crime_codes,:label => false ,:include_blank => 'Crime Code',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Crime Code' },
+            wrapper_html:{class:'col-xs-4'}
+        = f.input :number_of_offenses,:label => false,
+            input_html: {class:'input-transparent', placeholder:'# of Offenses','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Number of Offenses'},
+            wrapper_html:{class:'col-xs-4'}
+        = f.input :number_of_victims,:label => false,
+            input_html: {class:'input-transparent', placeholder:'# of Victims','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Number of Victims'},
+            wrapper_html:{class:'col-xs-4'}
+        = f.input :non_crime_code,:collection => TrifoldEnums::NonCrime.non_crime_codes,:label => false ,:include_blank => 'Non Crime Code',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Non-Crime Code' },
+            wrapper_html:{class:'col-xs-4'}
+        = f.input :number_of_suspects,:label => false,
+            input_html: {class:'input-transparent', placeholder:'# of Suspects','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Number of Suspects'},
+            wrapper_html:{class:'col-xs-4'}
+        = f.input :number_of_premises_entered,:label => false,
+            input_html: {class:'input-transparent', placeholder:'# of Premises Entered','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Number of Premises Entered'},
+            wrapper_html:{class:'col-xs-4'}
+        = f.input :drug_activity,:collection => TrifoldEnums::DrugActivity.drug_activities,:label => false ,:include_blank => 'Drug Activity',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Drug Activity' },
+            wrapper_html:{class:'col-xs-4'}
+        = f.input :number_of_vehicles_stolen,:label => false,
+            input_html: {class:'input-transparent', placeholder:'# of Vehicles Stolen','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Number of Vehicles Stolen'},
+            wrapper_html:{class:'col-xs-4'}
+        = f.input :zulu_code,:label => false,
+            input_html: {class:'input-transparent', placeholder:'Zulu Code','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Zulu Code'},
+            wrapper_html:{class:'col-xs-4'}
+        = f.input :drug_type,:collection => TrifoldEnums::DrugType.drug_types,:label => false ,:include_blank => 'Drug Type',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Drug Type' },
+            wrapper_html:{class:'col-xs-4'}
+        = f.input :charge,:label => false,as: :text,
+            input_html: {class:'input-transparent', placeholder:'Charge','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Charge', 'rows'=>5},
+            wrapper_html:{class:'col-xs-8'}
+        = f.input :juvenile_arrest,:label => false,as: :select,:include_blank => 'Juvenile Arrested?',
+            input_html: {class:'btn-transparent',id:'isJuvenile','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Juvenile Arrest?'},
+            wrapper_html: {class:'col-xs-4'}
+        = f.input :prior_similar_incident,:label => false,as: :select, :include_blank => 'Similar Priors?',
+            input_html: {class:'btn-transparent',id:'hasSimilarPriors','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Similar Priors?'},
+            wrapper_html: {class:'col-xs-4'}
 
 
 <script type="text/javascript">
@@ -79,22 +138,18 @@ down: "fa fa-arrow-down"
 
 <script type="text/javascript">
 $(document).ready(function(){
-$('isJuvenile').click(function(){
-if($(this).hasClass('icon-check')){
-$(this).removeClass('icon-check').addClass('icon-check-empty');}
-else {
-$(this).removeClass('icon-check-empty').addClass('icon-check');}
-});​
+$('isJuvenile').iCheck({
+checkedRadioClass: 'fa fa-check-square-o',
+uncheckedRadioClass: 'fa fa-square-o'
+});
 });
 </script>
 
 <script type="text/javascript">
 $(document).ready(function(){
-$('hasSimilarPriors').click(function(){
-if($(this).hasClass('icon-check')){
-$(this).removeClass('icon-check').addClass('icon-check-empty');}
-else {
-$(this).removeClass('icon-check-empty').addClass('icon-check');}
-});​
+$('hassimilarPriors').iCheck({
+checkedRadioClass: 'fa fa-check-square-o',
+uncheckedRadioClass: 'fa fa-square-o'
+});
 });
 </script>
