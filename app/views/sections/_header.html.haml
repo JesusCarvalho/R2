@@ -86,14 +86,14 @@
             input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Drug Type' },
             wrapper_html:{class:'col-xs-4'}
         = f.input :charge,:label => false,as: :text,
-            input_html: {class:'input-transparent', placeholder:'Charge','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Charge', 'rows'=>7},
+            input_html: {class:'input-transparent', placeholder:'Charge','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Charge', 'rows'=>3},
             wrapper_html:{class:'col-xs-8'}
         = f.input :juvenile_arrest,:label => false,as: :select,:include_blank => 'Juvenile Arrested?',
             input_html: {class:'btn-transparent',id:'isJuvenile','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Juvenile Arrest?'},
             wrapper_html: {class:'col-xs-4'}
         = f.input :prior_similar_incident,:label => false,as: :radio_buttons, :include_blank => 'Similar Priors?',
             input_html: {class:'btn-transparent',id:'hasSimilarPriors','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Similar Priors?'},
-            wrapper_html: {class:'col-xs-4 iradio'}
+            wrapper_html: {class:'col-xs-2 iradio'}
 
 
 
