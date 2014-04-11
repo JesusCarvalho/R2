@@ -1,7 +1,15 @@
-.col-sm-offset-2
+.col-xs-offset-2
   %section.widget
     %legend.section
-      %h3 Offenses
-    = simple_form_for :offenses do |f|
-      = f.input :pbso_case_num,:label => false, input_html: {class:'input-transparent', placeholder:'Case #'}
-      = f.input :unit,:collection => TrifoldEnums::Unit.unit_codes,:label => false ,:include_blank => 'Unit', input_html: { class: 'btn-default' }
+      %h3 Offense(s)
+    = simple_form_for :offense do |f|
+      .row
+        = f.input :attempt_code,:collection => TrifoldEnums::Attempt.attempt_codes,:label => false, :include_blank => 'Attempt Code',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Attempt Code' },
+            wrapper_html:{class:'col-xs-4'}
+        = f.input :statute_id,:label => false,
+            input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'FL Statute:', placeholder:'FL Statute'},
+            wrapper_html:{class:'col-xs-4'}
+        = f.input :ucr_code, :label=>false,
+            input_html: { class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'UCR Code', placeholder:'UCR Code:' },
+            wrapper_html:{class:'col-xs-4'}

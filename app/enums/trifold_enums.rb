@@ -50,8 +50,8 @@ class TrifoldEnums < ActiveRecord::Base
   class Disposition < ActiveRecord::Base
     enum disposition_code: [
 
-        :'Cleared_By_Arrest',
-        :'Exceptionally_Cleared',
+        :'Cleared By Arrest',
+        :'Exceptionally Cleared',
         :'Unfounded',
         :'Inactive',
         :'Open',
@@ -62,45 +62,45 @@ class TrifoldEnums < ActiveRecord::Base
   class ExceptionType < ActiveRecord::Base
     enum exception_type_code: [
 
-        :'Extradition_Declined',
-        :'Arrested_on_Primary_Offense',
-        :'Secondary_Offense_Without_Prosecution',
-        :'Death_of_Offender',
-        :'Victim_Witness_Refused_to_Cooperate',
-        :'Prosecution_Declined',
-        :'Juvenile_No_Custody'
+        :'Extradition Declined',
+        :'Arrested on Primary Offense',
+        :'Secondary Offense Without Prosecution',
+        :'Death of Offender',
+        :'Victim Witness Refused to Cooperate',
+        :'Prosecution Declined',
+        :'Juvenile No Custody'
     ] 
   end
 
   class Crime < ActiveRecord::Base
     enum crime_code: [
 
-        :'Crime_Person',
-        :'Crime_Property',
+        :'Crime Person',
+        :'Crime Property',
         :'Agricultural',
-        :'Financial_Economic_Crimes',
-        :'Hate_Crimes',
-        :'Gang_Crimes',
-        :'Animal_Cruelty'
+        :'Financial Economic Crimes',
+        :'Hate Crimes',
+        :'Gang Crimes',
+        :'Animal Cruelty'
     ] 
   end
 
   class Weapon < ActiveRecord::Base
     enum weapon_type: [
 
-        :'Not_Applicable',
+        :'Not Applicable',
         :'Handgun',
         :'Rifle',
         :'Shotgun',
         :'Firearm',
-        :'Knife_Cutting_Instrument',
-        :'Blunt_Object',
-        :'Hands_Fist_Feet',
+        :'Knife Cutting Instrument',
+        :'Blunt Object',
+        :'Hands Fist Feet',
         :'Poison',
         :'Explosives',
-        :'Fire_Incendiary',
-        :'Threat_Intimidation',
-        :'Simulated_Weapon',
+        :'Fire Incendiary',
+        :'Threat Intimidation',
+        :'Simulated Weapon',
         :'Drugs',
         :'Unknown',
         :'Other',
@@ -110,19 +110,19 @@ class TrifoldEnums < ActiveRecord::Base
   class NonCrime < ActiveRecord::Base
     enum non_crime_code: [
 
-        :'Assist_Other_Dept',
-        :'Assist_PBSO_Unit',
-        :'Civil_Case',
-        :'Domestic_Dispute',
-        :'Gone_on_Arrival',
-        :'Juvenile_Trouble',
-        :'Neighbor_Trouble',
+        :'Assist Other Dept',
+        :'Assist PBSO Unit',
+        :'Civil Case',
+        :'Domestic Dispute',
+        :'Gone on Arrival',
+        :'Juvenile Trouble',
+        :'Neighbor Trouble',
         :'Other',
-        :'Police_Services',
-        :'Hate_Related',
-        :'Gang_Related',
-        :'Homeless_Intervention',
-        :'Animal_Related',
+        :'Police Services',
+        :'Hate Related',
+        :'Gang Related',
+        :'Homeless Intervention',
+        :'Animal Related',
         :'Agriculture'
     ] 
   end
@@ -130,35 +130,35 @@ class TrifoldEnums < ActiveRecord::Base
   class LocationType < ActiveRecord::Base
     enum location_type_code: [
 
-        :'Residence_Single_Family',
-        :'Apartment_Condo',
-        :'Residence_Other',
-        :'Hotel_Motel',
-        :'Convenience_Store',
-        :'Gas_Station',
-        :'Liquor_Store',
-        :'Bar_Night_Club',
+        :'Residence Single Family',
+        :'Apartment Condo',
+        :'Residence Other',
+        :'Hotel Motel',
+        :'Convenience Store',
+        :'Gas Station',
+        :'Liquor Store',
+        :'Bar Night Club',
         :'Supermarket',
-        :'Department_Discount_Store',
-        :'Speciality_Store',
-        :'Drug_Store_Hospital',
-        :'Bank_Financial_Inst',
-        :'Commercial_Office_Bldg',
-        :'Indust_Manufacturing',
+        :'Department Discount Store',
+        :'Speciality Store',
+        :'Drug Store Hospital',
+        :'Bank Financial Inst',
+        :'Commercial Office Bldg',
+        :'Indust Manufacturing',
         :'Storage',
-        :'Govmnt_Public_Bldg',
-        :'Jail_Prison',
-        :'Religious_Bldg',
+        :'Govmnt Public Bldg',
+        :'Jail Prison',
+        :'Religious Bldg',
         :'Airport',
-        :'Bus_Rail_Terminal',
-        :'Construction_Site',
-        :'Other_Structure',
-        :'Parking_Lot_Garage',
-        :'Highway_Roadway',
-        :'Park_Woodland_Field',
-        :'Lake_Waterway',
-        :'Motor_Vehicle',
-        :'Other_Mobile',
+        :'Bus Rail Terminal',
+        :'Construction Site',
+        :'Other Structure',
+        :'Parking Lot Garage',
+        :'Highway Roadway',
+        :'Park Woodland Field',
+        :'Lake Waterway',
+        :'Motor Vehicle',
+        :'Other Mobile',
         :'Other'
     ] 
   end
@@ -166,12 +166,12 @@ class TrifoldEnums < ActiveRecord::Base
   class DrugActivity < ActiveRecord::Base
     enum drug_activity: [
 
-        :'Not_Applicable',
+        :'Not Applicable',
         :'Buy',
         :'Deliver',
         :'Use',
-        :'Dispense_Distribute',
-        :'Manufacture_Produce_Cultivate',
+        :'Dispense Distribute',
+        :'Manufacture Produce Cultivate',
         :'Possess',
         :'Smuggle',
         :'Sell',
@@ -184,15 +184,15 @@ class TrifoldEnums < ActiveRecord::Base
   class DrugType < ActiveRecord::Base
     enum drug_type: [
 
-        :'Not_Applicable',
+        :'Not Applicable',
         :'Amphetamine',
         :'Barbiturate',
         :'Cocaine',
         :'Heroin',
         :'Hallucinogen',
         :'Marijuana',
-        :'Opium_Derivative',
-        :'Paraphernalia_Equip',
+        :'Opium Derivative',
+        :'Paraphernalia Equip',
         :'Synthetic',
         :'Unknown',
         :'Other'
@@ -210,11 +210,11 @@ class TrifoldEnums < ActiveRecord::Base
   class OffenseIndicator < ActiveRecord::Base
     enum offense_indicator: [
 
-        :'Offense_1',
-        :'Offense_2',
-        :'Offense_3',
-        :'Offense_4',
-        :'Both_Offense_1_and_2'
+        :'Offense 1',
+        :'Offense 2',
+        :'Offense 3',
+        :'Offense 4',
+        :'Both Offense 1 and 2'
     ] 
   end
 
@@ -223,7 +223,7 @@ class TrifoldEnums < ActiveRecord::Base
     enum victim_type: [
 
         :'Juvenile',
-        :'Law_Enforcement_Officer',
+        :'Law Enforcement Officer',
         :'Adult',
         :'Business',
         :'Government',
@@ -235,7 +235,7 @@ class TrifoldEnums < ActiveRecord::Base
   class SexCrimeObject < ActiveRecord::Base
     enum sex_crime_object: [
 
-        :'Sex_Organ',
+        :'Sex Organ',
         :'Other',
         :'Both'
     ] 
@@ -244,16 +244,16 @@ class TrifoldEnums < ActiveRecord::Base
   class InjuryType < ActiveRecord::Base
     enum injury_type: [
 
-        :'Not_Applicable',
+        :'Not Applicable',
         :'Gunshot',
         :'Stabbed',
         :'Laceration',
         :'Unconscious',
-        :'Poss_Broken_Bones',
-        :'Poss_Internal_Injuries',
-        :'Loss_of_Teeth',
+        :'Poss Broken Bones',
+        :'Poss Internal Injuries',
+        :'Loss of Teeth',
         :'Burns',
-        :'Abrasions_Bruises',
+        :'Abrasions Bruises',
         :'Other'
     ] 
   end
@@ -261,52 +261,52 @@ class TrifoldEnums < ActiveRecord::Base
   class VictimRelationship < ActiveRecord::Base
     enum victims_relationship: [
 
-        :'Not_Applicable',
+        :'Not Applicable',
         :'Undetermined',
         :'Stranger',
         :'Spouse',
-        :'Ex_Spouse',
-        :'Co_habitant',
+        :'Ex Spouse',
+        :'Co habitant',
         :'Parent',
-        :'Brother_Sister',
+        :'Brother Sister',
         :'Child',
-        :'Step_Parent',
-        :'Step_Child',
-        :'In_law',
-        :'Other_Family',
+        :'Step Parent',
+        :'Step Child',
+        :'In law',
+        :'Other Family',
         :'Student',
         :'Teacher',
-        :'Child_of_Boyfriend_Girlfriend',
-        :'Boyfriend_Girlfriend',
+        :'Child of Boyfriend Girlfriend',
+        :'Boyfriend Girlfriend',
         :'Friend',
         :'Neighbor',
-        :'Sitter_Daycare',
+        :'Sitter Daycare',
         :'Employee',
         :'Employer',
-        :'Landlord_Tenant',
+        :'Landlord Tenant',
         :'Acquaintance',
-        :'Other_Known'
+        :'Other Known'
     ] 
   end
 
   class ResidenceType < ActiveRecord::Base
     enum residence_type: [
 
-        :'Not_Applicable',
+        :'Not Applicable',
         :'City',
         :'County',
         :'Florida',
-        :'Out_of_State',
+        :'Out of State',
     ] 
   end
 
   class ResidenceStatus < ActiveRecord::Base
     enum residence_status: [
 
-        :'Not_Applicable',
-        :'Full_Time_Resident',
-        :'Part_Time_Resident',
-        :'Non_Resident'
+        :'Not Applicable',
+        :'Full Time Resident',
+        :'Part Time Resident',
+        :'Non Resident'
     ] 
   end
 
@@ -325,12 +325,12 @@ class TrifoldEnums < ActiveRecord::Base
     enum premises: [
 
         :'Highway',
-        :'Convenience_Store',
-        :'Service_Station',
-        :'Liquor_Store',
+        :'Convenience Store',
+        :'Service Station',
+        :'Liquor Store',
         :'Bank',
         :'Supermarket',
-        :'Other_Commercial',
+        :'Other Commercial',
         :'Drugstore',
         :'Residence',
         :'Miscellaneous'
@@ -340,35 +340,35 @@ class TrifoldEnums < ActiveRecord::Base
   class LarcenyNature < ActiveRecord::Base
     enum larceny_nature: [
 
-        :'Pocket_Picking',
-        :'Purse_Snatching',
+        :'Pocket Picking',
+        :'Purse Snatching',
         :'Shoplifting',
-        :'Theft_from_Vehicle',
-        :'Theft_Vehicle_Parts_Accessories',
+        :'Theft from Vehicle',
+        :'Theft Vehicle Parts Accessories',
         :'Bicycles',
-        :'From_Bldg_not_C_or_K',
-        :'Coin_Operated_Machine',
-        :'All_Others'
+        :'From Bldg not C or K',
+        :'Coin Operated Machine',
+        :'All Others'
     ] 
   end
 
   class EntryPoint < ActiveRecord::Base
     enum entry_point: [
 
-        :'Front_Door',
-        :'Rear_Door',
-        :'Side_Door',
-        :'Sliding_Glass_Door',
-        :'Front_Window',
-        :'Rear_Window',
-        :'Side_Window',
+        :'Front Door',
+        :'Rear Door',
+        :'Side Door',
+        :'Sliding Glass Door',
+        :'Front Window',
+        :'Rear Window',
+        :'Side Window',
         :'Wall',
         :'Roof',
-        :'Garage_Door',
+        :'Garage Door',
         :'Balcony',
-        :'Screen_Patio',
-        :'Gate_Fence',
-        :'Construction_Area',
+        :'Screen Patio',
+        :'Gate Fence',
+        :'Construction Area',
         :'Floor'
     ] 
   end
@@ -376,51 +376,51 @@ class TrifoldEnums < ActiveRecord::Base
   class EntryMethod < ActiveRecord::Base
     enum entry_method: [
 
-        :'Prying_Tool',
-        :'Forced_In',
-        :'Slipped_Locked',
-        :'Picked_Lock',
-        :'Drilled_Lock',
-        :'Punched_Lock',
-        :'Twisted_Lock',
-        :'Remove_Glass',
-        :'Cut_Break_Glass',
-        :'Cut_Tear_Screen',
-        :'Axe_Sledge_Hammer',
+        :'Prying Tool',
+        :'Forced In',
+        :'Slipped Locked',
+        :'Picked Lock',
+        :'Drilled Lock',
+        :'Punched Lock',
+        :'Twisted Lock',
+        :'Remove Glass',
+        :'Cut Break Glass',
+        :'Cut Tear Screen',
+        :'Axe Sledge Hammer',
         :'Saw',
-        :'Hydraulic_Jack',
-        :'AC_Unit_Ductwork',
+        :'Hydraulic Jack',
+        :'AC Unit Ductwork',
         :'Skylight',
-        :'Left_Unlocked',
-        :'Left_Open',
-        :'Used_Key'
+        :'Left Unlocked',
+        :'Left Open',
+        :'Used Key'
     ] 
   end
 
   class ModusOperandi < ActiveRecord::Base
     enum modus_operandi: [
 
-        :'Safe_or_Vault',
-        :'Bypass_or_Disarm_Alarm',
-        :'Disrupt_Telephone_Line',
-        :'Tools_Left_at_Scene',
-        :'Matches_Used_at_Scene',
-        :'Blood_Found_at_Scene',
-        :'Obscenities_Written_at_Scene',
-        :'Wanton_Vandalism_Only',
-        :'Explosive_Used',
-        :'Acetylene_Torch',
-        :'Human_Defecation_Urine_Left_at_Scene',
-        :'Consumption_of_Food_at_Scene',
-        :'Removal_or_Destruction_of_Female_Clothing',
-        :'Cat_Burglary',
-        :'Motel_Room',
+        :'Safe or Vault',
+        :'Bypass or Disarm Alarm',
+        :'Disrupt Telephone Line',
+        :'Tools Left at Scene',
+        :'Matches Used at Scene',
+        :'Blood Found at Scene',
+        :'Obscenities Written at Scene',
+        :'Wanton Vandalism Only',
+        :'Explosive Used',
+        :'Acetylene Torch',
+        :'Human Defecation Urine Left at Scene',
+        :'Consumption of Food at Scene',
+        :'Removal or Destruction of Female Clothing',
+        :'Cat Burglary',
+        :'Motel Room',
         :'Condominium',
-        :'Vending_Machines_Only',
-        :'Break_Out',
-        :'Day_Burglary',
-        :'Night_Burglary',
-        :'Human_Defecation_or_Urine_Left_at_Scene'
+        :'Vending Machines Only',
+        :'Break Out',
+        :'Day Burglary',
+        :'Night Burglary',
+        :'Human Defecation or Urine Left at Scene'
     ] 
   end
 
@@ -429,74 +429,74 @@ class TrifoldEnums < ActiveRecord::Base
 
         :'Stolen',
         :'Recovered',
-        :'Stolen_and_Recovered',
-        :'Recovered_for_Other_Jurisdiction',
-        :'Lost_Found_Property',
-        :'Drug_Purchases',
-        :'Evidence_Seized',
-        :'Damaged_Property_Arson_Vandalism'
+        :'Stolen and Recovered',
+        :'Recovered for Other Jurisdiction',
+        :'Lost Found Property',
+        :'Drug Purchases',
+        :'Evidence Seized',
+        :'Damaged Property Arson Vandalism'
     ] 
   end
 
   class PropertyType < ActiveRecord::Base
     enum property_type: [
   
-        :'Auto_Accessory_Parts',
+        :'Auto Accessory Parts',
         :'Bicycle',
-        :'Camera_Photo_Equipment',
+        :'Camera Photo Equipment',
         :'Drug',
-        :'Equipment_Tool',
-        :'Food_Liquor_Consumable',
+        :'Equipment Tool',
+        :'Food Liquor Consumable',
         :'Gun',
-        :'Household_Appliance_Goods',
-        :'Plant_Citrus',
-        :'Jewelry_Precious_Metal',
-        :'Clothing_Fur',
+        :'Household Appliance Goods',
+        :'Plant Citrus',
+        :'Jewelry Precious Metal',
+        :'Clothing Fur',
         :'Livestock',
-        :'Musical_Instrument',
-        :'Construction_Equipment_over_10k_USD',
-        :'Office_Equipment',
-        :'Art_Collection',
-        :'Computer_Equipment',
-        :'Radio_Stereo_Cell_Phone',
-        :'Sports_Equipment',
-        :'TV_Video_VCR_DVD',
-        :'Currency_Negotiable',
-        :'Credit_Card_Non_Negotiable',
-        :'Boat_Motor',
+        :'Musical Instrument',
+        :'Construction Equipment over 10k USD',
+        :'Office Equipment',
+        :'Art Collection',
+        :'Computer Equipment',
+        :'Radio Stereo Cell Phone',
+        :'Sports Equipment',
+        :'TV Video VCR DVD',
+        :'Currency Negotiable',
+        :'Credit Card Non Negotiable',
+        :'Boat Motor',
         :'Structure',
-        :'Farm_Equipment',
+        :'Farm Equipment',
         :'Miscellaneous',
-        :'Drug_Para_Equip'
+        :'Drug Para Equip'
     ] 
   end
   
   class IncidentType < ActiveRecord::Base
     enum incident_type: [
   
-        :'Officer_Killed_Felonious',
-        :'Officer_Killed_Accident_or_Negligence',
-        :'Officer_Assaulted_No_Injury',
-        :'Officer_Assaulted_Minor_Injury',
-        :'Officer_Assaulted_Serious_Injury'
+        :'Officer Killed Felonious',
+        :'Officer Killed Accident or Negligence',
+        :'Officer Assaulted No Injury',
+        :'Officer Assaulted Minor Injury',
+        :'Officer Assaulted Serious Injury'
     ] 
   end
   
   class OfficerActivity < ActiveRecord::Base
     enum officer_activity: [
   
-        :'Responding_to_Disturbance',
-        :'B_and_E_in_Progress_or_Pursuing_B_and_E_Suspect',
-        :'Robbery_in_Progress_or_Pursuing_Robbery_Suspect',
-        :'Attempting_Other_Arrest',
-        :'Civil_Disorder',
-        :'Domestic_Disturbance',
-        :'Handling_Transporting_Custody_of_Prisoner',
-        :'Investigating_Suspicious_Person_or_Circumstance',
+        :'Responding to Disturbance',
+        :'B and E in Progress or Pursuing B and E Suspect',
+        :'Robbery in Progress or Pursuing Robbery Suspect',
+        :'Attempting Other Arrest',
+        :'Civil Disorder',
+        :'Domestic Disturbance',
+        :'Handling Transporting Custody of Prisoner',
+        :'Investigating Suspicious Person or Circumstance',
         :'Ambush',
-        :'No_Warning',
-        :'Assailant_Mentally_Deranged',
-        :'Traffic_Pursuit_or_Stop',
+        :'No Warning',
+        :'Assailant Mentally Deranged',
+        :'Traffic Pursuit or Stop',
         :'Other'
     ] 
   end
@@ -504,13 +504,13 @@ class TrifoldEnums < ActiveRecord::Base
   class AssignmentTyoe < ActiveRecord::Base
     enum assignment_type: [
 
-        :'One_Person_Vehicle_Alone',
-        :'One_Person_Vehicle_Assisted',
-        :'Two_Person_Vehicle',
-        :'Detective_or_Special_Assignment_Alone',
-        :'Detective_or_Special_Assignment_Assisted',
-        :'Other_Alone',
-        :'Other_Assisted'
+        :'One Person Vehicle Alone',
+        :'One Person Vehicle Assisted',
+        :'Two Person Vehicle',
+        :'Detective or Special Assignment Alone',
+        :'Detective or Special Assignment Assisted',
+        :'Other Alone',
+        :'Other Assisted'
     ]
   end
 
@@ -518,13 +518,13 @@ class TrifoldEnums < ActiveRecord::Base
     enum missing_person_type: [
 
         :'Runaway',
-        :'Kidnapping_Parental',
+        :'Kidnapping Parental',
         :'Involuntary',
         :'Disabled',
         :'Endangered',
-        :'Disaster_Victim',
-        :'Voluntary_Adult',
-        :'Unknown_Other'
+        :'Disaster Victim',
+        :'Voluntary Adult',
+        :'Unknown Other'
     ]
   end
  
@@ -532,21 +532,21 @@ class TrifoldEnums < ActiveRecord::Base
     enum missing_person_code: [
 
         :'Missing',
-        :'Recovered_After_24_hrs',
-        :'Recovered_Within_24_hrs'
+        :'Recovered After 24 hrs',
+        :'Recovered Within 24 hrs'
     ]
   end
 
   class RecoveryInformation < ActiveRecord::Base
     enum recovery_information: [
 
-        :'Not_Applicable',
+        :'Not Applicable',
         :'Voluntary',
-        :'Located_Not_Returned',
+        :'Located Not Returned',
         :'Hospitalized',
-        :'DCF_HRS_Custody',
-        :'Law_Enforcement_Custody',
-        :'Returned_to_Parent',
+        :'DCF HRS Custody',
+        :'Law Enforcement Custody',
+        :'Returned to Parent',
         :'Deceased',
         :'Other'
     ]
@@ -585,11 +585,11 @@ class TrifoldEnums < ActiveRecord::Base
         :'Moles',
         :'Freckles',
         :'Pimples',
-        :'Lips_Thick',
-        :'Lips_Thin',
-        :'Chin_Protruding',
-        :'Chin_Receding',
-        :'Hollow_Cheeks'
+        :'Lips Thick',
+        :'Lips Thin',
+        :'Chin Protruding',
+        :'Chin Receding',
+        :'Hollow Cheeks'
     ]
   end
 
@@ -599,7 +599,7 @@ class TrifoldEnums < ActiveRecord::Base
         :'Dark',
         :'Sallow',
         :'Ruddy',
-        :'Light_Fair',
+        :'Light Fair',
         :'Medium'
     ]
   end
@@ -607,13 +607,13 @@ class TrifoldEnums < ActiveRecord::Base
   class FacialHair < ActiveRecord::Base
     enum facial_hair: [
 
-        :'Mustache_Chinese',
-        :'Mustache_Heavy',
-        :'Mustache_Thin',
-        :'Mustache_Medium',
+        :'Mustache Chinese',
+        :'Mustache Heavy',
+        :'Mustache Thin',
+        :'Mustache Medium',
         :'Goatee',
         :'Beard',
-        :'Brows_Heavy',
+        :'Brows Heavy',
         :'Unshaven'
     ]
   end
@@ -621,8 +621,8 @@ class TrifoldEnums < ActiveRecord::Base
   class Face < ActiveRecord::Base
     enum face: [
 
-        :'Black_Caus',
-        :'Hi_Cheekbones',
+        :'Black Caus',
+        :'Hi Cheekbones',
         :'Long',
         :'Broad',
         :'Thin',
@@ -635,8 +635,8 @@ class TrifoldEnums < ActiveRecord::Base
 
         :'Dyed',
         :'Processed',
-        :'Wig_Toupee',
-        :'Crew_Cut',
+        :'Wig Toupee',
+        :'Crew Cut',
         :'Bald',
         :'Afro',
         :'Long',
@@ -668,7 +668,7 @@ class TrifoldEnums < ActiveRecord::Base
         :'Cauliflower',
         :'Pierced',
         :'Protruding',
-        :'Close_to_Head',
+        :'Close to Head',
         :'Large',
         :'Small'
     ]
@@ -709,10 +709,10 @@ class TrifoldEnums < ActiveRecord::Base
         :'Accent',
         :'Lisp',
         :'Stutter',
-        :'Hare_Lip',
+        :'Hare Lip',
         :'Mumbles',
         :'Rapid',
-        :'Soft_Low',
+        :'Soft Low',
         :'Refined'
     ]
   end
@@ -738,7 +738,7 @@ class TrifoldEnums < ActiveRecord::Base
         :'Hand',
         :'Fingers',
         :'Limp',
-        :'Bow_legged'
+        :'Bow legged'
     ]
   end
 
@@ -762,19 +762,19 @@ class TrifoldEnums < ActiveRecord::Base
 
         :'Stolen',
         :'Recovered',
-        :'Stolen_and_Recovered',
-        :'Recovered_for_Other_Jurisdiction',
+        :'Stolen and Recovered',
+        :'Recovered for Other Jurisdiction',
         :'Impounded',
         :'Offenders',
-        :'Failure_to_Return',
-        :'Evidence_Seized',
-        :'Damaged_Arson',
-        :'Misc_Other',
+        :'Failure to Return',
+        :'Evidence Seized',
+        :'Damaged Arson',
+        :'Misc Other',
         :'Repossessed',
-        :'Suspicious_Vehicle',
+        :'Suspicious Vehicle',
         :'Towed',
         :'Victims',
-        :'Seized_Tag',
+        :'Seized Tag',
         :'Abandoned'
     ]
   end
@@ -783,9 +783,9 @@ class TrifoldEnums < ActiveRecord::Base
     enum vehicle_vessel_type: [
 
         :'Auto',
-        :'Truck_Van',
+        :'Truck Van',
         :'Motorcycle',
-        :'Camper_RV',
+        :'Camper RV',
         :'Bus',
         :'Trailer',
         :'Boat',
@@ -797,34 +797,34 @@ class TrifoldEnums < ActiveRecord::Base
   class CautionField < ActiveRecord::Base
     enum caution_field: [
 
-        :'Occupants_Armed',
-        :'Hold_for_Prints',
-        :'Both_of_the_Above'
+        :'Occupants Armed',
+        :'Hold for Prints',
+        :'Both of the Above'
     ]
   end
 
   class RecoveryCode < ActiveRecord::Base
     enum recovery_code: [
 
-        :'Stolen_Locally_Recovered_Locally',
-        :'Stolen_Locally_Recovered_Other',
-        :'Stolen_Other_Recovered_Locally'
+        :'Stolen Locally Recovered Locally',
+        :'Stolen Locally Recovered Other',
+        :'Stolen Other Recovered Locally'
     ]
   end
 
   class LicenseTagType < ActiveRecord::Base
     enum license_tag_type: [
 
-        :'City_Owned',
-        :'County_Owned',
+        :'City Owned',
+        :'County Owned',
         :'Dealer',
-        :'Disabled_Veteran',
-        :'Foreign_Tag',
-        :'Handicapped_Person',
-        :'Law_Enforcement',
+        :'Disabled Veteran',
+        :'Foreign Tag',
+        :'Handicapped Person',
+        :'Law Enforcement',
         :'Moped',
         :'Motorcycle',
-        :'Passenger_Car',
+        :'Passenger Car',
         :'Personalized',
         :'Rental',
         :'Temporary',
@@ -837,10 +837,10 @@ class TrifoldEnums < ActiveRecord::Base
   class VehicleStyle < ActiveRecord::Base
     enum vehicle_style: [
 
-        :'Four_Door',
-        :'Two_Door',
+        :'Four Door',
+        :'Two Door',
         :'Convertible',
-        :'Station_Wagon',
+        :'Station Wagon',
         :'Truck',
         :'Pickup',
         :'Ambulance',
@@ -848,7 +848,7 @@ class TrifoldEnums < ActiveRecord::Base
         :'Van',
         :'Other',
         :'Bus',
-        :'Carry_all_Sport_Utility'
+        :'Carry all Sport Utility'
     ]
   end
 
@@ -868,38 +868,38 @@ class TrifoldEnums < ActiveRecord::Base
   class JustifiableCircumstances < ActiveRecord::Base
     enum justifiable_circumstances: [
 
-        :'Not_Applicable',
-        :'Felon_Killed_by_Private_Citizen',
-        :'Felon_Killed_by_Police_Officer'
+        :'Not Applicable',
+        :'Felon Killed by Private Citizen',
+        :'Felon Killed by Police Officer'
     ]
   end
 
   class JustifiableHomicide < ActiveRecord::Base
     enum justifiable_homicide_code: [
 
-        :'Not_Applicable',
-        :'Felon_Attacked_Police_Officer',
-        :'Felon_Attacked_Fellow_Police_Officer',
-        :'Felon_Attacked_Citizen',
-        :'Felon_Attempted_Flight_from_Crime',
-        :'Felon_Killed_in_Commission_of_Crime',
-        :'Felon_Resisted_Arrest',
-        :'Unable_to_Determine_Not_Enough_Information'
+        :'Not Applicable',
+        :'Felon Attacked Police Officer',
+        :'Felon Attacked Fellow Police Officer',
+        :'Felon Attacked Citizen',
+        :'Felon Attempted Flight from Crime',
+        :'Felon Killed in Commission of Crime',
+        :'Felon Resisted Arrest',
+        :'Unable to Determine Not Enough Information'
     ]
   end
 
   class MurderType < ActiveRecord::Base
     enum murder_type: [
 
-        :'Drinking_Argument',
-        :'Narcotics_Related_Argument',
-        :'Other_Felony_Involved',
+        :'Drinking Argument',
+        :'Narcotics Related Argument',
+        :'Other Felony Involved',
         :'Gangland',
-        :'Juvenile_Gang',
-        :'Lovers_Quarrel',
-        :'Money_Argument',
-        :'While_Incarcerated',
-        :'Unknown_Circumstance',
+        :'Juvenile Gang',
+        :'Lovers Quarrel',
+        :'Money Argument',
+        :'While Incarcerated',
+        :'Unknown Circumstance',
         :'Other'
     ]
   end
@@ -907,12 +907,12 @@ class TrifoldEnums < ActiveRecord::Base
   class DeathBy < ActiveRecord::Base
     enum death_by: [
 
-        :'Child_Playing_with_Weapon',
-        :'Gun_Cleaning_Accident',
-        :'Hunting_Accident',
-        :'Other_Negligent_Weapon_Handling',
-        :'Vehicular_Negligence',
-        :'Other_Negligent_Killing'
+        :'Child Playing with Weapon',
+        :'Gun Cleaning Accident',
+        :'Hunting Accident',
+        :'Other Negligent Weapon Handling',
+        :'Vehicular Negligence',
+        :'Other Negligent Killing'
     ]
   end
 
@@ -929,8 +929,8 @@ class TrifoldEnums < ActiveRecord::Base
 
         :'White',
         :'Black',
-        :'American_Indian',
-        :'Oriental_Asian',
+        :'American Indian',
+        :'Oriental Asian',
         :'Unknown'
     ]
   end
@@ -943,7 +943,7 @@ class TrifoldEnums < ActiveRecord::Base
         :'Dangerous',
         :'Mental',
         :'Suicidal',
-        :'Resisting_Arrest'
+        :'Resisting Arrest'
     ]
   end
 
@@ -951,21 +951,21 @@ class TrifoldEnums < ActiveRecord::Base
     enum roles: [
 
         :'Arrestee',
-        :'Loss_Sustained_By',
+        :'Loss Sustained By',
         :'Complainant',
         :'Deceased',
         :'Discoverer',
-        :'Injured_Person',
+        :'Injured Person',
         :'Runaway',
-        :'Law_Enforcement_Official',
-        :'Missing_Person',
-        :'Property_Owner',
+        :'Law Enforcement Official',
+        :'Missing Person',
+        :'Property Owner',
         :'Passenger',
-        :'Vehicle_Driver',
+        :'Vehicle Driver',
         :'Suspect',
         :'Victim',
         :'Witness',
-        :'Sex_Related_Intelligence',
+        :'Sex Related Intelligence',
         :'Other'
     ]
   end
@@ -982,7 +982,7 @@ class TrifoldEnums < ActiveRecord::Base
   class YesNoUknownNA < ActiveRecord::Base
     enum NA_Yes_No_Unknown: [
 
-        :'Not_Applicable',
+        :'Not Applicable',
         :'Yes',
         :'No',
         :'Unknown'

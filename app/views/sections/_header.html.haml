@@ -8,16 +8,16 @@
             input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'PBSO Case #', placeholder:'PBSO Case #'},
             wrapper_html:{class:'col-xs-4'}
         = f.input :date_reported, :label=>false,
-            input_html: { class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Date Reported #', id: 'date_reported', placeholder:'Date Reported:' },
+            input_html: { class:'input-transparent date','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Date Reported #', id: 'date_reported', placeholder:'Date Reported:' },
             wrapper_html:{class:'col-xs-4'}
         = f.input :unit,:collection => TrifoldEnums::Unit.unit_codes,:label => false ,:include_blank => 'Unit',
             input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Unit' },
             wrapper_html:{class:'col-xs-4'}
         = f.input :occurred_from, :label=>false,
             input_html: { class:'input-transparent date', id: 'occurred_from', placeholder:'Occurred From:','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Occurred From'},
-            wrapper_html:{class:'col-xs-4'}
+            wrapper_html:{class:'col-xs-4 '}
         = f.input :occurred_to,   :label=>false,
-            input_html: { class:'input-transparent',   placeholder:'Occurred To:', id:'occurred_to','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Occurred To'},
+            input_html: { class:'input-transparent date',   placeholder:'Occurred To:', id:'occurred_to','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Occurred To'},
             wrapper_html:{class:'col-xs-4'}
         = f.input :disposition,:collection => TrifoldEnums::Disposition.disposition_codes,:label => false ,:include_blank => 'Disposition',
             input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Disposition' },
@@ -35,7 +35,7 @@
             input_html: {class:'input-transparent', placeholder:'Incident Location Address', 'data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Incident Location Address'},
             wrapper_html:{class:'col-xs-4'}
         = f.input :apartment_number,:label => false,
-            input_html: {class:'input-transparent', placeholder:'Apt #','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Apt #'},
+            input_html: {class:'input-transparent', placeholder:'Apt #','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Apartment #'},
             wrapper_html:{class:'col-xs-4'}
         = f.input :disposition,:collection => TrifoldEnums::LocationType.location_type_codes,:label => false ,:include_blank => 'Location Type',
             input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Location Type' },
@@ -86,14 +86,15 @@
             input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Drug Type' },
             wrapper_html:{class:'col-xs-4'}
         = f.input :charge,:label => false,as: :text,
-            input_html: {class:'input-transparent', placeholder:'Charge','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Charge', 'rows'=>5},
+            input_html: {class:'input-transparent', placeholder:'Charge','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Charge', 'rows'=>7},
             wrapper_html:{class:'col-xs-8'}
         = f.input :juvenile_arrest,:label => false,as: :select,:include_blank => 'Juvenile Arrested?',
             input_html: {class:'btn-transparent',id:'isJuvenile','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Juvenile Arrest?'},
             wrapper_html: {class:'col-xs-4'}
-        = f.input :prior_similar_incident,:label => false,as: :select, :include_blank => 'Similar Priors?',
+        = f.input :prior_similar_incident,:label => false,as: :radio_buttons, :include_blank => 'Similar Priors?',
             input_html: {class:'btn-transparent',id:'hasSimilarPriors','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Similar Priors?'},
-            wrapper_html: {class:'col-xs-4'}
+            wrapper_html: {class:'col-xs-4 iradio'}
+
 
 
 <script type="text/javascript">
@@ -136,20 +137,11 @@ down: "fa fa-arrow-down"
 });
 </script>
 
-<script type="text/javascript">
+<script>
 $(document).ready(function(){
-$('isJuvenile').iCheck({
-checkedRadioClass: 'fa fa-check-square-o',
-uncheckedRadioClass: 'fa fa-square-o'
-});
-});
-</script>
-
-<script type="text/javascript">
-$(document).ready(function(){
-$('hassimilarPriors').iCheck({
-checkedRadioClass: 'fa fa-check-square-o',
-uncheckedRadioClass: 'fa fa-square-o'
+$('input').iCheck({
+checkboxClass: 'icheckbox_polaris',
+radioClass: 'iradio_polaris'
 });
 });
 </script>
