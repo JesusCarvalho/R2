@@ -1,10 +1,26 @@
 GIT
+  remote: git://github.com/bokmann/font-awesome-rails.git
+  revision: f34cfb5a121a78fd1d9a61de6b00ec0be434fdea
+  specs:
+    font-awesome-rails (4.0.3.1)
+      railties (>= 3.2, < 5.0)
+
+GIT
   remote: git://github.com/plataformatec/simple_form.git
   revision: 9158043eabe5bb70fb055e9d9baef8ede0ba9115
   specs:
     simple_form (3.0.1)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
+
+GIT
+  remote: git://github.com/pry/pry.git
+  revision: 762dc796ded0ab11c37a3a6851252026200508f1
+  specs:
+    pry (0.10.0.pre)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8)
+      slop (~> 3.4)
 
 GIT
   remote: git://github.com/rails/rails.git
@@ -63,6 +79,13 @@ GIT
       sprockets-rails (~> 2.0)
 
 GIT
+  remote: git://github.com/rails/turbolinks.git
+  revision: 65dc3afd1dffb825450c186d20e228061525f55c
+  specs:
+    turbolinks (2.2.2)
+      coffee-rails
+
+GIT
   remote: git://github.com/twbs/bootstrap-sass.git
   revision: 44d139e896a2bc1bd623f9cbcb714465ff3ed11f
   specs:
@@ -73,7 +96,10 @@ GEM
   remote: https://rubygems.org/
   specs:
     arel (5.0.0)
+    bcrypt (3.1.7)
     bcrypt (3.1.7-x86-mingw32)
+    bcrypt-ruby (3.1.5)
+      bcrypt (>= 3.1.3)
     bcrypt-ruby (3.1.5-x86-mingw32)
       bcrypt (>= 3.1.3)
     better_errors (1.1.0)
@@ -94,13 +120,12 @@ GEM
       execjs
     coffee-script-source (1.7.0)
     erubis (2.7.0)
+    eventmachine (1.0.3)
     eventmachine (1.0.3-x86-mingw32)
     execjs (2.0.2)
     faye-websocket (0.7.2)
       eventmachine (>= 0.12.0)
       websocket-driver (>= 0.3.1)
-    font-awesome-rails (4.0.3.1)
-      railties (>= 3.2, < 5.0)
     gibbon (1.1.2)
       httparty
       multi_json (>= 1.3.4)
@@ -122,6 +147,7 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    method_source (0.8.2)
     mime-types (1.25.1)
     minitest (5.3.2)
     momentjs-rails (2.5.1)
@@ -129,6 +155,7 @@ GEM
     multi_json (1.9.2)
     multi_xml (0.5.5)
     pdf-core (0.2.5)
+    pg (0.17.1)
     pg (0.17.1-x86-mingw32)
     pg_search (0.7.3)
       activerecord (>= 3.1)
@@ -150,6 +177,7 @@ GEM
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
+    slop (3.5.0)
     sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -188,7 +216,7 @@ DEPENDENCIES
   cocoon
   coffee-rails (~> 4.0.0)
   faye-websocket
-  font-awesome-rails
+  font-awesome-rails!
   gibbon
   gmaps4rails
   haml
@@ -199,9 +227,11 @@ DEPENDENCIES
   pg_search
   placeholder-gem
   prawn
+  pry!
   rails!
   sass-rails!
   sdoc
   simple_form!
+  turbolinks!
   tzinfo-data
   uglifier (>= 1.3.0)

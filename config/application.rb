@@ -29,6 +29,7 @@ module R2
     # Added for pg_search gem compatibility
     config.active_record.schema_format = :sql
 
-
+    # 2014-04-11 mkdir assets/fonts, copy theme fonts there and add to default pipeline path
+    config.assets.paths << Rails.root.join("app", "assets", "fonts")
   end
 end

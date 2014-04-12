@@ -15,6 +15,7 @@
 //= require jquery_ujs
 //= require placeholder
 //= require bootstrap
+//= require turbolinks
 //= require moment
 //= require bootstrap-datetimepicker
 //= require icheck.min

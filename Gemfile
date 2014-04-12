@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+# irb++
+gem 'pry', :github => 'pry/pry'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', :github => 'rails'
 
@@ -35,7 +38,7 @@ gem 'cocoon'
 gem 'haml'
 
 # Use font-awesome-rails instead of bootstrap glyphicons
-gem 'font-awesome-rails'
+gem 'font-awesome-rails', :github => 'bokmann/font-awesome-rails'
 
 # Comet for dispatch to deputy messages
 gem 'faye-websocket'
@@ -68,7 +71,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-#gem 'turbolinks', :github =>'rails/turbolinks'
+gem 'turbolinks', :github =>'rails/turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder'

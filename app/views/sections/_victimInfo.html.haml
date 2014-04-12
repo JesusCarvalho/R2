@@ -2,6 +2,62 @@
   %section.widget
     %legend.section
       %h3 Victim Info
-    = simple_form_for :header do |f|
-      = f.input :pbso_case_num,:label => false, input_html: {class:'input-transparent', placeholder:'Case #'}
-      = f.input :unit,:collection => TrifoldEnums::Unit.unit_codes,:label => false ,:include_blank => 'Unit', input_html: { class: 'btn-default' }
+    = simple_form_for :victimInfo do |v|
+      .row
+        = v.input :victim_type,:collection => TrifoldEnums::VictimType.victim_types,:label => false ,:include_blank => 'Victim Type',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Victim Type' },
+            wrapper_html:{class:'col-xs-4'}
+        = v.input :residence_type,:collection => TrifoldEnums::ResidenceType.residence_types,:label => false ,:include_blank => 'Residence Type',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Residence Type' },
+            wrapper_html:{class:'col-xs-4'}
+        = v.input :residence_status,:collection => TrifoldEnums::ResidenceStatus.residence_statuses,:label => false ,:include_blank => 'Residence Status',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Residence Status' },
+            wrapper_html:{class:'col-xs-4'}
+        = v.input :race,:collection => TrifoldEnums::RaceCode.race_codes,:label => false ,:include_blank => 'Race',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Race' },
+            wrapper_html:{class:'col-xs-4'}
+        = v.input :sex,:collection => TrifoldEnums::Gender.genders,:label => false,as: :select, :include_blank => 'Gender',
+            input_html: {class:'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Gender'},
+            wrapper_html: {class:'col-xs-4'}
+        = v.input :dob, :label=>false,
+            input_html: { class:'input-transparent date','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Date of Birth', id: 'dob', placeholder:'Date of Birth:' },
+            wrapper_html:{class:'col-xs-4'}
+        = v.input :extent_of_injury,:collection => TrifoldEnums::InjuryExtent.injury_extents,:label => false,as: :select, :include_blank => 'Extent of Injury',
+            input_html: {class:'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Extent of Injury'},
+            wrapper_html: {class:'col-xs-4'}
+        = v.input :treatment_location,:label => false,
+            input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Treatment Location', placeholder:'Where Victim Treated/Taken'},
+            wrapper_html:{class:'col-xs-4'}
+        = v.input :treating_physician,:label => false,
+            input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Treating Physician', placeholder:'Treating Physician'},
+            wrapper_html:{class:'col-xs-4'}
+        = v.input :victim_type,:collection => TrifoldEnums::Premises.premises,:label => false ,:include_blank => 'If Robbery, Premises Code',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Premises Code for Robbery' },
+            wrapper_html:{class:'col-xs-4'}
+        = v.input :sex_crime_object,:collection => TrifoldEnums::SexCrimeObject.sex_crime_objects,:label => false ,:include_blank => 'If Sex Crime, Object Used',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Object Usec in Sex Crime' },
+            wrapper_html:{class:'col-xs-4'}
+        = v.input :victim_relationship_to_suspect,:collection => TrifoldEnums::VictimRelationship.victims_relationships,:label => false ,:include_blank => "Victim's Relationship to Suspect",
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Victim's Relationship to Suspect" },
+            wrapper_html:{class:'col-xs-4'}
+        = v.input :domestic_violence,:label => false,as: :radio_buttons, :label => 'Domestic Violence?',
+            input_html: {class:'btn-transparent iradio',id:'hasSimilarPriors','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Domestic Violence?'},
+            wrapper_html: {class:'form-inline col-xs-2 iradio'}
+        = v.input :injury_type,:label => false,as: :radio_buttons, :label => 'Domestic Violence?',
+            input_html: {class:'btn-transparent iradio',id:'hasSimilarPriors','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Domestic Violence?'},
+            wrapper_html: {class:'form-inline col-xs-2 iradio'}
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+$(function () {
+$('#dob').datetimepicker({
+pickTime: false
+});
+});
+</script>

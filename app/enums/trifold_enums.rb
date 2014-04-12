@@ -218,7 +218,6 @@ class TrifoldEnums < ActiveRecord::Base
     ] 
   end
 
-
   class VictimType < ActiveRecord::Base
     enum victim_type: [
 
