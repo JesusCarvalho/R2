@@ -1,4 +1,12 @@
 GIT
+  remote: git://github.com/airblade/paper_trail.git
+  revision: 5d9b6b7d3c3954edd7e32acfb9b52250ac0ccb6f
+  specs:
+    paper_trail (3.0.1)
+      activerecord (>= 3.0, < 5.0)
+      activesupport (>= 3.0, < 5.0)
+
+GIT
   remote: git://github.com/bokmann/font-awesome-rails.git
   revision: f34cfb5a121a78fd1d9a61de6b00ec0be434fdea
   specs:
@@ -6,8 +14,16 @@ GIT
       railties (>= 3.2, < 5.0)
 
 GIT
+  remote: git://github.com/kossnocorp/jquery.turbolinks.git
+  revision: 76c7a4ab18f64239896c4899b1fac78d84f0aac2
+  specs:
+    jquery-turbolinks (2.0.2)
+      railties (>= 3.1.0)
+      turbolinks
+
+GIT
   remote: git://github.com/plataformatec/simple_form.git
-  revision: 9158043eabe5bb70fb055e9d9baef8ede0ba9115
+  revision: 6b3f9db8906336d8df80475c71b75613e3fc895b
   specs:
     simple_form (3.0.1)
       actionpack (~> 4.0)
@@ -24,7 +40,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: 39a54c648dfed1599479e33766d2e0c96b19654d
+  revision: 80d0dd53caeb55dffcbf3e86b3707d170899f035
   specs:
     actionmailer (4.2.0.alpha)
       actionpack (= 4.2.0.alpha)
@@ -70,7 +86,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/sass-rails.git
-  revision: a5c466c809cde1797f5cc4b447f3a73f1fcb911f
+  revision: 7138bbb401159b116dda4ec9dd4b375dc1d2e59a
   specs:
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
@@ -87,7 +103,7 @@ GIT
 
 GIT
   remote: git://github.com/twbs/bootstrap-sass.git
-  revision: 44d139e896a2bc1bd623f9cbcb714465ff3ed11f
+  revision: 4dfc9219c9bcee076c4ec57b30b1926d3f3af9ac
   specs:
     bootstrap-sass (3.1.1.0)
       sass (~> 3.2)
@@ -96,10 +112,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     arel (5.0.0)
-    bcrypt (3.1.7)
     bcrypt (3.1.7-x86-mingw32)
-    bcrypt-ruby (3.1.5)
-      bcrypt (>= 3.1.3)
     bcrypt-ruby (3.1.5-x86-mingw32)
       bcrypt (>= 3.1.3)
     better_errors (1.1.0)
@@ -120,7 +133,6 @@ GEM
       execjs
     coffee-script-source (1.7.0)
     erubis (2.7.0)
-    eventmachine (1.0.3)
     eventmachine (1.0.3-x86-mingw32)
     execjs (2.0.2)
     faye-websocket (0.7.2)
@@ -133,13 +145,13 @@ GEM
     haml (4.0.5)
       tilt
     hike (1.2.3)
-    httparty (0.13.0)
+    httparty (0.13.1)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     i18n (0.6.9)
-    jbuilder (2.0.5)
-      activesupport (>= 3.0.0)
-      multi_json (>= 1.2.0)
+    jbuilder (2.0.6)
+      activesupport (>= 3.0.0, < 5)
+      multi_json (~> 1.2)
     jquery-rails (3.1.0)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
@@ -155,13 +167,12 @@ GEM
     multi_json (1.9.2)
     multi_xml (0.5.5)
     pdf-core (0.2.5)
-    pg (0.17.1)
     pg (0.17.1-x86-mingw32)
     pg_search (0.7.3)
       activerecord (>= 3.1)
       activesupport (>= 3.1)
       arel
-    placeholder-gem (3.0.0.0)
+    placeholder-gem (3.0.2)
       railties (>= 3.1)
     polyglot (0.3.4)
     prawn (1.0.0)
@@ -183,12 +194,12 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sprockets-rails (2.1.0)
-      actionpack (>= 4.0)
-      activesupport (>= 4.0)
+    sprockets-rails (2.1.3)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
       sprockets (~> 2.8)
     thor (0.19.1)
-    thread_safe (0.3.2)
+    thread_safe (0.3.3)
     tilt (1.4.1)
     treetop (1.4.15)
       polyglot
@@ -222,7 +233,9 @@ DEPENDENCIES
   haml
   jbuilder
   jquery-rails
+  jquery-turbolinks!
   momentjs-rails
+  paper_trail!
   pg
   pg_search
   placeholder-gem

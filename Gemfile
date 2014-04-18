@@ -12,6 +12,9 @@ gem 'pg'
 # Full text search for pg and rails
 gem 'pg_search'
 
+# versioning and auditing database changes
+gem 'paper_trail', :github => 'airblade/paper_trail'
+
 # breadcrumb on rails
 gem 'breadcrumbs_on_rails'
 
@@ -72,6 +75,9 @@ gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks', :github =>'rails/turbolinks'
+
+# woe is Man
+gem 'jquery-turbolinks', :github => 'kossnocorp/jquery.turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder'

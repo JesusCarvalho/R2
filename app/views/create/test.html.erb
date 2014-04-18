@@ -12,15 +12,7 @@
 <div class="container">
 <div class="row">
 
-
-
     <h3>New IRF</h3>
-
-    <!-- tabs left -->
-
-
-    <!-- Start form here -->
-
 
     <div class="tabbable tabs-left">
       <ul class="nav nav-tabs">
@@ -55,6 +47,11 @@
           <%= render 'sections/offenses' %>
         </div>
         <div class="tab-pane" id="VictimTab">
+          <script type="text/javascript">
+              $(function () {
+                  $('#vicdob').datetimepicker();
+              });
+          </script>
           <%= render 'sections/victimInfo' %>
         </div>
         <div class="tab-pane" id="NameListTab">
@@ -91,13 +88,7 @@
           <%= render 'sections/multimedia' %>
         </div>
       </div>
-
-
-      <!-- /tabs -->
-
     </div>
-    <!-- End form tag here-->
-
 </div>
 </div>
 

@@ -20,8 +20,8 @@
             input_html: {class:'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Gender'},
             wrapper_html: {class:'col-xs-4'}
         = v.input :dob, :label=>false,
-            input_html: { class:'input-transparent date','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Date of Birth', id: 'dob', placeholder:'Date of Birth:' },
-            wrapper_html:{class:'col-xs-4'}
+            input_html: {id: 'vicdob', class:'input-transparent date','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Date of Birth', placeholder:'Date of Birth:' },
+            wrapper_html:{class:'col-xs-4', id:'vicdob'}
         = v.input :extent_of_injury,:collection => TrifoldEnums::InjuryExtent.injury_extents,:label => false,as: :select, :include_blank => 'Extent of Injury',
             input_html: {class:'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Extent of Injury'},
             wrapper_html: {class:'col-xs-4'}
@@ -39,25 +39,19 @@
             wrapper_html:{class:'col-xs-4'}
         = v.input :victim_relationship_to_suspect,:collection => TrifoldEnums::VictimRelationship.victims_relationships,:label => false ,:include_blank => "Victim's Relationship to Suspect",
             input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Victim's Relationship to Suspect" },
-            wrapper_html:{class:'col-xs-4'}
+            wrapper_html: { class:'col-xs-4'}
+        %legend.section
+        %h4.col-lg-offset-4 Injury Type (check all that apply)
+        = v.collection_check_boxes :injury_type,TrifoldEnums::InjuryType.injury_types.to_a,:first.to_s,:first.to_s,
+            input_html: { class:'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Injury Type (select all that apply)'},
+            item_wrapper_tag: :div,
+            item_wrapper_class: 'col-xs-4'
         = v.input :domestic_violence,:label => false,as: :radio_buttons, :label => 'Domestic Violence?',
-            input_html: {class:'btn-transparent iradio',id:'hasSimilarPriors','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Domestic Violence?'},
-            wrapper_html: {class:'form-inline col-xs-2 iradio'}
-        = v.input :injury_type,:label => false,as: :radio_buttons, :label => 'Domestic Violence?',
-            input_html: {class:'btn-transparent iradio',id:'hasSimilarPriors','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Domestic Violence?'},
-            wrapper_html: {class:'form-inline col-xs-2 iradio'}
+            input_html: { class:'btn-transparent iradio','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Domestic Violence?'},
+            wrapper_html: { class:'form-inline col-xs-2 iradio'}
 
 
 
 
 
 
-
-
-<script type="text/javascript">
-$(function () {
-$('#dob').datetimepicker({
-pickTime: false
-});
-});
-</script>
