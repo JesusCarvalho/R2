@@ -137,14 +137,20 @@ down: "fa fa-arrow-down"
 });
 </script>
 
-<script>
-$(document).ready(function(){
-$('input').iCheck({
-checkboxClass: 'icheckbox_polaris',
-radioClass: 'iradio_polaris'
+
+
+
+<script type="text/javascript">
+$(function () {
+$('#vicdob').datetimepicker({
+pickTime: false,
+icons: {
+time: "fa fa-clock-o",
+date: "fa fa-calendar",
+up: "fa fa-arrow-up",
+down: "fa fa-arrow-down"
+}
 });
 });
 </script>
-
-
 

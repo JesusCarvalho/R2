@@ -31,5 +31,8 @@ module R2
 
     # 2014-04-11 mkdir assets/fonts, copy theme fonts there and add to default pipeline path
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
+
+    # 2014-04-17 mkdir and add pdf template for stamping
+    config.assets.paths << Rails.root.join("app", "assets", "pdf")
   end
 end

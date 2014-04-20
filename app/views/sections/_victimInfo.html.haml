@@ -1,7 +1,7 @@
 .col-sm-offset-2
   %section.widget
     %legend.section
-      %h3 Victim Info
+      %h2 Victim Info
     = simple_form_for :victimInfo do |v|
       .row
         = v.input :victim_type,:collection => TrifoldEnums::VictimType.victim_types,:label => false ,:include_blank => 'Victim Type',
@@ -21,7 +21,7 @@
             wrapper_html: {class:'col-xs-4'}
         = v.input :dob, :label=>false,
             input_html: {id: 'vicdob', class:'input-transparent date','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Date of Birth', placeholder:'Date of Birth:' },
-            wrapper_html:{class:'col-xs-4', id:'vicdob'}
+            wrapper_html:{class:'col-xs-4'}
         = v.input :extent_of_injury,:collection => TrifoldEnums::InjuryExtent.injury_extents,:label => false,as: :select, :include_blank => 'Extent of Injury',
             input_html: {class:'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Extent of Injury'},
             wrapper_html: {class:'col-xs-4'}
@@ -35,22 +35,35 @@
             input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Premises Code for Robbery' },
             wrapper_html:{class:'col-xs-4'}
         = v.input :sex_crime_object,:collection => TrifoldEnums::SexCrimeObject.sex_crime_objects,:label => false ,:include_blank => 'If Sex Crime, Object Used',
-            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Object Usec in Sex Crime' },
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Object Used in Sex Crime' },
             wrapper_html:{class:'col-xs-4'}
         = v.input :victim_relationship_to_suspect,:collection => TrifoldEnums::VictimRelationship.victims_relationships,:label => false ,:include_blank => "Victim's Relationship to Suspect",
             input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Victim's Relationship to Suspect" },
             wrapper_html: { class:'col-xs-4'}
         %legend.section
-        %h4.col-lg-offset-4 Injury Type (check all that apply)
+          %h3.col-lg-offset-4 Injury Type (check all that apply)
         = v.collection_check_boxes :injury_type,TrifoldEnums::InjuryType.injury_types.to_a,:first.to_s,:first.to_s,
-            input_html: { class:'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Injury Type (select all that apply)'},
+            input_html: { class:'btn-transparent fieldset','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Injury Type (select all that apply)'},
             item_wrapper_tag: :div,
             item_wrapper_class: 'col-xs-4'
         = v.input :domestic_violence,:label => false,as: :radio_buttons, :label => 'Domestic Violence?',
             input_html: { class:'btn-transparent iradio','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Domestic Violence?'},
-            wrapper_html: { class:'form-inline col-xs-2 iradio'}
+            wrapper_html: { class:'form-inline col-xs-4 iradio label-center'}
 
 
+<script type="text/javascript">
+$(function () {
+$('#vicdob').datetimepicker({
+pickTime: false,
+icons: {
+time: "fa fa-clock-o",
+date: "fa fa-calendar",
+up: "fa fa-arrow-up",
+down: "fa fa-arrow-down"
+}
+});
+});
+</script>
 
 
 

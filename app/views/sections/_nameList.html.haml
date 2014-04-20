@@ -1,44 +1,44 @@
 .col-xs-offset-2
   %section.widget
     %legend.section
-      %h3 Names List
+      %h2 Names List
     = simple_form_for :names_list do |nl|
       .row
         = nl.input :last_name,:label => false,
-            input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'LAst NAme', placeholder:'Last Name'},
+            input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Last Name', placeholder:'Last Name'},
             wrapper_html:{class:'col-xs-4'}
-        = nl.input :date_reported, :label=>false,
-            input_html: { class:'input-transparent date','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Date Reported #', id: 'date_reported', placeholder:'Date Reported:' },
+        = nl.input :first_name,:label => false,
+            input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'First Name', placeholder:'First Name'},
             wrapper_html:{class:'col-xs-4'}
-        = nl.input :unit,:collection => TrifoldEnums::Unit.unit_codes,:label => false ,:include_blank => 'Unit',
-            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Unit' },
+        = nl.input :middle_name,:label => false,
+            input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Middle Name', placeholder:'Middle Name'},
             wrapper_html:{class:'col-xs-4'}
-        = nl.input :occurred_from, :label=>false,
-            input_html: { class:'input-transparent date', id: 'occurred_from', placeholder:'Occurred From:','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Occurred From'},
+        = nl.input :race,:collection => TrifoldEnums::RaceCode.race_codes,:label => false ,:include_blank => 'Race',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Race' },
+            wrapper_html:{class:'col-xs-4'}
+        = nl.input :sex,:collection => TrifoldEnums::Gender.genders,:label => false ,:include_blank => 'Gender',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Gender' },
+            wrapper_html:{class:'col-xs-4'}
+        = nl.input :date_of_birth, :label=>false,
+            input_html: { class:'input-transparent date','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Date of Birth', id: 'date_of_birth', placeholder:'Date of Birth:' },
+            wrapper_html:{class:'col-xs-4'}
+        = nl.input :height,:label => false,
+            input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Height:', placeholder:'Height'},
+            wrapper_html:{class:'col-xs-4'}
+        = nl.input :weight, :label=>false,
+            input_html: { class:'input-transparent',  placeholder:'Weight:','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Weight'},
             wrapper_html:{class:'col-xs-4 '}
-        = nl.input :occurred_to,   :label=>false,
-            input_html: { class:'input-transparent date',   placeholder:'Occurred To:', id:'occurred_to','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Occurred To'},
+        = nl.input :hair_color,   :label=>false,
+            input_html: { class:'input-transparent',   placeholder:'Hair Color:', 'data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Hair Color'},
             wrapper_html:{class:'col-xs-4'}
-        = nl.input :disposition,:collection => TrifoldEnums::Disposition.disposition_codes,:label => false ,:include_blank => 'Disposition',
-            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Disposition' },
+        = nl.input :eye_color, :label => false,
+            input_html: { class: 'input-transparent', placeholder:'Eye Color:','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Eye Color' },
             wrapper_html:{class:'col-xs-4'}
-        = nl.input :zone, :label => false,
-            input_html: {class:'input-transparent', placeholder:'Zone','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Zone'},
+        = nl.input :other, :label => false,
+            input_html: {class:'input-transparent', placeholder:'Other:','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Other'},
             wrapper_html:{class:'col-xs-4'}
-        = nl.input :ds_id,:label => false,
-            input_html: {class:'input-transparent', placeholder:'D/S ID#','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'D/S ID'},
-            wrapper_html:{class:'col-xs-4'}
-        = nl.input :exception_type,:collection => TrifoldEnums::ExceptionType.exception_type_codes,:label => false ,:include_blank => 'Exception Type',
-            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Exception Type' },
-            wrapper_html:{class:'col-md-4'}
-        = nl.input :incident_location_address,:label => false,
-            input_html: {class:'input-transparent', placeholder:'Incident Location Address', 'data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Incident Location Address'},
-            wrapper_html:{class:'col-xs-4'}
-        = nl.input :apartment_number,:label => false,
-            input_html: {class:'input-transparent', placeholder:'Apt #','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Apartment #'},
-            wrapper_html:{class:'col-xs-4'}
-        = nl.input :disposition,:collection => TrifoldEnums::LocationType.location_type_codes,:label => false ,:include_blank => 'Location Type',
-            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Location Type' },
+        = nl.input :local_address,:label => false,
+            input_html: {class:'input-transparent', placeholder:'Local Address:','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Local Address'},
             wrapper_html:{class:'col-xs-4'}
         = nl.input :city,:label => false,
             input_html: {class:'input-transparent', placeholder:'City','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'City'},
@@ -46,60 +46,32 @@
         = nl.input :state,:label => false,
             input_html: {class:'input-transparent', placeholder:'State','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'State'},
             wrapper_html:{class:'col-xs-4'}
-        = nl.input :weapon_type,:collection => TrifoldEnums::Weapon.weapon_types,:label => false ,:include_blank => 'Weapon Type',
-            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Weapon Type' },
-            wrapper_html:{class:'col-xs-4'}
         = nl.input :zip_code,:label => false,
             input_html: {class:'input-transparent', placeholder:'Zip','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Zip code'},
             wrapper_html:{class:'col-xs-4'}
-        = nl.input :number_arrested,:label => false,
-            input_html: {class:'input-transparent', placeholder:'# Arrested','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Number Arrested'},
+        = nl.input :subdivision,:label => false,
+            input_html: {class:'input-transparent', placeholder:'Subdivision: ','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Subdivision'},
             wrapper_html:{class:'col-xs-4'}
-        = nl.input :crime_code,:collection => TrifoldEnums::Crime.crime_codes,:label => false ,:include_blank => 'Crime Code',
-            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Crime Code' },
+        = nl.input :second_address,:label => false,
+            input_html: {class:'input-transparent', placeholder:'Secondary Address:','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Secondary Address'},
             wrapper_html:{class:'col-xs-4'}
-        = nl.input :number_of_offenses,:label => false,
-            input_html: {class:'input-transparent', placeholder:'# of Offenses','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Number of Offenses'},
+        = nl.input :second_city,:label => false,
+            input_html: {class:'input-transparent', placeholder:'Secondary City','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Secondary City'},
             wrapper_html:{class:'col-xs-4'}
-        = nl.input :number_of_victims,:label => false,
-            input_html: {class:'input-transparent', placeholder:'# of Victims','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Number of Victims'},
+        = nl.input :second_state,:label => false,
+            input_html: {class:'input-transparent', placeholder:'Secondary State','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Secondary State'},
             wrapper_html:{class:'col-xs-4'}
-        = nl.input :non_crime_code,:collection => TrifoldEnums::NonCrime.non_crime_codes,:label => false ,:include_blank => 'Non Crime Code',
-            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Non-Crime Code' },
+        = nl.input :second_zip_code,:label => false,
+            input_html: {class:'input-transparent', placeholder:'Secondary Zip','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Secondary Zip code'},
             wrapper_html:{class:'col-xs-4'}
-        = nl.input :number_of_suspects,:label => false,
-            input_html: {class:'input-transparent', placeholder:'# of Suspects','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Number of Suspects'},
+        = nl.input :business_address,:label => false,
+            input_html: {class:'input-transparent', placeholder:'Business Address','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Business Address'},
             wrapper_html:{class:'col-xs-4'}
-        = nl.input :number_of_premises_entered,:label => false,
-            input_html: {class:'input-transparent', placeholder:'# of Premises Entered','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Number of Premises Entered'},
-            wrapper_html:{class:'col-xs-4'}
-        = nl.input :drug_activity,:collection => TrifoldEnums::DrugActivity.drug_activities,:label => false ,:include_blank => 'Drug Activity',
-            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Drug Activity' },
-            wrapper_html:{class:'col-xs-4'}
-        = nl.input :number_of_vehicles_stolen,:label => false,
-            input_html: {class:'input-transparent', placeholder:'# of Vehicles Stolen','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Number of Vehicles Stolen'},
-            wrapper_html:{class:'col-xs-4'}
-        = nl.input :zulu_code,:label => false,
-            input_html: {class:'input-transparent', placeholder:'Zulu Code','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Zulu Code'},
-            wrapper_html:{class:'col-xs-4'}
-        = nl.input :drug_type,:collection => TrifoldEnums::DrugType.drug_types,:label => false ,:include_blank => 'Drug Type',
-            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Drug Type' },
-            wrapper_html:{class:'col-xs-4'}
-        = nl.input :charge,:label => false,as: :text,
-            input_html: {class:'input-transparent', placeholder:'Charge','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Charge', 'rows'=>3},
-            wrapper_html:{class:'col-md-8'}
-        = nl.input :juvenile_arrest,:label => false,as: :radio_buttons,:label => 'Juvenile Arrested?',
-            input_html: {class:'btn-transparent iradio',id:'isJuvenile','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Juvenile Arrest?'},
-            wrapper_html: {class:'form-inline col-xs-2 iradio'}
-        = nl.input :prior_similar_incident,:label => false,as: :radio_buttons, :label => 'Similar Priors?',
-            input_html: {class:'btn-transparent iradio',id:'hasSimilarPriors','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Similar Priors?'},
-            wrapper_html: {class:'form-inline col-xs-2 iradio'}
-
 
 
 <script type="text/javascript">
 $(function () {
-$('#date_reported').datetimepicker({
+$('#date_of_birth').datetimepicker({
 pickTime: false,
 icons: {
 time: "fa fa-clock-o",
@@ -110,41 +82,4 @@ down: "fa fa-arrow-down"
 });
 });
 </script>
-
-<script type="text/javascript">
-$(function () {
-$('#occurred_from').datetimepicker({
-icons: {
-time: "fa fa-clock-o",
-date: "fa fa-calendar",
-up: "fa fa-arrow-up",
-down: "fa fa-arrow-down"
-}
-});
-});
-</script>
-
-<script type="text/javascript">
-$(function () {
-$('#occurred_to').datetimepicker({
-icons: {
-time: "fa fa-clock-o",
-date: "fa fa-calendar",
-up: "fa fa-arrow-up",
-down: "fa fa-arrow-down"
-}
-});
-});
-</script>
-
-<script>
-$(document).ready(function(){
-$('input').iCheck({
-checkboxClass: 'icheckbox_polaris',
-radioClass: 'iradio_polaris'
-});
-});
-</script>
-
-
 

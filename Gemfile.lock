@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/airblade/paper_trail.git
-  revision: 5d9b6b7d3c3954edd7e32acfb9b52250ac0ccb6f
+  revision: eb36d1a9e0ba85e2c359c35fdd2092797770db2b
   specs:
     paper_trail (3.0.1)
       activerecord (>= 3.0, < 5.0)
@@ -14,6 +14,13 @@ GIT
       railties (>= 3.2, < 5.0)
 
 GIT
+  remote: git://github.com/joliss/jquery-ui-rails.git
+  revision: 8b2d28d20d4d9372f5ae6318a878bfec275d7b10
+  specs:
+    jquery-ui-rails (4.2.1)
+      railties (>= 3.2.16)
+
+GIT
   remote: git://github.com/kossnocorp/jquery.turbolinks.git
   revision: 76c7a4ab18f64239896c4899b1fac78d84f0aac2
   specs:
@@ -23,24 +30,39 @@ GIT
 
 GIT
   remote: git://github.com/plataformatec/simple_form.git
-  revision: 6b3f9db8906336d8df80475c71b75613e3fc895b
+  revision: 3805d187a11a0919e7ba9880bf57e8d0fb866a5f
   specs:
-    simple_form (3.0.1)
+    simple_form (3.1.0.rc1)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
 
 GIT
   remote: git://github.com/pry/pry.git
-  revision: 762dc796ded0ab11c37a3a6851252026200508f1
+  revision: 487f54852c51e139fd25972a45d5777216b8dbcb
   specs:
     pry (0.10.0.pre)
       coderay (~> 1.1.0)
-      method_source (~> 0.8)
+      method_source (~> 0.8.1)
       slop (~> 3.4)
 
 GIT
+  remote: git://github.com/rafaelmacedo/masked_input-rails.git
+  revision: 354f528c11abfd095cdf241a127b5da38690d596
+  specs:
+    masked_input-rails (1.2.0.pre)
+      railties (~> 4.0)
+
+GIT
+  remote: git://github.com/rails/jquery-rails.git
+  revision: f08040b92417faf43b3f92b6431f5431a1c363de
+  specs:
+    jquery-rails (3.1.0)
+      railties (>= 3.0, < 5.0)
+      thor (>= 0.14, < 2.0)
+
+GIT
   remote: git://github.com/rails/rails.git
-  revision: 80d0dd53caeb55dffcbf3e86b3707d170899f035
+  revision: c524556e58bcacade1d67c057c0fa30c0bd13327
   specs:
     actionmailer (4.2.0.alpha)
       actionpack (= 4.2.0.alpha)
@@ -96,22 +118,22 @@ GIT
 
 GIT
   remote: git://github.com/rails/turbolinks.git
-  revision: 65dc3afd1dffb825450c186d20e228061525f55c
+  revision: 3aab7249bb0b695b49f2a31493653f0dce87729c
   specs:
     turbolinks (2.2.2)
       coffee-rails
 
 GIT
   remote: git://github.com/twbs/bootstrap-sass.git
-  revision: 4dfc9219c9bcee076c4ec57b30b1926d3f3af9ac
+  revision: 4ae14a582bfb37e9af7827eddee28807b87f0663
   specs:
-    bootstrap-sass (3.1.1.0)
+    bootstrap-sass (3.1.1.1)
       sass (~> 3.2)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    arel (5.0.0)
+    arel (5.0.1.20140414130214)
     bcrypt (3.1.7-x86-mingw32)
     bcrypt-ruby (3.1.5-x86-mingw32)
       bcrypt (>= 3.1.3)
@@ -152,16 +174,13 @@ GEM
     jbuilder (2.0.6)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
-    jquery-rails (3.1.0)
-      railties (>= 3.0, < 5.0)
-      thor (>= 0.14, < 2.0)
     json (1.8.1)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     method_source (0.8.2)
     mime-types (1.25.1)
-    minitest (5.3.2)
+    minitest (5.3.3)
     momentjs-rails (2.5.1)
       railties (>= 3.1)
     multi_json (1.9.2)
@@ -181,7 +200,7 @@ GEM
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
-    rake (10.2.2)
+    rake (10.3.1)
     rdoc (4.1.1)
       json (~> 1.4)
     sass (3.2.19)
@@ -232,8 +251,10 @@ DEPENDENCIES
   gmaps4rails
   haml
   jbuilder
-  jquery-rails
+  jquery-rails!
   jquery-turbolinks!
+  jquery-ui-rails!
+  masked_input-rails!
   momentjs-rails
   paper_trail!
   pg

@@ -15,11 +15,11 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require placeholder
-//= require bootstrap
 //= require turbolinks
 //= require moment
+//= require bootstrap
 //= require bootstrap-datetimepicker
-//= require jquery.icheck
+//= require jquery.maskedinput-1.3
 
 
 

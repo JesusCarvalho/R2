@@ -34,6 +34,9 @@ gem 'bootstrap3-datetimepicker-rails'
 # placeholder hack for IE
 gem 'placeholder-gem'
 
+# masked inputs using jquery
+gem 'masked_input-rails', :github => 'rafaelmacedo/masked_input-rails'
+
 # for dynamic nested forms
 gem 'cocoon'
 
@@ -71,7 +74,10 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+gem 'jquery-rails', :github => 'rails/jquery-rails'
+
+# not bundled by default anymore with above
+gem 'jquery-ui-rails', :github => 'joliss/jquery-ui-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks', :github =>'rails/turbolinks'
