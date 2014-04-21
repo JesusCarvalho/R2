@@ -1,8 +1,5 @@
 source 'https://rubygems.org'
 
-# irb++
-gem 'pry', :github => 'pry/pry'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', :github => 'rails'
 
@@ -78,6 +75,9 @@ gem 'jquery-rails', :github => 'rails/jquery-rails'
 
 # not bundled by default anymore with above
 gem 'jquery-ui-rails', :github => 'joliss/jquery-ui-rails'
+
+# for all the goddamn deprecated features used by the plugins i need
+gem 'jquery-migrate-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks', :github =>'rails/turbolinks'

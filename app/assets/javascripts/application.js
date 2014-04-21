@@ -19,6 +19,7 @@
 //= require moment
 //= require bootstrap
 //= require bootstrap-datetimepicker
+//= require jquery-migrate-min
 //= require jquery.maskedinput-1.3
 
 

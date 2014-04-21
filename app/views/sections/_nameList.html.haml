@@ -67,6 +67,22 @@
         = nl.input :business_address,:label => false,
             input_html: {class:'input-transparent', placeholder:'Business Address','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Business Address'},
             wrapper_html:{class:'col-xs-4'}
+        = nl.input :business_phone,:label => false,
+            input_html: {class:'input-transparent',id:'business_phone', placeholder:'Business Phone','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Business Phone'},
+            wrapper_html:{class:'col-xs-4'}
+        = nl.input :home_phone,:label => false,
+            input_html: {class:'input-transparent',id:'home_phone', placeholder:'Home Phone','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Home Phone'},
+            wrapper_html:{class:'col-xs-4'}
+        = nl.input :mobile_phone,:label => false,
+            input_html: {class:'input-transparent',id:'mobile_phone', placeholder:'Mobile Phone','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Mobile Phone'},
+            wrapper_html:{class:'col-xs-4'}
+        %legend.section
+          %h3.col-lg-offset-4 Roles (check all that apply)
+        = nl.collection_check_boxes :roles, TrifoldEnums::Roles.roles.to_a,:first.to_s,:first.to_s,
+            input_html: { class:'btn-transparent fieldset','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Roles (select all that apply)'},
+            item_wrapper_tag: :div,
+            item_wrapper_class: 'col-xs-4'
+
 
 
 <script type="text/javascript">
@@ -83,3 +99,20 @@ down: "fa fa-arrow-down"
 });
 </script>
 
+<script type="text/javascript">
+$(function(){
+$('#business_phone').mask("(999) 999-9999? x99999");
+});
+</script>
+
+<script type="text/javascript">
+$(function(){
+$('#home_phone').mask("(999) 999-9999");
+});
+</script>
+
+<script type="text/javascript">
+$(function(){
+$('#mobile_phone').mask("(999) 999-9999");
+});
+</script>
