@@ -1,7 +1,76 @@
-.col-sm-offset-2
+.col-xs-offset-2
   %section.widget
     %legend.section
-      %h3 Property Crime Details
-    = simple_form_for :header do |f|
-      = f.input :pbso_case_num,:label => false, input_html: {class:'input-transparent', placeholder:'Case #'}
-      = f.input :unit,:collection => TrifoldEnums::Unit.unit_codes,:label => false ,:include_blank => 'Unit', input_html: { class: 'btn-default' }
+      %h2 Property Crime
+    = simple_form_for :property_crime_details do |pcd|
+      .row
+        = pcd.input :nature_of_larceny,:collection => TrifoldEnums::LarcenyNature.larceny_natures,:label => false ,:include_blank => 'Nature of Larceny',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Nature of Larceny' },
+            wrapper_html:{class:'col-xs-4'}
+        = pcd.input :point_of_entry,:collection => TrifoldEnums::EntryPoint.entry_points,:label => false ,:include_blank => 'Point of Entry',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Poinr of Entry' },
+            wrapper_html:{class:'col-xs-4'}
+        = pcd.input :method_of_entry,:collection => TrifoldEnums::EntryMethod.entry_methods,:label => false ,:include_blank => 'Method of Entry',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Method of Entry' },
+            wrapper_html:{class:'col-xs-4'}
+        = pcd.input :modus_operandi,:collection => TrifoldEnums::ModusOperandi.modus_operandis,:label => false ,:include_blank => 'Modus Operandi',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Modus Operandi' },
+            wrapper_html:{class:'col-xs-4'}
+        = pcd.input :property_status,:collection => TrifoldEnums::PropertyStatus.property_statuses,:label => false ,:include_blank => 'Property Status',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Property Status' },
+            wrapper_html:{class:'col-xs-4'}
+        = pcd.input :property_type,:collection => TrifoldEnums::PropertyType.property_types,:label => false ,:include_blank => 'Property Type',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Property Type' },
+            wrapper_html:{class:'col-xs-4'}
+        = pcd.input :serial_number_or_description,:label => false,
+            input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Serial # / Description:', placeholder:'Serial # / Description'},
+            wrapper_html:{class:'col-xs-4'}
+        = pcd.input :value_stoled_or_purchased,:label => false,
+            input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Value Stolen / Purchased (USD)', placeholder:'Value Stolen / Purchased (USD)'},
+            wrapper_html:{class:'col-xs-4'}
+        = pcd.input :value_recovered_or_seized,:label => false,
+            input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Value Recovered / Seized (USD)', placeholder:'Value Recovered / Seized (USD)'},
+            wrapper_html:{class:'col-xs-4'}
+
+
+<script type="text/javascript">
+$(function () {
+$('#date_reported').datetimepicker({
+pickTime: false,
+icons: {
+time: "fa fa-clock-o",
+date: "fa fa-calendar",
+up: "fa fa-arrow-up",
+down: "fa fa-arrow-down"
+}
+});
+});
+</script>
+
+<script type="text/javascript">
+$(function () {
+$('#occurred_from').datetimepicker({
+icons: {
+time: "fa fa-clock-o",
+date: "fa fa-calendar",
+up: "fa fa-arrow-up",
+down: "fa fa-arrow-down"
+}
+});
+});
+</script>
+
+<script type="text/javascript">
+$(function () {
+$('#occurred_to').datetimepicker({
+icons: {
+time: "fa fa-clock-o",
+date: "fa fa-calendar",
+up: "fa fa-arrow-up",
+down: "fa fa-arrow-down"
+}
+});
+});
+</script>
+
+

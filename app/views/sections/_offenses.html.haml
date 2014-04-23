@@ -1,7 +1,7 @@
 .col-xs-offset-2
   %section.widget
     %legend.section
-      %h3 Offense List
+      %h2 Offense List
     = simple_form_for :offense do |o|
       .row
         = o.input :attempt_code,:collection => TrifoldEnums::Attempt.attempt_codes,:label => false, :include_blank => 'Attempt Code',

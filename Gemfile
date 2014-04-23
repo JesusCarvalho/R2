@@ -21,6 +21,9 @@ gem 'simple_form', :github => 'plataformatec/simple_form'
 # bootstrap for rails
 gem 'bootstrap-sass', :github => 'twbs/bootstrap-sass'
 
+# for dropdowns that can hold multiple values simultaneously
+gem 'bootstrap-multiselect-rails'
+
 # gem for ACL
 gem 'cancan'
 
@@ -77,6 +80,7 @@ gem 'jquery-rails', :github => 'rails/jquery-rails'
 gem 'jquery-ui-rails', :github => 'joliss/jquery-ui-rails'
 
 # for all the goddamn deprecated features used by the plugins i need
+# to make IE7 behave like a goddamn modern browser
 gem 'jquery-migrate-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
