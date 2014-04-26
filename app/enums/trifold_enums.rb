@@ -1019,8 +1019,8 @@ class TrifoldEnums < ActiveRecord::Base
         :'Other',
         :'Employee',
         :'Supervisor',
-        :'NotApplicable',
-        :'BusinessAssociate'
+        :'Business Associate'
+        :'Neighbor'
 
     ]
   end

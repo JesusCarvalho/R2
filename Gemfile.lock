@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/airblade/paper_trail.git
-  revision: eb36d1a9e0ba85e2c359c35fdd2092797770db2b
+  revision: 6a0c9aa8198c5edf6f031d4a2a0668262a892898
   specs:
     paper_trail (3.0.1)
       activerecord (>= 3.0, < 5.0)
@@ -8,9 +8,9 @@ GIT
 
 GIT
   remote: git://github.com/bokmann/font-awesome-rails.git
-  revision: f34cfb5a121a78fd1d9a61de6b00ec0be434fdea
+  revision: 7f096ec8544596f605e882886db5954d23b8b8a0
   specs:
-    font-awesome-rails (4.0.3.1)
+    font-awesome-rails (4.0.3.2)
       railties (>= 3.2, < 5.0)
 
 GIT
@@ -22,7 +22,7 @@ GIT
 
 GIT
   remote: git://github.com/kossnocorp/jquery.turbolinks.git
-  revision: 76c7a4ab18f64239896c4899b1fac78d84f0aac2
+  revision: 73b9cb57b99c45c04743b40280af0716096c29a9
   specs:
     jquery-turbolinks (2.0.2)
       railties (>= 3.1.0)
@@ -30,7 +30,7 @@ GIT
 
 GIT
   remote: git://github.com/plataformatec/simple_form.git
-  revision: 3805d187a11a0919e7ba9880bf57e8d0fb866a5f
+  revision: d7306558665d38fe3a0c277ce263e99f635958de
   specs:
     simple_form (3.1.0.rc1)
       actionpack (~> 4.0)
@@ -52,54 +52,8 @@ GIT
       thor (>= 0.14, < 2.0)
 
 GIT
-  remote: git://github.com/rails/rails.git
-  revision: c524556e58bcacade1d67c057c0fa30c0bd13327
-  specs:
-    actionmailer (4.2.0.alpha)
-      actionpack (= 4.2.0.alpha)
-      actionview (= 4.2.0.alpha)
-      mail (~> 2.5.4)
-    actionpack (4.2.0.alpha)
-      actionview (= 4.2.0.alpha)
-      activesupport (= 4.2.0.alpha)
-      rack (~> 1.5.2)
-      rack-test (~> 0.6.2)
-    actionview (4.2.0.alpha)
-      activesupport (= 4.2.0.alpha)
-      builder (~> 3.1)
-      erubis (~> 2.7.0)
-    activemodel (4.2.0.alpha)
-      activesupport (= 4.2.0.alpha)
-      builder (~> 3.1)
-    activerecord (4.2.0.alpha)
-      activemodel (= 4.2.0.alpha)
-      activesupport (= 4.2.0.alpha)
-      arel (~> 5.0.0)
-    activesupport (4.2.0.alpha)
-      i18n (~> 0.6, >= 0.6.9)
-      json (~> 1.7, >= 1.7.7)
-      minitest (~> 5.1)
-      thread_safe (~> 0.1)
-      tzinfo (~> 1.1)
-    rails (4.2.0.alpha)
-      actionmailer (= 4.2.0.alpha)
-      actionpack (= 4.2.0.alpha)
-      actionview (= 4.2.0.alpha)
-      activemodel (= 4.2.0.alpha)
-      activerecord (= 4.2.0.alpha)
-      activesupport (= 4.2.0.alpha)
-      bundler (>= 1.3.0, < 2.0)
-      railties (= 4.2.0.alpha)
-      sprockets-rails (~> 2.1)
-    railties (4.2.0.alpha)
-      actionpack (= 4.2.0.alpha)
-      activesupport (= 4.2.0.alpha)
-      rake (>= 0.8.7)
-      thor (>= 0.18.1, < 2.0)
-
-GIT
   remote: git://github.com/rails/sass-rails.git
-  revision: 7138bbb401159b116dda4ec9dd4b375dc1d2e59a
+  revision: 07011eb7fa656b4b16de33fa8e6b161406f99d82
   specs:
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
@@ -109,14 +63,14 @@ GIT
 
 GIT
   remote: git://github.com/rails/turbolinks.git
-  revision: 3aab7249bb0b695b49f2a31493653f0dce87729c
+  revision: 23e5937ca74d4e81f8322c7afb735d096186061d
   specs:
     turbolinks (2.2.2)
       coffee-rails
 
 GIT
   remote: git://github.com/twbs/bootstrap-sass.git
-  revision: 4ae14a582bfb37e9af7827eddee28807b87f0663
+  revision: 0d25afc31914c4d31a3129b1b1bc3d8fc254824b
   specs:
     bootstrap-sass (3.1.1.1)
       sass (~> 3.2)
@@ -124,6 +78,32 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
+    actionmailer (4.1.0)
+      actionpack (= 4.1.0)
+      actionview (= 4.1.0)
+      mail (~> 2.5.4)
+    actionpack (4.1.0)
+      actionview (= 4.1.0)
+      activesupport (= 4.1.0)
+      rack (~> 1.5.2)
+      rack-test (~> 0.6.2)
+    actionview (4.1.0)
+      activesupport (= 4.1.0)
+      builder (~> 3.1)
+      erubis (~> 2.7.0)
+    activemodel (4.1.0)
+      activesupport (= 4.1.0)
+      builder (~> 3.1)
+    activerecord (4.1.0)
+      activemodel (= 4.1.0)
+      activesupport (= 4.1.0)
+      arel (~> 5.0.0)
+    activesupport (4.1.0)
+      i18n (~> 0.6, >= 0.6.9)
+      json (~> 1.7, >= 1.7.7)
+      minitest (~> 5.1)
+      thread_safe (~> 0.1)
+      tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
     bcrypt (3.1.7)
     bcrypt (3.1.7-x86-mingw32)
@@ -154,7 +134,7 @@ GEM
     eventmachine (1.0.3)
     eventmachine (1.0.3-x86-mingw32)
     execjs (2.0.2)
-    faye-websocket (0.7.2)
+    faye-websocket (0.7.3)
       eventmachine (>= 0.12.0)
       websocket-driver (>= 0.3.1)
     gibbon (1.1.2)
@@ -198,6 +178,21 @@ GEM
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
+    rails (4.1.0)
+      actionmailer (= 4.1.0)
+      actionpack (= 4.1.0)
+      actionview (= 4.1.0)
+      activemodel (= 4.1.0)
+      activerecord (= 4.1.0)
+      activesupport (= 4.1.0)
+      bundler (>= 1.3.0, < 2.0)
+      railties (= 4.1.0)
+      sprockets-rails (~> 2.0)
+    railties (4.1.0)
+      actionpack (= 4.1.0)
+      activesupport (= 4.1.0)
+      rake (>= 0.8.7)
+      thor (>= 0.18.1, < 2.0)
     rake (10.3.1)
     rdoc (4.1.1)
       json (~> 1.4)
@@ -228,7 +223,7 @@ GEM
     uglifier (2.5.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    websocket-driver (0.3.2)
+    websocket-driver (0.3.3)
 
 PLATFORMS
   x86-mingw32
@@ -260,7 +255,8 @@ DEPENDENCIES
   pg_search
   placeholder-gem
   prawn
-  rails!
+  rails
+  railties
   sass-rails!
   sdoc
   simple_form!

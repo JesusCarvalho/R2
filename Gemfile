@@ -1,12 +1,16 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', :github => 'rails'
+#gem 'rails', :github => 'rails'
+#gem 'railties', :github => 'rails'
+gem 'rails'
+gem 'railties'
+
 
 # Use postgresql as the database for Active Record
 gem 'pg'
 
-# Full text search for pg and rails
+# Full text search for pg and rails (commented out on 4/26/2014 because of failing startup for server)
 gem 'pg_search'
 
 # versioning and auditing database changes

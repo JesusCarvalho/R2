@@ -32,13 +32,22 @@
             input_html: {class:'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Gender'},
             wrapper_html: {class:'col-xs-4'}
         = mp.input :description_when_last_seen,:label => false,as: :text,
-            input_html: {class:'input-transparent', placeholder:'Description When Last Seen','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Description When Last Seen', 'rows'=>3},
+            input_html: {class:'input-transparent', placeholder:'Description When Last Seen','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Description When Last Seen', 'rows'=>2},
             wrapper_html:{class:'col-md-6'}
         = mp.input :mental_condition,:label => false,as: :text,
-            input_html: {class:'input-transparent', placeholder:'Mental Condition','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Mental Condition', 'rows'=>3},
+            input_html: {class:'input-transparent', placeholder:'Mental Condition','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Mental Condition', 'rows'=>2},
             wrapper_html:{class:'col-md-6'}
         = mp.input :date_of_birth, :label=>false,
             input_html: {id: 'mpdob', class:'input-transparent date','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Date of Birth', placeholder:'Date of Birth:' },
+            wrapper_html:{class:'col-xs-4'}
+        = mp.input :marital_status,:collection => TrifoldEnums::MaritalStatus.marital_statuses,:label => false,as: :select, :include_blank => 'Marital Status',
+            input_html: {class:'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Marital Status'},
+            wrapper_html: {class:'col-xs-4'}
+        = mp.input :occupation,:label => false,
+            input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Occupation', placeholder:'Occupation'},
+            wrapper_html:{class:'col-xs-4'}
+        = mp.input :school_last_attended,:label => false,
+            input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Name of School', placeholder:'Name of School (if student)'},
             wrapper_html:{class:'col-xs-4'}
         = mp.input :foul_play_suspected,:label => false,as: :radio_buttons, :label => 'Foul Play Suspected?',
             input_html: {class:'btn-transparent iradio','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Foul Play Suspected?'},
@@ -49,30 +58,21 @@
         = mp.input :fingerprints_available,:label => false,as: :radio_buttons, :label => 'Fingerprints Available?',
             input_html: {class:'btn-transparent iradio','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Fingerprints Available?'},
             wrapper_html: {class:'form-inline col-xs-3 iradio'}
-        = mp.input :marital_status,:collection => TrifoldEnums::MaritalStatus.marital_statuses,:label => false,as: :select, :include_blank => 'Marital Status',
-            input_html: {class:'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Marital Status'},
-            wrapper_html: {class:'col-xs-4'}
-        = mp.input :occupation,:label => false,
-            input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Occupation', placeholder:'Occupation'},
-            wrapper_html:{class:'col-xs-4'}
-        = mp.input :occupation,:label => false,
-            input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Occupation', placeholder:'Occupation'},
-            wrapper_html:{class:'col-xs-4'}
-        = mp.input :treatment_location,:label => false,
-            input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Treatment Location', placeholder:'Where Victim Treated/Taken'},
-            wrapper_html:{class:'col-xs-4'}
-        = mp.input :treating_physician,:label => false,
-            input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Treating Physician', placeholder:'Treating Physician'},
-            wrapper_html:{class:'col-xs-4'}
-        = mp.input :victim_type,:collection => TrifoldEnums::Premises.premises,:label => false ,:include_blank => 'If Robbery, Premises Code',
-            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Premises Code for Robbery' },
-            wrapper_html:{class:'col-xs-4'}
-        = mp.input :sex_crime_object,:collection => TrifoldEnums::SexCrimeObject.sex_crime_objects,:label => false ,:include_blank => 'If Sex Crime, Object Used',
-            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Object Used in Sex Crime' },
-            wrapper_html:{class:'col-xs-4'}
-        = mp.input :victim_relationship_to_suspect,:collection => TrifoldEnums::VictimRelationship.victims_relationships,:label => false ,:include_blank => "Victim's Relationship to Suspect",
-            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Victim's Relationship to Suspect" },
-            wrapper_html: { class:'col-xs-4'}
+        %legend.section
+          %h3.col-xs-offset-5 Contacts
+        = simple_form_for :associate do |asc|
+
+          = asc.input :role,:collection => TrifoldEnums::Associates.associate_roles,:label => false,as: :select, :include_blank => 'Role',
+               input_html: {class:'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Role'},
+               wrapper_html: {class:'col-xs-4'}
+          = asc.input :address,:label => false,
+               input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Address', placeholder:'Address'},
+               wrapper_html:{class:'col-xs-4'}
+          = asc.input :phone_number,:label => false,
+               input_html: {class:'input-transparent',id:'business_phone', placeholder:'Phone Number','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Phone Number'},
+               wrapper_html:{class:'col-xs-4'}
+
+
 
 
 <script type="text/javascript">
@@ -99,6 +99,12 @@ up: "fa fa-arrow-up",
 down: "fa fa-arrow-down"
 }
 });
+});
+</script>
+
+<script type="text/javascript">
+$(function(){
+$('#role_phone').mask("(999) 999-9999? x99999");
 });
 </script>
 
