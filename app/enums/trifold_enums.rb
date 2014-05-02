@@ -1019,8 +1019,10 @@ class TrifoldEnums < ActiveRecord::Base
         :'Other',
         :'Employee',
         :'Supervisor',
-        :'Business Associate'
-        :'Neighbor'
+        :'Business Associate',
+        :'Neighbor',
+        :'Pastor/Priest',
+        :'Therapist/Psychologist'
 
     ]
   end

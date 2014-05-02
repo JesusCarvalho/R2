@@ -4,11 +4,17 @@
       %h2 Missing Person(s)
     = simple_form_for :missing_person do |mp|
       .row
+        = mp.input :time_last_seen, :label=>false,
+            input_html: { class:'input-transparent date', id: 'lastseen', placeholder:'Date/Time Last Seen:','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Date/Time Last Seen'},
+            wrapper_html:{class:'col-xs-4 '}
         = mp.input :person_type,:collection => TrifoldEnums::MissingPersonType.missing_person_types,:label => false ,:include_blank => 'Missing Person Type',
             input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Missing Person Type' },
             wrapper_html:{class:'col-xs-4'}
         = mp.input :person_code,:collection => TrifoldEnums::MissingPersonCode.missing_person_codes,:label => false ,:include_blank => 'Missing Person Code',
             input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Missing Person Code' },
+            wrapper_html:{class:'col-xs-4'}
+        = mp.input :date_of_birth, :label=>false,
+            input_html: {id: 'mpdob', class:'input-transparent date','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Date of Birth', placeholder:'Date of Birth:' },
             wrapper_html:{class:'col-xs-4'}
         = mp.input :previously_missing,:collection => TrifoldEnums::YesNoUknownNA.NA_Yes_No_Unknowns,:label => false ,:include_blank => 'Previously Missing?',
             input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Previously Missing?' },
@@ -16,36 +22,33 @@
         = mp.input :recovery_information,:collection => TrifoldEnums::RecoveryInformation.recovery_informations,:label => false ,:include_blank => 'Recovery Information',
             input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Recovery Information' },
             wrapper_html:{class:'col-xs-4'}
-        = mp.input :where_located,:label => false,
-            input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Located Where?', placeholder:'Located Where?'},
-            wrapper_html:{class:'col-xs-4'}
-        = mp.input :time_last_seen, :label=>false,
-            input_html: { class:'input-transparent date', id: 'lastseen', placeholder:'Date/Time Last Seen:','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Date/Time Last Seen'},
-            wrapper_html:{class:'col-xs-4 '}
+
         = mp.input :possible_destination,:label => false,
             input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Possible Destination?', placeholder:'Possible Destination?'},
             wrapper_html:{class:'col-xs-4'}
-        = mp.input :race,:collection => TrifoldEnums::RaceCode.race_codes,:label => false ,:include_blank => 'Race',
-            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Race' },
-            wrapper_html:{class:'col-xs-4'}
+        = mp.input :marital_status,:collection => TrifoldEnums::MaritalStatus.marital_statuses,:label => false,as: :select, :include_blank => 'Marital Status',
+            input_html: {class:'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Marital Status'},
+            wrapper_html: {class:'col-xs-4'}
         = mp.input :gender,:collection => TrifoldEnums::Gender.genders,:label => false,as: :select, :include_blank => 'Gender',
             input_html: {class:'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Gender'},
             wrapper_html: {class:'col-xs-4'}
+
+        = mp.input :where_located,:label => false,
+            input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Located Where?', placeholder:'Located Where?'},
+            wrapper_html:{class:'col-xs-4'}
+        = mp.input :occupation,:label => false,
+            input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Occupation', placeholder:'Occupation'},
+            wrapper_html:{class:'col-xs-4'}
+
+        = mp.input :race,:collection => TrifoldEnums::RaceCode.race_codes,:label => false ,:include_blank => 'Race',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Race' },
+            wrapper_html:{class:'col-xs-4'}
         = mp.input :description_when_last_seen,:label => false,as: :text,
             input_html: {class:'input-transparent', placeholder:'Description When Last Seen','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Description When Last Seen', 'rows'=>2},
             wrapper_html:{class:'col-md-6'}
         = mp.input :mental_condition,:label => false,as: :text,
             input_html: {class:'input-transparent', placeholder:'Mental Condition','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Mental Condition', 'rows'=>2},
             wrapper_html:{class:'col-md-6'}
-        = mp.input :date_of_birth, :label=>false,
-            input_html: {id: 'mpdob', class:'input-transparent date','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Date of Birth', placeholder:'Date of Birth:' },
-            wrapper_html:{class:'col-xs-4'}
-        = mp.input :marital_status,:collection => TrifoldEnums::MaritalStatus.marital_statuses,:label => false,as: :select, :include_blank => 'Marital Status',
-            input_html: {class:'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Marital Status'},
-            wrapper_html: {class:'col-xs-4'}
-        = mp.input :occupation,:label => false,
-            input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Occupation', placeholder:'Occupation'},
-            wrapper_html:{class:'col-xs-4'}
         = mp.input :school_last_attended,:label => false,
             input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Name of School', placeholder:'Name of School (if student)'},
             wrapper_html:{class:'col-xs-4'}
@@ -64,13 +67,16 @@
 
           = asc.input :role,:collection => TrifoldEnums::Associates.associate_roles,:label => false,as: :select, :include_blank => 'Role',
                input_html: {class:'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Role'},
-               wrapper_html: {class:'col-xs-4'}
+               wrapper_html: {class:'col-xs-2'}
+          = asc.input :name,:label => false,
+               input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Name', placeholder:'Name'},
+               wrapper_html:{class:'col-xs-4'}
           = asc.input :address,:label => false,
                input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Address', placeholder:'Address'},
                wrapper_html:{class:'col-xs-4'}
           = asc.input :phone_number,:label => false,
-               input_html: {class:'input-transparent',id:'business_phone', placeholder:'Phone Number','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Phone Number'},
-               wrapper_html:{class:'col-xs-4'}
+               input_html: {class:'input-transparent',id:'role_phone', placeholder:'Phone Number','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Phone Number'},
+               wrapper_html:{class:'col-xs-2'}
 
 
 

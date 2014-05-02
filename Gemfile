@@ -26,7 +26,7 @@ gem 'simple_form', :github => 'plataformatec/simple_form'
 gem 'bootstrap-sass', :github => 'twbs/bootstrap-sass'
 
 # for dropdowns that can hold multiple values simultaneously
-gem 'bootstrap-multiselect-rails'
+gem 'select2-rails'
 
 # gem for ACL
 gem 'cancan'

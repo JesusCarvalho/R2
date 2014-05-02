@@ -114,8 +114,6 @@ GEM
     better_errors (1.1.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
-    bootstrap-multiselect-rails (0.0.4)
-      railties (>= 3.2.0, < 5.0)
     bootstrap3-datetimepicker-rails (3.0.0)
       momentjs-rails (~> 2.5.0)
     breadcrumbs_on_rails (2.3.0)
@@ -200,6 +198,8 @@ GEM
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
+    select2-rails (3.5.4)
+      thor (~> 0.14)
     sprockets (2.11.0)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -231,7 +231,6 @@ PLATFORMS
 DEPENDENCIES
   bcrypt-ruby
   better_errors
-  bootstrap-multiselect-rails
   bootstrap-sass!
   bootstrap3-datetimepicker-rails
   breadcrumbs_on_rails
@@ -259,6 +258,7 @@ DEPENDENCIES
   railties
   sass-rails!
   sdoc
+  select2-rails
   simple_form!
   turbolinks!
   tzinfo-data
