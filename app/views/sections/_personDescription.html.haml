@@ -1,7 +1,7 @@
 .col-sm-offset-2
   %section.widget
     %legend.section
-      %h2 Person Description
+      %h2 Suspect / Missing Person Description
     = simple_form_for :person_description do |pd|
       .row
         = pd.input :facial_scars,:collection =>TrifoldEnums::FacialScars.facial_scars,:label => false,
