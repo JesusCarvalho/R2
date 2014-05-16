@@ -76,15 +76,17 @@
         = nl.input :mobile_phone,:label => false,
             input_html: {class:'input-transparent',id:'mobile_phone', placeholder:'Mobile Phone','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Mobile Phone'},
             wrapper_html:{class:'col-xs-4'}
-        = nl.input :roles,:collection =>TrifoldEnums::Roles.roles,:label => false ,:include_blank => 'Roles (select all that apply)',
-            input_html: { :multiple => true ,id:'roleMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Roles (select all that apply)" },
+        = nl.input :roles,:collection =>TrifoldEnums::Roles.roles,:label => false,
+            input_html: { :multiple => true ,id:'rolesMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Roles (select all that apply)" },
             wrapper_html: { class: 'col-xs-12'}
 
-<script type="text/javascript">
-$(document).ready(function() { $("#roleMultiSelect").select2(
-); });
-</script>
 
+<script type="text/javascript">
+$("#rolesMultiSelect").select2({
+placeholder: "Roles (select all that apply)",
+allowClear: true
+});
+</script>
 <script type="text/javascript">
 $(function () {
 $('#date_of_birth').datetimepicker({
@@ -116,3 +118,5 @@ $(function(){
 $('#mobile_phone').mask("(999) 999-9999");
 });
 </script>
+
+

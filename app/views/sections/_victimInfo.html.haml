@@ -40,13 +40,22 @@
         = v.input :victim_relationship_to_suspect,:collection => TrifoldEnums::VictimRelationship.victims_relationships,:label => false ,:include_blank => "Victim's Relationship to Suspect",
             input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Victim's Relationship to Suspect" },
             wrapper_html: { class:'col-xs-4'}
-        = v.input :injury_type,:collection =>TrifoldEnums::InjuryType.injury_types,:label => false ,:include_blank => 'Injury Type (select all that apply)',
-            input_html: { :multiple => true ,id:'injtype', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Injury Type (select all that apply)" },
+        = v.input :injury_type,:collection =>TrifoldEnums::InjuryType.injury_types,:label => false,
+            input_html: { :multiple => true ,id:'injuryTypeMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Injury Type (select all that apply)" },
             wrapper_html: { class: 'col-xs-8'}
         = v.input :domestic_violence,:label => false,as: :radio_buttons, :label => 'Domestic Violence?',
             input_html: { class:'btn-transparent iradio','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Domestic Violence?'},
             wrapper_html: { class:'form-inline col-xs-4 iradio label-center'}
 
+
+
+
+<script type="text/javascript">
+$("#injuryTypeMultiSelect").select2({
+placeholder: "Injury Type (select all that apply)",
+allowClear: true
+});
+</script>
 
 <script type="text/javascript">
 $(function () {

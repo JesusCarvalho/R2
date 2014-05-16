@@ -13,6 +13,9 @@ gem 'pg'
 # Full text search for pg and rails (commented out on 4/26/2014 because of failing startup for server)
 gem 'pg_search'
 
+# for offense panel to access Arrest and ChargeBook
+gem 'twitter-typeahead-rails'
+
 # versioning and auditing database changes
 gem 'paper_trail', :github => 'airblade/paper_trail'
 
@@ -100,7 +103,7 @@ gem 'jbuilder'
 gem 'sdoc',          group: :doc, require: false
 
 # Use ActiveModel has_secure_password
-gem 'bcrypt-ruby'
+gem 'bcrypt'
 
 # Use unicorn as the app server
 # gem 'unicorn'

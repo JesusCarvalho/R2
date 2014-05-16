@@ -4,125 +4,125 @@
       %h2 Person Description
     = simple_form_for :person_description do |pd|
       .row
-        = pd.input :facial_scars,:collection =>TrifoldEnums::FacialScars.facial_scars,:label => false ,:include_blank => 'Roles (select all that apply)',
+        = pd.input :facial_scars,:collection =>TrifoldEnums::FacialScars.facial_scars,:label => false,
           input_html: { :multiple => true ,id:'facialScarsMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Roles (select all that apply)" },
           wrapper_html: { class: 'col-xs-4'}
-        = pd.input :roles,:collection =>TrifoldEnums::Roles.roles,:label => false ,:include_blank => 'Roles (select all that apply)',
+        = pd.input :body_scars,:collection =>TrifoldEnums::BodyScars.body_scars,:label => false,
           input_html: { :multiple => true ,id:'bodyScarsMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Roles (select all that apply)" },
           wrapper_html: { class: 'col-xs-4'}
-        = pd.input :roles,:collection =>TrifoldEnums::Roles.roles,:label => false ,:include_blank => 'Roles (select all that apply)',
+        = pd.input :facial_oddity,:collection =>TrifoldEnums::FacialOddity.facial_oddities,:label => false,
           input_html: { :multiple => true ,id:'facialOddityMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Roles (select all that apply)" },
           wrapper_html: { class: 'col-xs-4'}
-        = pd.input :roles,:collection =>TrifoldEnums::Roles.roles,:label => false ,:include_blank => 'Roles (select all that apply)',
+        = pd.input :roles,:collection =>TrifoldEnums::Complexion.complexion_codes,:label => false,
           input_html: { :multiple => true ,id:'complexionMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Roles (select all that apply)" },
           wrapper_html: { class: 'col-xs-4'}
-        = pd.input :roles,:collection =>TrifoldEnums::Roles.roles,:label => false ,:include_blank => 'Roles (select all that apply)',
+        = pd.input :roles,:collection =>TrifoldEnums::FacialHair.facial_hairs,:label => false,
           input_html: { :multiple => true ,id:'facialHairMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Roles (select all that apply)" },
           wrapper_html: { class: 'col-xs-4'}
-        = pd.input :roles,:collection =>TrifoldEnums::Roles.roles,:label => false ,:include_blank => 'Roles (select all that apply)',
+        = pd.input :roles,:collection =>TrifoldEnums::Face.faces,:label => false,
           input_html: { :multiple => true ,id:'faceMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Roles (select all that apply)" },
           wrapper_html: { class: 'col-xs-4'}
-        = pd.input :roles,:collection =>TrifoldEnums::Roles.roles,:label => false ,:include_blank => 'Roles (select all that apply)',
+        = pd.input :roles,:collection =>TrifoldEnums::HairType.hair_types,:label => false,
           input_html: { :multiple => true ,id:'hairTypeMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Roles (select all that apply)" },
           wrapper_html: { class: 'col-xs-4'}
-        = pd.input :roles,:collection =>TrifoldEnums::Roles.roles,:label => false ,:include_blank => 'Roles (select all that apply)',
+        = pd.input :roles,:collection =>TrifoldEnums::Eye.eyes,:label => false,
           input_html: { :multiple => true ,id:'eyesMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Roles (select all that apply)" },
           wrapper_html: { class: 'col-xs-4'}
-        = pd.input :roles,:collection =>TrifoldEnums::Roles.roles,:label => false ,:include_blank => 'Roles (select all that apply)',
+        = pd.input :roles,:collection =>TrifoldEnums::Ear.ears,:label => false,
           input_html: { :multiple => true ,id:'earsMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Roles (select all that apply)" },
           wrapper_html: { class: 'col-xs-4'}
-        = pd.input :roles,:collection =>TrifoldEnums::Roles.roles,:label => false ,:include_blank => 'Roles (select all that apply)',
+        = pd.input :roles,:collection =>TrifoldEnums::Nose.noses,:label => false,
           input_html: { :multiple => true ,id:'noseMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Roles (select all that apply)" },
           wrapper_html: { class: 'col-xs-4'}
-        = pd.input :roles,:collection =>TrifoldEnums::Roles.roles,:label => false ,:include_blank => 'Roles (select all that apply)',
+        = pd.input :roles,:collection =>TrifoldEnums::Teeth.teeths,:label => false,
           input_html: { :multiple => true ,id:'teethMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Roles (select all that apply)" },
           wrapper_html: { class: 'col-xs-4'}
-        = pd.input :roles,:collection =>TrifoldEnums::Roles.roles,:label => false ,:include_blank => 'Roles (select all that apply)',
+        = pd.input :roles,:collection =>TrifoldEnums::Speech.speeches,:label => false,
           input_html: { :multiple => true ,id:'speechMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Roles (select all that apply)" },
           wrapper_html: { class: 'col-xs-4'}
-        = pd.input :roles,:collection =>TrifoldEnums::Roles.roles,:label => false ,:include_blank => 'Roles (select all that apply)',
+        = pd.input :roles,:collection =>TrifoldEnums::Amputee.amputees,:label => false,
           input_html: { :multiple => true ,id:'amputeeMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Roles (select all that apply)" },
           wrapper_html: { class: 'col-xs-4'}
-        = pd.input :roles,:collection =>TrifoldEnums::Roles.roles,:label => false ,:include_blank => 'Roles (select all that apply)',
+        = pd.input :roles,:collection =>TrifoldEnums::Deformed.deformeds,:label => false,
           input_html: { :multiple => true ,id:'deformedMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Roles (select all that apply)" },
           wrapper_html: { class: 'col-xs-4'}
-        = pd.input :roles,:collection =>TrifoldEnums::Roles.roles,:label => false ,:include_blank => 'Roles (select all that apply)',
+        = pd.input :roles,:collection =>TrifoldEnums::Tatoo.tatoos,:label => false,
           input_html: { :multiple => true ,id:'tatooMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Roles (select all that apply)" },
           wrapper_html: { class: 'col-xs-4'}
 
 <script type="text/javascript">
-$(document).ready(function() { $("#facialScarsMultiSelect").select2({
+$("#facialScarsMultiSelect").select2({
 placeholder: "Facial Scars (select all that apply)",
 allowClear: true
-); });
+});
 </script>
 <script type="text/javascript">
-$(document).ready(function() { $("#bodyScarsMultiSelect").select2(
+$("#bodyScarsMultiSelect").select2({
 placeholder: "Body Scars (select all that apply)"
-); });
+});
 </script>
 <script type="text/javascript">
-$(document).ready(function() { $("#facialOddityMultiSelect").select2(
+$("#facialOddityMultiSelect").select2({
 placeholder: "Facial Oddity (select all that apply)"
-); });
+});
 </script>
 <script type="text/javascript">
-$(document).ready(function() { $("#complexionMultiSelect").select2(
+$("#complexionMultiSelect").select2({
 placeholder: "Complexion (select all that apply)"
-); });
+});
 </script>
 <script type="text/javascript">
-$(document).ready(function() { $("#facialHairMultiSelect").select2(
+$("#facialHairMultiSelect").select2({
 placeholder: "Facial Hair (select all that apply)"
-); });
+});
 </script>
 <script type="text/javascript">
-$(document).ready(function() { $("#faceMultiSelect").select2(
+$("#faceMultiSelect").select2({
 placeholder: "Face (select all that apply)"
-); });
+});
 </script>
 <script type="text/javascript">
-$(document).ready(function() { $("#hairTypeMultiSelect").select2(
+$("#hairTypeMultiSelect").select2({
 placeholder: "Hair Type (select all that apply)"
-); });
+});
 </script>
 <script type="text/javascript">
-$(document).ready(function() { $("#eyesMultiSelect").select2(
+$("#eyesMultiSelect").select2({
 placeholder: "Eyes (select all that apply)"
-); });
+});
 </script>
 <script type="text/javascript">
-$(document).ready(function() { $("#earsMultiSelect").select2(
+$("#earsMultiSelect").select2({
 placeholder: "Ears (select all that apply)"
-); });
+});
 </script>
 <script type="text/javascript">
-$(document).ready(function() { $("#noseMultiSelect").select2(
+$("#noseMultiSelect").select2({
 placeholder: "Nose (select all that apply)"
-); });
+});
 </script>
 <script type="text/javascript">
-$(document).ready(function() { $("#teethMultiSelect").select2(
+$("#teethMultiSelect").select2({
 placeholder: "Teeth (select all that apply)"
-); });
+});
 </script>
 <script type="text/javascript">
-$(document).ready(function() { $("#speechMultiSelect").select2(
+$("#speechMultiSelect").select2({
 placeholder: "Speech (select all that apply)"
-); });
+});
 </script>
 <script type="text/javascript">
-$(document).ready(function() { $("#amputeeMultiSelect").select2(
+$("#amputeeMultiSelect").select2({
 placeholder: "Amputee (select all that apply)"
-); });
+});
 </script>
 <script type="text/javascript">
-$(document).ready(function() { $("#deformedMultiSelect").select2(
+$("#deformedMultiSelect").select2({
 placeholder: "Deformed (select all that apply)"
-); });
+});
 </script>
 <script type="text/javascript">
-$(document).ready(function() { $("#tatooMultiSelect").select2(
+$("#tatooMultiSelect").select2({
 placeholder: "Tatoo (select all that apply)"
-); });
+});
 </script>

@@ -22,6 +22,7 @@
 //= require jquery-migrate-min
 //= require jquery.maskedinput-1.3
 //= require select2
+//= require twitter/typeahead.min
 
 
 
