@@ -1,16 +1,16 @@
 GIT
   remote: git://github.com/airblade/paper_trail.git
-  revision: 6a0c9aa8198c5edf6f031d4a2a0668262a892898
+  revision: 1880df9b618e783bce96cfd006a918b20b9833e2
   specs:
-    paper_trail (3.0.1)
+    paper_trail (3.0.2)
       activerecord (>= 3.0, < 5.0)
       activesupport (>= 3.0, < 5.0)
 
 GIT
   remote: git://github.com/bokmann/font-awesome-rails.git
-  revision: 7f096ec8544596f605e882886db5954d23b8b8a0
+  revision: 9f1fec73b7c0dd96c4e4b6ddf5a5f64f1c418b42
   specs:
-    font-awesome-rails (4.0.3.2)
+    font-awesome-rails (4.1.0.0)
       railties (>= 3.2, < 5.0)
 
 GIT
@@ -70,7 +70,7 @@ GIT
 
 GIT
   remote: git://github.com/twbs/bootstrap-sass.git
-  revision: bbbd92a844bc2f3c910c707bffca00f6844bac2c
+  revision: a416cb86a3ddc6906892b2c0472deea306989fea
   specs:
     bootstrap-sass (3.1.1.1)
       sass (~> 3.2)
@@ -149,7 +149,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
-    minitest (5.3.3)
+    minitest (5.3.4)
     momentjs-rails (2.5.1)
       railties (>= 3.1)
     multi_json (1.10.0)
@@ -184,7 +184,7 @@ GEM
       activesupport (= 4.1.1)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (10.3.1)
+    rake (10.3.2)
     rdoc (4.1.1)
       json (~> 1.4)
     sass (3.3.7)
@@ -215,7 +215,7 @@ GEM
       railties (>= 3.1)
     tzinfo (1.1.0)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2014.2)
+    tzinfo-data (1.2014.3)
       tzinfo (>= 1.0.0)
     uglifier (2.5.0)
       execjs (>= 0.3.0)
