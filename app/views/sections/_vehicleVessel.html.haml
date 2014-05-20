@@ -46,9 +46,37 @@
         = vv.input :make_model,:label => false ,:include_blank => false,
             input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Make & Model',  placeholder:'Make & Model' },
             wrapper_html:{class:'col-xs-4'}
+        = vv.input :vehicle_style,:collection => TrifoldEnums::VehicleStyle.vehicle_styles,:label => false ,:include_blank => 'Vehicle Style',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Vehicle Style' },
+            wrapper_html:{class:'col-xs-4'}
+        = vv.input :vehicle_vessel_colors ,:label => false ,:include_blank => false,
+            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Vehicle/Vessel Color(s)',  placeholder:'Vehicle/Vessel Color(s)' },
+            wrapper_html:{class:'col-xs-4'}
+        = vv.input :license_tag_background_color,:collection => TrifoldEnums::LicenseBackgroundColor.license_background_colors,:label => false ,:include_blank => 'License Tag Background Color',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'License Tag Background Color' },
+            wrapper_html:{class:'col-xs-4'}
+        = vv.input :caution_field,:collection => TrifoldEnums::CautionField.caution_fields,:label => false ,:include_blank => 'Caution Field',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Caution Field' },
+            wrapper_html:{class:'col-xs-4'}
+        = vv.input :insurance_company ,:label => false ,:include_blank => false,
+            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Insurance Company',  placeholder:'Insurance Company' },
+            wrapper_html:{class:'col-xs-4'}
+        = vv.input :insurance_policy_number,:label => false ,:include_blank => false,
+            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Insurance Policy #',  placeholder:'Insurance Policy #' },
+            wrapper_html:{class:'col-xs-4'}
+        = vv.input :insurance_company_phone_number,:label => false,
+            input_html: {class:'input-transparent',id:'vv_ins_phone', placeholder:'Insurance Co. Phone Number','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Insurance Co. Phone Number'},
+            wrapper_html:{class:'col-xs-4'}
+        = vv.input :teletype_number ,:label => false ,:include_blank => false,
+            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Teletype #',  placeholder:'Teletype #' },
+            wrapper_html:{class:'col-xs-4'}
 
 
-
+<script type="text/javascript">
+$(function(){
+$('#vv_ins_phone').mask("(999) 999-9999? x99999");
+});
+</script>
 
 
 <script type="text/javascript">
