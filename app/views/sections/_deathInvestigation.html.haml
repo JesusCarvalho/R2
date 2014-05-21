@@ -2,6 +2,81 @@
   %section.widget
     %legend.section
       %h3 Death Investigation
-    = simple_form_for :header do |f|
-      = f.input :pbso_case_num,:label => false, input_html: {class:'input-transparent', placeholder:'Case #'}
-      = f.input :unit,:collection => TrifoldEnums::Unit.unit_codes,:label => false ,:include_blank => 'Unit', input_html: { class: 'btn-default' }
+    = simple_form_for :death_investigation do |di|
+      .row
+        = di.input :agency_on_scene,:label => false ,:include_blank => false,
+            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Agency on Scene',  placeholder:'Agency on Scene' },
+            wrapper_html:{class:'col-xs-4'}
+        = di.input :officer_on_scene,:label => false ,:include_blank => false,
+            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Officer on Scene',  placeholder:'Officer on Scene' },
+            wrapper_html:{class:'col-xs-4'}
+        = di.input :supervisor_detective_on_scene,:label => false ,:include_blank => false,
+            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Supv/Det on Scene',  placeholder:'Supv/Det on Scene' },
+            wrapper_html:{class:'col-xs-4'}
+        = di.input :body_found_at,:label => false ,:include_blank => false,
+            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Where Body Found (Address)',  placeholder:'Where Body Found (Address)' },
+            wrapper_html:{class:'col-xs-4'}
+        = di.input :time_officer_viewed_body, :label=>false,
+            input_html: { class:'input-transparent date','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Datetime Officer Viewed Body', id: 'di_officer_viewed_body_at', placeholder:'Datetime Officer Viewed Body' },
+            wrapper_html:{class:'col-xs-4'}
+        = di.input :agency_on_scene,:collection => TrifoldEnums::CautionField.caution_fields,:label => false ,:include_blank => 'Caution Field',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Caution Field' },
+            wrapper_html:{class:'col-xs-4'}
+        = di.input :insurance_policy_number,:label => false ,:include_blank => false,
+            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Insurance Policy #',  placeholder:'Insurance Policy #' },
+            wrapper_html:{class:'col-xs-4'}
+        = di.input :insurance_company_phone_number,:label => false,
+            input_html: {class:'input-transparent',id:'vv_ins_phone', placeholder:'Insurance Co. Phone Number','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Insurance Co. Phone Number'},
+            wrapper_html:{class:'col-xs-4'}
+        = di.input :officer_date_of_birth, :label=>false,
+            input_html: { class:'input-transparent date','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Officer Date of Birth', id: 'oak_officer_date_of_birth', placeholder:'Officer Date of Birth:' },
+            wrapper_html:{class:'col-xs-4'}
+
+
+<script type="text/javascript">
+$(function () {
+$('#oak_officer_date_of_birth').datetimepicker({
+pickTime: false,
+icons: {
+time: "fa fa-clock-o",
+date: "fa fa-calendar",
+up: "fa fa-arrow-up",
+down: "fa fa-arrow-down"
+}
+});
+});
+</script>
+
+<script type="text/javascript">
+$(function(){
+$('#vv_ins_phone').mask("(999) 999-9999? x99999");
+});
+</script>
+
+
+<script type="text/javascript">
+$(function () {
+$('#di_officer_viewed_body_at').datetimepicker({
+icons: {
+time: "fa fa-clock-o",
+date: "fa fa-calendar",
+up: "fa fa-arrow-up",
+down: "fa fa-arrow-down"
+}
+});
+});
+</script>
+
+<script type="text/javascript">
+$(function () {
+$('#vv_date_recovered').datetimepicker({
+pickTime: false,
+icons: {
+time: "fa fa-clock-o",
+date: "fa fa-calendar",
+up: "fa fa-arrow-up",
+down: "fa fa-arrow-down"
+}
+});
+});
+</script>
