@@ -904,7 +904,7 @@ class TrifoldEnums < ActiveRecord::Base
   end
 
   class DeathBy < ActiveRecord::Base
-    enum death_by: [
+    enum death_by_code: [
 
         :'Child Playing with Weapon',
         :'Gun Cleaning Accident',

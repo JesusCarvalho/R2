@@ -34,7 +34,7 @@ gem 'select2-rails'
 # gem for ACL
 gem 'cancan'
 
-# datetime picker for rails (https://github.com/Eonasdan/bootstrap-datetimepicker))
+# datetime picker for rails (https://github.com/Eonasdan/bootstrap-datetimepicker)
 gem 'momentjs-rails'
 gem 'bootstrap3-datetimepicker-rails'
 

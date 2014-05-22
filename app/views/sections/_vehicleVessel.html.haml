@@ -38,10 +38,10 @@
             input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'License Tag Type' },
             wrapper_html:{class:'col-xs-4'}
         = vv.input :license_tag_year,:label => false ,:include_blank => false,
-            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'License Tag Year',  placeholder:'License Tag Year' },
+            input_html: { class: 'input-transparent date','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'License Tag Year',id: 'vv_tag_year',  placeholder:'License Tag Year','data-date-format'=>'YYYY' },
             wrapper_html:{class:'col-xs-4'}
         = vv.input :vehicle_vessel_year,:label => false ,:include_blank => false,
-            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Vehicle Vessel Year',  placeholder:'Vehicle Vessel Year' },
+            input_html: { class: 'input-transparent date','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Vehicle Vessel Year',id: 'vv_year',  placeholder:'Vehicle Vessel Year','data-date-format'=>'YYYY' },
             wrapper_html:{class:'col-xs-4'}
         = vv.input :make_model,:label => false ,:include_blank => false,
             input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Make & Model',  placeholder:'Make & Model' },
@@ -83,6 +83,38 @@ $('#vv_ins_phone').mask("(999) 999-9999? x99999");
 $(function () {
 $('#vv_date_recovered').datetimepicker({
 pickTime: false,
+icons: {
+time: "fa fa-clock-o",
+date: "fa fa-calendar",
+up: "fa fa-arrow-up",
+down: "fa fa-arrow-down"
+}
+});
+});
+</script>
+
+<script type="text/javascript">
+$(function () {
+$('#vv_tag_year').datetimepicker({
+pickTime: false,
+minViewMode: "years",
+viewMode:"years",
+icons: {
+time: "fa fa-clock-o",
+date: "fa fa-calendar",
+up: "fa fa-arrow-up",
+down: "fa fa-arrow-down"
+}
+});
+});
+</script>
+
+<script type="text/javascript">
+$(function () {
+$('#vv_year').datetimepicker({
+pickTime: false,
+minViewMode: "years",
+viewMode:"years",
 icons: {
 time: "fa fa-clock-o",
 date: "fa fa-calendar",

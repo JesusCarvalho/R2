@@ -19,23 +19,99 @@
         = di.input :time_officer_viewed_body, :label=>false,
             input_html: { class:'input-transparent date','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Datetime Officer Viewed Body', id: 'di_officer_viewed_body_at', placeholder:'Datetime Officer Viewed Body' },
             wrapper_html:{class:'col-xs-4'}
-        = di.input :agency_on_scene,:collection => TrifoldEnums::CautionField.caution_fields,:label => false ,:include_blank => 'Caution Field',
-            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Caution Field' },
+        = di.input :body_identified_by,:label => false ,:include_blank => false,
+            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Body I.D. By',  placeholder:'Body I.D. By' },
             wrapper_html:{class:'col-xs-4'}
-        = di.input :insurance_policy_number,:label => false ,:include_blank => false,
-            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Insurance Policy #',  placeholder:'Insurance Policy #' },
+        = di.input :ambulance_company,:label => false ,:include_blank => false,
+            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Ambulance Company',  placeholder:'Ambulance Company' },
             wrapper_html:{class:'col-xs-4'}
-        = di.input :insurance_company_phone_number,:label => false,
-            input_html: {class:'input-transparent',id:'vv_ins_phone', placeholder:'Insurance Co. Phone Number','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Insurance Co. Phone Number'},
+        = di.input :fire_rescue,:label => false ,:include_blank => false,
+            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Fire Rescue',  placeholder:'Fire Rescue' },
             wrapper_html:{class:'col-xs-4'}
-        = di.input :officer_date_of_birth, :label=>false,
-            input_html: { class:'input-transparent date','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Officer Date of Birth', id: 'oak_officer_date_of_birth', placeholder:'Officer Date of Birth:' },
+        = di.input :removal_service,:label => false ,:include_blank => false,
+            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Removal Service',  placeholder:'Removal Service' },
             wrapper_html:{class:'col-xs-4'}
+        = di.input :body_pronounced_by,:label => false ,:include_blank => false,
+            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Body Pronounced By',  placeholder:'Body Pronounced By' },
+            wrapper_html:{class:'col-xs-4'}
+        = di.input :body_location,:label => false ,:include_blank => false,
+            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Location',  placeholder:'Location' },
+            wrapper_html:{class:'col-xs-4'}
+        = di.input :doctor_examining_prior_to_death,:label => false ,:include_blank => false,
+            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Doctor Examining Prior to Death',  placeholder:'Doctor Examining Prior to Death' },
+            wrapper_html:{class:'col-xs-4'}
+        = di.input :date_examined, :label=>false,
+            input_html: { class:'input-transparent date','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Officer Date of Birth', id: 'di_date_examined', placeholder:'Officer Date of Birth:' },
+            wrapper_html:{class:'col-xs-4'}
+        = di.input :doctors_address,:label => false ,:include_blank => false,
+            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Doctor\'s Address',  placeholder:'Doctor\'s Address' },
+            wrapper_html:{class:'col-xs-4'}
+        = di.input :doctors_phone,:label => false,
+            input_html: {class:'input-transparent',id:'di_doc_phone', placeholder:'Doctor\'s Phone Number','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Doctor\'s Phone Number'},
+            wrapper_html:{class:'col-xs-4'}
+        = di.input :cause_of_death,:label => false ,:include_blank => false,
+            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Cause of Death',  placeholder:'Cause of Death' },
+            wrapper_html:{class:'col-xs-4'}
+        = di.input :death_certificate_signed_by,:label => false ,:include_blank => false,
+            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Death Certificate Signed By',  placeholder:'Death Certificate Signed By' },
+            wrapper_html:{class:'col-xs-4'}
+        = di.input :body_released_to,:label => false ,:include_blank => false,
+            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Body Released To (Funeral Home/Medical Examiner)',  placeholder:'Body Released To (Funeral Home/Medical Examiner)' },
+            wrapper_html:{class:'col-xs-4'}
+        = di.input :date, :label=>false,
+            input_html: { class:'input-transparent date','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Date', id: 'di_date', placeholder:'Date' },
+            wrapper_html:{class:'col-xs-4'}
+        = di.input :suspect_race,:collection => TrifoldEnums::RaceCode.race_codes,:label => false ,:include_blank => 'Race',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Race' },
+            wrapper_html:{class:'col-xs-4'}
+        = di.input :suspect_gender,:collection => TrifoldEnums::Gender.genders,:label => false ,:include_blank => 'Gender',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Gender' },
+            wrapper_html:{class:'col-xs-4'}
+        = di.input :suspect_date_of_birth, :label=>false,
+            input_html: { class:'input-transparent date','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Suspect Date of Birth', id: 'di_suspect_dob', placeholder:'Suspect Date of Birth:' },
+            wrapper_html:{class:'col-xs-4'}
+        = di.input :justifiable_circumstance,:collection => TrifoldEnums::JustifiableCircumstances.justifiable_circumstances,:label => false ,:include_blank => 'Justifiable Circumstances Code',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Justifiable Circumstances Code' },
+            wrapper_html:{class:'col-xs-4'}
+        = di.input :justifiable_homicide,:collection => TrifoldEnums::JustifiableHomicide.justifiable_homicide_codes,:label => false ,:include_blank => 'Justifiable Homicide Code',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Justifiable Homicide Code' },
+            wrapper_html:{class:'col-xs-4'}
+        = di.input :murder_type, :collection =>TrifoldEnums::MurderType.murder_types,:label => false,
+            input_html: { :multiple => true ,id:'murderTypeMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Murder Type (select all that apply)" },
+            wrapper_html: { class: 'col-xs-4'}
+        = di.input :death_by,:collection =>TrifoldEnums::DeathBy.death_by_codes,:label => false,
+            input_html: { :multiple => true ,id:'deathByMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Death By (select all that apply)" },
+            wrapper_html: { class: 'col-xs-4'}
+        = di.input :nearest_relative,:label => false ,:include_blank => false,
+            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Nearest Relative',  placeholder:'Nearest Relative' },
+            wrapper_html:{class:'col-xs-4'}
+        = di.input :description_when_last_seen,:label => false,as: :text,
+            input_html: {class:'input-transparent', placeholder:'Medical History','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Medical History', 'rows'=>4},
+            wrapper_html:{class:'col-xs-9'}
+        = di.input :unidentified_remains,:label => false,as: :radio_buttons, :label => 'Unidentified Remains?',
+            input_html: {class:'btn-transparent iradio',id:'hasSimilarPriors','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Unidentified Remains?'},
+            wrapper_html: {class:'form-inline col-xs-3 iradio'}
+
+
+
+<script type="text/javascript">
+$("#murderTypeMultiSelect").select2({
+placeholder: "Murder Type (select all that apply)",
+allowClear: true
+});
+</script>
+<script type="text/javascript">
+$("#deathByMultiSelect").select2({
+placeholder: "Death By (select all that apply)",
+allowClear: true
+});
+</script>
+
 
 
 <script type="text/javascript">
 $(function () {
-$('#oak_officer_date_of_birth').datetimepicker({
+$('#di_date').datetimepicker({
 pickTime: false,
 icons: {
 time: "fa fa-clock-o",
@@ -48,8 +124,29 @@ down: "fa fa-arrow-down"
 </script>
 
 <script type="text/javascript">
+$(function () {
+$('#di_suspect_dob').datetimepicker({
+pickTime: false,
+icons: {
+time: "fa fa-clock-o",
+date: "fa fa-calendar",
+up: "fa fa-arrow-up",
+down: "fa fa-arrow-down"
+}
+});
+});
+</script>
+
+
+<script type="text/javascript">
 $(function(){
 $('#vv_ins_phone').mask("(999) 999-9999? x99999");
+});
+</script>
+
+<script type="text/javascript">
+$(function(){
+$('#di_doc_phone').mask("(999) 999-9999? x99999");
 });
 </script>
 
@@ -57,6 +154,20 @@ $('#vv_ins_phone').mask("(999) 999-9999? x99999");
 <script type="text/javascript">
 $(function () {
 $('#di_officer_viewed_body_at').datetimepicker({
+icons: {
+time: "fa fa-clock-o",
+date: "fa fa-calendar",
+up: "fa fa-arrow-up",
+down: "fa fa-arrow-down"
+}
+});
+});
+</script>
+
+<script type="text/javascript">
+$(function () {
+$('#di_date_examined').datetimepicker({
+pickTime: false,
 icons: {
 time: "fa fa-clock-o",
 date: "fa fa-calendar",
