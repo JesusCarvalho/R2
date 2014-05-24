@@ -31,8 +31,8 @@
         = vv.input :decal_number,:label => false ,:include_blank => false,
             input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Decal #',  placeholder:'Decal #' },
             wrapper_html:{class:'col-xs-4'}
-        = vv.input :state,:label => false ,:include_blank => false,
-            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'State',  placeholder:'State' },
+        = vv.input :state,:collection => TrifoldEnums::USStates.states,:label => false ,:include_blank => 'State',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'State' },
             wrapper_html:{class:'col-xs-4'}
         = vv.input :license_tag_type,:collection => TrifoldEnums::LicenseTagType.license_tag_types,:label => false ,:include_blank => 'License Tag Type',
             input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'License Tag Type' },

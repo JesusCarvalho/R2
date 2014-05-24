@@ -47,6 +47,9 @@ gem 'masked_input-rails', :github => 'rafaelmacedo/masked_input-rails'
 # for dynamic nested forms
 gem 'cocoon'
 
+# for ajax pagination/sorting on table data
+gem 'smart_listing'
+
 # simplified html markup (for cocoon gem (see http://haml.info for tutorial))
 gem 'haml'
 

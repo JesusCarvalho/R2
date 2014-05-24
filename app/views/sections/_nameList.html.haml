@@ -43,8 +43,8 @@
         = nl.input :city,:label => false,
             input_html: {class:'input-transparent', placeholder:'City','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'City'},
             wrapper_html:{class:'col-xs-4'}
-        = nl.input :state,:label => false,
-            input_html: {class:'input-transparent', placeholder:'State','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'State'},
+        = nl.input :state,:collection => TrifoldEnums::USStates.states,:label => false ,:include_blank => 'State',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'State' },
             wrapper_html:{class:'col-xs-4'}
         = nl.input :zip_code,:label => false,
             input_html: {class:'input-transparent', placeholder:'Zip','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Zip code'},
@@ -58,8 +58,8 @@
         = nl.input :second_city,:label => false,
             input_html: {class:'input-transparent', placeholder:'Secondary City','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Secondary City'},
             wrapper_html:{class:'col-xs-4'}
-        = nl.input :second_state,:label => false,
-            input_html: {class:'input-transparent', placeholder:'Secondary State','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Secondary State'},
+        = nl.input :second_state,:collection => TrifoldEnums::USStates.states,:label => false ,:include_blank => 'Secondary State',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Secondary State' },
             wrapper_html:{class:'col-xs-4'}
         = nl.input :second_zip_code,:label => false,
             input_html: {class:'input-transparent', placeholder:'Secondary Zip','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Secondary Zip code'},
