@@ -16,30 +16,62 @@
         = ai.input :witness_to_crime,:label => false,as: :radio_buttons, :label => 'Witness To Crime Known?',
             input_html: {class:'btn-transparent iradio',id:'witnessToCrimeKnown','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Witness To Crime Known?'},
             wrapper_html: {class:'form-inline col-xs-4 iradio'}
-        = ai.input :is_modus_operandi_significant,:label => false,as: :radio_buttons, :label => 'State is Victim?',
-            input_html: {class:'btn-transparent iradio',id:'stateIsVictim','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'State is Victim?'},
+        = ai.input :is_modus_operandi_significant,:label => false,as: :radio_buttons, :label => 'Is Modus Operandi Significant?',
+            input_html: {class:'btn-transparent iradio',id:'modusOperandiSignificant','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Is Modus Operandi Significant?'},
             wrapper_html: {class:'form-inline col-xs-4 iradio'}
         = ai.input :suspect_name_known,:label => false,as: :radio_buttons, :label => 'Is Suspect\'s Name Known?',
-            input_html: {class:'btn-transparent iradio',id:'stateIsVictim','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Is Suspect\'s Name Known?'},
+            input_html: {class:'btn-transparent iradio',id:'suspectNameKnown','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Is Suspect\'s Name Known?'},
             wrapper_html: {class:'form-inline col-xs-4 iradio'}
-        = ai.input :valuable_evidence_left_at_scene,:label => false,as: :radio_buttons, :label => 'State is Victim?',
-            input_html: {class:'btn-transparent iradio',id:'stateIsVictim','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'State is Victim?'},
+        = ai.input :valuable_evidence_left_at_scene,:label => false,as: :radio_buttons, :label => 'Valuable Evidence Left At Scene?',
+            input_html: {class:'btn-transparent iradio',id:'valuableEvidenceLeftAtScene','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Valuable Evidence Left At Scene?'},
             wrapper_html: {class:'form-inline col-xs-4 iradio'}
-        = ai.input :can_victim_id_suspect,:label => false,as: :radio_buttons, :label => 'State is Victim?',
-            input_html: {class:'btn-transparent iradio',id:'stateIsVictim','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'State is Victim?'},
+        = ai.input :can_victim_id_suspect,:label => false,as: :radio_buttons, :label => 'Can Victim ID Suspect?',
+            input_html: {class:'btn-transparent iradio',id:'canVictimIdSuspect','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Can Victim ID Suspect?'},
             wrapper_html: {class:'form-inline col-xs-4 iradio'}
         = ai.input :latents_lifted,:collection => TrifoldEnums::YesNoAttempted.yna_codes,:label => false ,:include_blank => 'Latents Lifted',
             input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Latents Lifted' },
             wrapper_html:{class:'col-xs-4'}
-        = ai.input :victim_will_prosecute,:label => false,as: :radio_buttons, :label => 'State is Victim?',
-            input_html: {class:'btn-transparent iradio',id:'stateIsVictim','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'State is Victim?'},
+        = ai.input :victim_will_prosecute,:label => false,as: :radio_buttons, :label => 'Victim Will Prosecute?',
+            input_html: {class:'btn-transparent iradio',id:'stateIsVictim','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Victim Will Prosecute?'},
             wrapper_html: {class:'form-inline col-xs-4 iradio'}
-        = ai.input :suspect_location_known,:label => false,as: :radio_buttons, :label => 'State is Victim?',
-            input_html: {class:'btn-transparent iradio',id:'stateIsVictim','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'State is Victim?'},
+        = ai.input :suspect_location_known,:label => false,as: :radio_buttons, :label => 'Suspect Location Known?',
+            input_html: {class:'btn-transparent iradio',id:'suspectLocationKnown','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Suspect Location Known?'},
             wrapper_html: {class:'form-inline col-xs-4 iradio'}
-        = ai.input :stolen_property_traceable,:label => false,as: :radio_buttons, :label => 'State is Victim?',
-            input_html: {class:'btn-transparent iradio',id:'stateIsVictim','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'State is Victim?'},
+        = ai.input :stolen_property_traceable,:label => false,as: :radio_buttons, :label => 'Stolen Property Traceable?',
+            input_html: {class:'btn-transparent iradio',id:'stolenPropertyTraceable','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Solen Property Traceable?'},
             wrapper_html: {class:'form-inline col-xs-4 iradio'}
-        = ai.input :suspect_location_known,:label => false,as: :radio_buttons, :label => 'State is Victim?',
-            input_html: {class:'btn-transparent iradio',id:'stateIsVictim','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'State is Victim?'},
+        = ai.input :suspect_location_known,:label => false,as: :radio_buttons, :label => 'Suspect Location Known?',
+            input_html: {class:'btn-transparent iradio',id:'suspectLocationKnown','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Suspect Location Known?'},
             wrapper_html: {class:'form-inline col-xs-4 iradio'}
+        = ai.input :tag_number_known,:label => false,as: :radio_buttons, :label => 'Tag Number Known?',
+            input_html: {class:'btn-transparent iradio',id:'tagNumberKnown','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Tag Number Known?'},
+            wrapper_html: {class:'form-inline col-xs-4 iradio'}
+        = ai.input :property_damage,as: :radio_buttons, :label => 'Property Damage?',
+            input_html: {class:'btn-transparent iradio',id:'propertyDamage','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Property Damage?'},
+            wrapper_html: {class:'form-inline col-xs-4 iradio'}
+        = ai.input :amount_of_damage,:label => false ,:include_blank => false,
+            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Amount of Damage ($USD)',  placeholder:'Amount of Damage ($USD)' },
+            wrapper_html:{class:'col-xs-3'}
+        = ai.input :arresting_officer,:label => false ,:include_blank => false,
+            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Arresting Officer',  placeholder:'Arresting Officer' },
+            wrapper_html:{class:'col-xs-4'}
+        = ai.input :state_attorney,:label => false ,:include_blank => false,
+            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'State Attorney',  placeholder:'State Attorney' },
+            wrapper_html:{class:'col-xs-4'}
+        = ai.input :vehicle_towed_by,:label => false ,:include_blank => false,
+            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Vehicle Towed By',  placeholder:'Vehicle Towed By' },
+            wrapper_html:{class:'col-xs-4'}
+        = ai.input :towed_to,:label => false ,:include_blank => false,
+            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Towed To',  placeholder:'Towed To' },
+            wrapper_html:{class:'col-xs-4'}
+        = ai.input :evidence_by,:label => false ,:include_blank => false,
+            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Evidence By',  placeholder:'Evidence By' },
+            wrapper_html:{class:'col-xs-4'}
+        = ai.input :latents_taken_by,:label => false ,:include_blank => false,
+            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Latents Taken By',  placeholder:'Latents Taken By' },
+            wrapper_html:{class:'col-xs-4'}
+        = ai.input :photos_taken_by,:label => false ,:include_blank => false,
+            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Photos Taken By',  placeholder:'Photos Taken By' },
+            wrapper_html:{class:'col-xs-4'}
+
+
