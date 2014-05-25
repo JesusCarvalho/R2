@@ -1088,4 +1088,13 @@ class TrifoldEnums < ActiveRecord::Base
         :'Wyoming'
     ]
   end
+
+  class YesNoAttempted < ActiveRecord::Base
+    enum yna_code: [
+
+        :'Yes',
+        :'No',
+        :'Attempted'
+    ]
+  end
 end

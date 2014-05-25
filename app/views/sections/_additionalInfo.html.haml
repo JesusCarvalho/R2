@@ -2,6 +2,44 @@
   %section.widget
     %legend.section
       %h3 Additional Information
-    = simple_form_for :header do |f|
-      = f.input :pbso_case_num,:label => false, input_html: {class:'input-transparent', placeholder:'Case #'}
-      = f.input :unit,:collection => TrifoldEnums::Unit.unit_codes,:label => false ,:include_blank => 'Unit', input_html: { class: 'btn-default' }
+    = simple_form_for :additional_information do |ai|
+      .row
+        = ai.input :state_is_victim,:label => false,as: :radio_buttons, :label => 'State is Victim?',
+            input_html: {class:'btn-transparent iradio',id:'stateIsVictim','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'State is Victim?'},
+            wrapper_html: {class:'form-inline col-xs-3 iradio'}
+        = ai.input :pbso_reference_case_nums,:label => false ,:include_blank => false,
+            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'PBSO Reference Cases (comma separated)',  placeholder:'PBSO Reference Cases (comma separated)' },
+            wrapper_html:{class:'col-xs-9'}
+        = ai.input :weather,:label => false ,:include_blank => false,
+            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Weather',  placeholder:'Weather' },
+            wrapper_html:{class:'col-xs-12'}
+        = ai.input :witness_to_crime,:label => false,as: :radio_buttons, :label => 'Witness To Crime Known?',
+            input_html: {class:'btn-transparent iradio',id:'witnessToCrimeKnown','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Witness To Crime Known?'},
+            wrapper_html: {class:'form-inline col-xs-4 iradio'}
+        = ai.input :is_modus_operandi_significant,:label => false,as: :radio_buttons, :label => 'State is Victim?',
+            input_html: {class:'btn-transparent iradio',id:'stateIsVictim','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'State is Victim?'},
+            wrapper_html: {class:'form-inline col-xs-4 iradio'}
+        = ai.input :suspect_name_known,:label => false,as: :radio_buttons, :label => 'Is Suspect\'s Name Known?',
+            input_html: {class:'btn-transparent iradio',id:'stateIsVictim','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Is Suspect\'s Name Known?'},
+            wrapper_html: {class:'form-inline col-xs-4 iradio'}
+        = ai.input :valuable_evidence_left_at_scene,:label => false,as: :radio_buttons, :label => 'State is Victim?',
+            input_html: {class:'btn-transparent iradio',id:'stateIsVictim','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'State is Victim?'},
+            wrapper_html: {class:'form-inline col-xs-4 iradio'}
+        = ai.input :can_victim_id_suspect,:label => false,as: :radio_buttons, :label => 'State is Victim?',
+            input_html: {class:'btn-transparent iradio',id:'stateIsVictim','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'State is Victim?'},
+            wrapper_html: {class:'form-inline col-xs-4 iradio'}
+        = ai.input :latents_lifted,:collection => TrifoldEnums::YesNoAttempted.yna_codes,:label => false ,:include_blank => 'Latents Lifted',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Latents Lifted' },
+            wrapper_html:{class:'col-xs-4'}
+        = ai.input :victim_will_prosecute,:label => false,as: :radio_buttons, :label => 'State is Victim?',
+            input_html: {class:'btn-transparent iradio',id:'stateIsVictim','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'State is Victim?'},
+            wrapper_html: {class:'form-inline col-xs-4 iradio'}
+        = ai.input :suspect_location_known,:label => false,as: :radio_buttons, :label => 'State is Victim?',
+            input_html: {class:'btn-transparent iradio',id:'stateIsVictim','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'State is Victim?'},
+            wrapper_html: {class:'form-inline col-xs-4 iradio'}
+        = ai.input :stolen_property_traceable,:label => false,as: :radio_buttons, :label => 'State is Victim?',
+            input_html: {class:'btn-transparent iradio',id:'stateIsVictim','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'State is Victim?'},
+            wrapper_html: {class:'form-inline col-xs-4 iradio'}
+        = ai.input :suspect_location_known,:label => false,as: :radio_buttons, :label => 'State is Victim?',
+            input_html: {class:'btn-transparent iradio',id:'stateIsVictim','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'State is Victim?'},
+            wrapper_html: {class:'form-inline col-xs-4 iradio'}
