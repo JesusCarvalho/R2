@@ -988,6 +988,15 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
+  class YesNoAttempted < ActiveRecord::Base
+    enum yna_code: [
+
+        :'Yes',
+        :'No',
+        :'Attempted'
+    ]
+  end
+
   class OffenseLevel < ActiveRecord::Base
     enum offense_level: [
 
@@ -1086,15 +1095,6 @@ class TrifoldEnums < ActiveRecord::Base
         :'West Virginia',
         :'Wisconsin',
         :'Wyoming'
-    ]
-  end
-
-  class YesNoAttempted < ActiveRecord::Base
-    enum yna_code: [
-
-        :'Yes',
-        :'No',
-        :'Attempted'
     ]
   end
 end

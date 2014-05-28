@@ -6,7 +6,7 @@
       .row
         = pd.input :role, :collection =>TrifoldEnums::Roles.roles,:label => false,
           input_html: { :multiple => true ,id:'pdRolesMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Roles (select all that apply)" },
-          wrapper_html: { class: 'col-xs-4'}
+          wrapper_html: { class: 'col-xs-4 btn-transparent input-transparent'}
         = pd.input :facial_scars, :collection =>TrifoldEnums::FacialScars.facial_scars,:label => false,
           input_html: { :multiple => true ,id:'facialScarsMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Facial Scars (select all that apply)" },
           wrapper_html: { class: 'col-xs-4'}
@@ -58,6 +58,7 @@
 $("#pdRolesMultiSelect").select2({
 placeholder: "Roles (select all that apply)",
 allowClear: true
+
 });
 </script>
 <script type="text/javascript">

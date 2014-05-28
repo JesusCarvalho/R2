@@ -2,6 +2,30 @@
   %section.widget
     %legend.section
       %h3 Narrative
-    = simple_form_for :header do |f|
-      = f.input :pbso_case_num,:label => false, input_html: {class:'input-transparent', placeholder:'Case #'}
-      = f.input :unit,:collection => TrifoldEnums::Unit.unit_codes,:label => false ,:include_blank => 'Unit', input_html: { class: 'btn-default' }
+    = simple_form_for :narrative do |n|
+      .row
+        = n.input :narrative_text,:label => false,as: :text,
+           input_html: {class:'input-transparent', placeholder:'Narrative','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Narrative', 'rows'=>8},
+           wrapper_html:{class:'col-xs-9'}
+        = n.input :reporting_member_full_name,:label => false,
+            input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Reporting Member\'s Full Name', placeholder:'Reporting Member\'s Full Name'},
+            wrapper_html:{class:'col-xs-3'}
+        = n.input :reporting_member_id_number,:label => false,
+            input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'ID Number', placeholder:'ID Number'},
+            wrapper_html:{class:'col-xs-3'}
+        = n.input :reported_on, :label=>false,
+            input_html: { class:'input-transparent date', id: 'narrDateTimeDictated', placeholder:'Date/Time Dictated','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Date/Time Dictated'},
+            wrapper_html:{class:'col-xs-3 '}
+
+<script type="text/javascript">
+$(function () {
+$('#narrDateTimeDictated').datetimepicker({
+icons: {
+time: "fa fa-clock-o",
+date: "fa fa-calendar",
+up: "fa fa-arrow-up",
+down: "fa fa-arrow-down"
+}
+});
+});
+</script>
