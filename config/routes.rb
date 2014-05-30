@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   match '/new',                       to:'create#new',            via: [:get]
   match '/old',                       to:'create#old',            via: [:get]
   match '/test',                      to:'create#test',           via: [:get,:post]
+  match '/menu',                      to:'login#menu',           via: [:get,:post]
   match '/vt',                        to:'create#vt',             via: [:get]
   #match '/search',                    to:'search#basicSearch',    via: [:get]
   #match '/view/:pbso_case_num',       to:'view#openIRF',          via: [:get]
