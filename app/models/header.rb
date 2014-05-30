@@ -13,7 +13,7 @@ class Header < ActiveRecord::Base
   has_many :person_description
   has_many :property_crime
   has_many :url
-  has_many :vehicle_vessel_info
+  has_many :vehicle_vessel
   has_many :victim_info
 
 
@@ -29,7 +29,7 @@ class Header < ActiveRecord::Base
   accepts_nested_attributes_for :person_description
   accepts_nested_attributes_for :property_crime
   accepts_nested_attributes_for :url
-  accepts_nested_attributes_for :vehicle_vessel_info
+  accepts_nested_attributes_for :vehicle_vessel
   accepts_nested_attributes_for :victim_info
 
 
