@@ -1,8 +1,11 @@
 %body.background-dark
- .jumbotron
-  .container-fluid
-   %section.widget
-    .row
-     =image_tag ('pencil.png'), size:'256x256', :class => 'btn-transparent'
-     =image_tag ('folder.png'), size:'256x256', :class => 'btn-transparent'
-     =image_tag ('inbox.png'), size:'256x256', :class => 'btn-transparent'
+ .container
+  .jumbotron
+   .col-sm-offset-2
+    %section.widget
+     .row
+      .i.fa.fa-pencil.fa-5x.col-md-4
+      .i.fa.fa-search.fa-5x.col-md-4
+      .i.fa.fa-envelope-o.fa-5x.col-md-4
+
+

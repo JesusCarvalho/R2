@@ -49,6 +49,7 @@ gem 'cocoon'
 
 # for ajax pagination/sorting on table data
 gem 'smart_listing'
+gem 'backgridjs-rails'
 
 # simplified html markup (for cocoon gem (see http://haml.info for tutorial))
 gem 'haml'

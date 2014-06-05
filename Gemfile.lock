@@ -105,6 +105,9 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    backgridjs-rails (0.3.5)
+      rails (>= 3.2.11)
+    bcrypt (3.1.7)
     bcrypt (3.1.7-x86-mingw32)
     better_errors (1.1.0)
       coderay (>= 1.0.0)
@@ -124,6 +127,7 @@ GEM
       execjs
     coffee-script-source (1.7.0)
     erubis (2.7.0)
+    eventmachine (1.0.3)
     eventmachine (1.0.3-x86-mingw32)
     execjs (2.0.2)
     faye-websocket (0.7.3)
@@ -158,6 +162,7 @@ GEM
     multi_json (1.10.0)
     multi_xml (0.5.5)
     pdf-core (0.2.5)
+    pg (0.17.1)
     pg (0.17.1-x86-mingw32)
     pg_search (0.7.3)
       activerecord (>= 3.1)
@@ -233,6 +238,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  backgridjs-rails
   bcrypt
   better_errors
   bootstrap-sass!
