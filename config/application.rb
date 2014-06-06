@@ -29,8 +29,8 @@ module R2
     # Added for pg_search gem compatibility
     config.active_record.schema_format = :sql
 
-    # 2014-04-11 mkdir assets/fonts, copy theme fonts there and add to default pipeline path
-    config.assets.paths << Rails.root.join("app", "assets", "fonts")
+    # 2014-04-11 mkdir assets/font, copy theme font there and add to default pipeline path
+    config.assets.paths << Rails.root.join("app", "assets", "font")
 
     # 2014-04-17 mkdir and add pdf template for stamping
     config.assets.paths << Rails.root.join("app", "assets", "pdf")
