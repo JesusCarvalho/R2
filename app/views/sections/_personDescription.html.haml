@@ -1,4 +1,4 @@
-.col-md-pull-1
+.col-md-12
   %section.widget
     %legend.section
       %h2 Suspect / Missing Person Description
@@ -6,7 +6,7 @@
       .row
         = pd.input :role, :collection =>TrifoldEnums::Roles.roles,:label => false,
           input_html: { :multiple => true ,id:'pdRolesMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Roles (select all that apply)" },
-          wrapper_html: { class: 'col-xs-4 btn-transparent input-transparent'}
+          wrapper_html: { class: 'col-xs-4'}
         = pd.input :facial_scars, :collection =>TrifoldEnums::FacialScars.facial_scars,:label => false,
           input_html: { :multiple => true ,id:'facialScarsMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Facial Scars (select all that apply)" },
           wrapper_html: { class: 'col-xs-4'}

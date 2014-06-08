@@ -1,4 +1,4 @@
-.col-md-pull-1
+.col-md-12
   %section.widget
     %legend.section
       %h2 Victim Info
@@ -43,9 +43,9 @@
         = v.input :injury_type,:collection =>TrifoldEnums::InjuryType.injury_types,:label => false,
             input_html: { :multiple => true ,id:'injuryTypeMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Injury Type (select all that apply)" },
             wrapper_html: { class: 'col-xs-8'}
-        = v.input :domestic_violence,:label => false,as: :radio_buttons, :label => 'Domestic Violence?',
+        = v.input :domestic_violence, as: :radio_buttons, :label => 'Domestic Violence?',
             input_html: { class:'btn-transparent iradio','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Domestic Violence?'},
-            wrapper_html: { class:'form-inline col-xs-4 iradio label-center'}
+            wrapper_html: { class:'form-inline col-xs-3 iradio'}
 
 
 

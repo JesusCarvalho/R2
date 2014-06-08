@@ -150,4 +150,6 @@ SimpleForm.setup do |config|
   # Defines if the default input wrapper class should be included in radio
   # collection wrappers.
   # config.include_default_input_wrapper_class = true
+
+
 end

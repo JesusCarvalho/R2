@@ -1,4 +1,4 @@
-.col-md-pull-1
+.col-md-12
   %section.widget
     %legend.section
       %h2 Offense List
@@ -6,7 +6,7 @@
       .row
         = o.input :search, as: :search,:label => false,
             input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Search Arrest and Charge Book', placeholder:'Search Arrest / Charge Book' },
-            wrapper_html:{class:'col-xs-9'}
+            wrapper_html:{class:'col-xs-8'}
         = o.input :attempt_code,:collection => TrifoldEnums::Attempt.attempt_codes,:label => false, :include_blank => 'Attempt Code',
             input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Attempt Code' },
             wrapper_html:{class:'col-xs-4'}

@@ -51,6 +51,9 @@ gem 'cocoon'
 gem 'smart_listing'
 gem 'backgridjs-rails'
 
+# radio and checkboxes via iCheck (http://fronteed.com/iCheck/)
+gem 'icheck-rails'
+
 # simplified html markup (for cocoon gem (see http://haml.info for tutorial))
 gem 'haml'
 

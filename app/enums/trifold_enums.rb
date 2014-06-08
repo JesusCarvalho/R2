@@ -997,6 +997,15 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
+
+  class YesNo < ActiveRecord::Base
+    enum yn_code: [
+
+        :'Yes',
+        :'No'
+    ]
+  end
+
   class OffenseLevel < ActiveRecord::Base
     enum offense_level: [
 
