@@ -4,7 +4,7 @@
       %h3 Additional Information
     = simple_form_for :additional_information do |ai|
       .row
-        .col-md-offset-1.form-control
+        .col-md-offset-1
           = ai.input :state_is_victim,as: :boolean, :label => false, :inline_label => true,
               input_html: { class:'btn-transparent iradio','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Unidentified Remains?'},
               wrapper_html: { class:'col-md-5 iradio btn-transparent'}
