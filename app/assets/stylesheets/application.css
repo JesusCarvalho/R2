@@ -11,7 +11,6 @@
  * file per style scope.
  *
  *= require_tree .
- *= require polaris
  *= require_self
  *= require bootstrap
  *= require font-awesome
@@ -7476,6 +7475,13 @@ button.close {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+/*2014-06-11 Added to center offense list search input in container
+  More than likely serves only to demonstrate my ignorance of css and BootStrap*/
+.center_div{
+    margin: 0 auto;
+    width:80% /* value of your choice which suits your alignment */
 }
 
 /* line 15, ../sass/bootstrap-original/_utilities.scss */

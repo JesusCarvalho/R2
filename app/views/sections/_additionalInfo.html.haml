@@ -4,43 +4,43 @@
       %h3 Additional Information
     = simple_form_for :additional_information do |ai|
       .row
-        .col-md-offset-3
+        .col-md-offset-1.form-control
           = ai.input :state_is_victim,as: :boolean, :label => false, :inline_label => true,
               input_html: { class:'btn-transparent iradio','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Unidentified Remains?'},
-              wrapper_html: { class:'col-md-4 iradio btn-transparent'}
+              wrapper_html: { class:'col-md-5 iradio btn-transparent'}
           = ai.input :witness_to_crime,as: :boolean, :label => false, :inline_label => true,
               input_html: { class:'btn-transparent iradio','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Unidentified Remains?'},
-              wrapper_html: { class:'col-md-4 iradio btn-transparent'}
+              wrapper_html: { class:'col-md-5 iradio btn-transparent'}
           = ai.input :is_modus_operandi_significant,as: :boolean, :label => false, :inline_label => 'Modus Operandi Significant',
               input_html: { class:'btn-transparent iradio','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Unidentified Remains?'},
-              wrapper_html: { class:'col-md-4 iradio btn-transparent'}
+              wrapper_html: { class:'col-md-5 iradio btn-transparent'}
           = ai.input :suspect_name_known,as: :boolean, :label => false, :inline_label => 'Suspect\'s Name Known',
               input_html: { class:'btn-transparent iradio','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Unidentified Remains?'},
-              wrapper_html: { class:'col-md-4 iradio btn-transparent'}
+              wrapper_html: { class:'col-md-5 iradio btn-transparent'}
           = ai.input :valuable_evidence_left_at_scene,as: :boolean, :label => false, :inline_label => true,
               input_html: { class:'btn-transparent iradio','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Unidentified Remains?'},
-              wrapper_html: { class:'col-md-4 iradio btn-transparent'}
+              wrapper_html: { class:'col-md-5 iradio btn-transparent'}
           = ai.input :can_victim_id_suspect,as: :boolean, :label => false, :inline_label => 'Victim can ID Suspect',
               input_html: { class:'btn-transparent iradio','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Unidentified Remains?'},
-              wrapper_html: { class:'col-md-4 iradio btn-transparent'}
+              wrapper_html: { class:'col-md-5 iradio btn-transparent'}
           = ai.input :victim_will_prosecute,as: :boolean, :label => false, :inline_label => true,
               input_html: { class:'btn-transparent iradio','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Unidentified Remains?'},
-              wrapper_html: { class:'col-md-4 iradio btn-transparent'}
+              wrapper_html: { class:'col-md-5 iradio btn-transparent'}
           = ai.input :suspect_location_known,as: :boolean, :label => false, :inline_label => true,
               input_html: { class:'btn-transparent iradio','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Unidentified Remains?'},
-              wrapper_html: { class:'col-md-4 iradio btn-transparent'}
+              wrapper_html: { class:'col-md-5 iradio btn-transparent'}
           = ai.input :stolen_property_traceable,as: :boolean, :label => false, :inline_label => true,
               input_html: { class:'btn-transparent iradio','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Unidentified Remains?'},
-              wrapper_html: { class:'col-md-4 iradio btn-transparent'}
+              wrapper_html: { class:'col-md-5 iradio btn-transparent'}
           = ai.input :suspect_location_known,as: :boolean, :label => false, :inline_label => true,
               input_html: { class:'btn-transparent iradio','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Unidentified Remains?'},
-              wrapper_html: { class:'col-md-4 iradio btn-transparent'}
+              wrapper_html: { class:'col-md-5 iradio btn-transparent'}
           = ai.input :property_damage,as: :boolean, :label => false, :inline_label => true,
               input_html: { class:'btn-transparent iradio','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Unidentified Remains?'},
-              wrapper_html: { class:'col-md-4 iradio btn-transparent'}
+              wrapper_html: { class:'col-md-5 iradio btn-transparent'}
           = ai.input :tag_number_known, as: :boolean, :label => false, :inline_label => true,
               input_html: { class:'btn-transparent iradio','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Unidentified Remains?'},
-              wrapper_html: { class:'col-md-4 iradio btn-transparent'}
+              wrapper_html: { class:'col-md-5 iradio btn-transparent'}
         .col-md-12
           %legend.section
         = ai.input :latents_lifted,:collection => TrifoldEnums::YesNoAttempted.yna_codes,:label => false ,:include_blank => 'Latents Lifted',

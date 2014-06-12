@@ -54,13 +54,13 @@
             wrapper_html:{class:'col-xs-3'}
         = mp.input :foul_play_suspected,:label => false,as: :radio_buttons, :label => 'Foul Play Suspected?',
             input_html: {class:'btn-transparent iradio','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Foul Play Suspected?'},
-            wrapper_html: {class:'form-inline col-xs-3 iradio'}
+            wrapper_html: {class:'form-inline col-xs-2 iradio'}
         = mp.input :documentation_submitted,:label => false,as: :radio_buttons, :label => 'Documentation Submitted?',
             input_html: {class:'btn-transparent iradio','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Documentation Submitted?'},
-            wrapper_html: {class:'form-inline col-xs-3 iradio'}
+            wrapper_html: {class:'form-inline col-xs-2 iradio'}
         = mp.input :fingerprints_available,:label => false,as: :radio_buttons, :label => 'Fingerprints Available?',
             input_html: {class:'btn-transparent iradio','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Fingerprints Available?'},
-            wrapper_html: {class:'form-inline col-xs-3 iradio'}
+            wrapper_html: {class:'form-inline col-xs-2 iradio'}
         .col-md-12
           %legend.section
             %h3.col-xs-offset-5 Contacts
@@ -68,7 +68,7 @@
 
           = asc.input :role,:collection => TrifoldEnums::Associates.associate_roles,:label => false,as: :select, :include_blank => 'Role',
                input_html: {class:'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Role'},
-               wrapper_html: {class:'col-xs-2'}
+               wrapper_html: {class:'col-xs-4'}
           = asc.input :name,:label => false,
                input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Name', placeholder:'Name'},
                wrapper_html:{class:'col-xs-4'}
@@ -77,8 +77,27 @@
                wrapper_html:{class:'col-xs-4'}
           = asc.input :phone_number,:label => false,
                input_html: {class:'input-transparent',id:'role_phone', placeholder:'Phone Number','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Phone Number'},
-               wrapper_html:{class:'col-xs-2'}
+               wrapper_html:{class:'col-xs-4'}
+          = asc.input :last_seen_when, :label=>false,
+               input_html: {id: 'ascLastSeenWhen', class:'input-transparent date','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Date of Birth', placeholder:'Date/Time Last Seen' },
+               wrapper_html:{class:'col-xs-4'}
+          = asc.input :last_seen_where,:label => false,
+               input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Name', placeholder:'Location Last Seen'},
+               wrapper_html:{class:'col-xs-4'}
 
+
+<script type="text/javascript">
+$(function () {
+$('#ascLastSeenWhen').datetimepicker({
+icons: {
+time: "fa fa-clock-o",
+date: "fa fa-calendar",
+up: "fa fa-arrow-up",
+down: "fa fa-arrow-down"
+}
+});
+});
+</script>
 
 
 
