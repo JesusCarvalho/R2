@@ -1,0 +1,37 @@
+= simple_form_for :associate do |asc|
+
+          = asc.input :role,:collection => TrifoldEnums::Associates.associate_roles,:label => false,as: :select, :include_blank => 'Role',
+               input_html: {class:'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Role'},
+               wrapper_html: {class:'col-xs-4'}
+          = asc.input :name,:label => false,
+               input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Name', placeholder:'Name'},
+               wrapper_html:{class:'col-xs-4'}
+          = asc.input :address,:label => false,
+               input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Address', placeholder:'Address'},
+               wrapper_html:{class:'col-xs-4'}
+          = asc.input :phone_number,:label => false,
+               input_html: {class:'input-transparent',id:'role_phone', placeholder:'Phone Number','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Phone Number'},
+               wrapper_html:{class:'col-xs-4'}
+          = asc.input :last_seen_when, :label=>false,
+               input_html: {id: 'ascLastSeenWhen', class:'input-transparent date','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Date of Birth', placeholder:'Date/Time Last Seen' },
+               wrapper_html:{class:'col-xs-4'}
+          = asc.input :last_seen_where,:label => false,
+               input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Name', placeholder:'Location Last Seen'},
+               wrapper_html:{class:'col-xs-4'}
+
+<script type="text/javascript">
+$(function () {
+$('#ascLastSeenWhen').datetimepicker({
+icons: {
+time: "fa fa-clock-o",
+date: "fa fa-calendar",
+up: "fa fa-arrow-up",
+down: "fa fa-arrow-down"
+}
+});
+});
+</script>
+
+
+
+
