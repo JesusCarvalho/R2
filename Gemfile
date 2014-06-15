@@ -72,7 +72,7 @@ gem 'gibbon'
 # for pdf transcription
 gem 'prawn'
 
-# google maps
+# google maps for displaying maps on Viewing of existing Trifold
 gem 'gmaps4rails'
 
 # Use SCSS for stylesheets
