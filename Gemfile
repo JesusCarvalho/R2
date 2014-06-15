@@ -74,6 +74,7 @@ gem 'prawn'
 
 # google maps for displaying maps on Viewing of existing Trifold
 gem 'gmaps4rails'
+gem 'underscore-rails'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', :github => 'rails/sass-rails'

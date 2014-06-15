@@ -25,6 +25,8 @@
 //= require twitter/typeahead
 //= require twitter/typeahead.min
 //= require jquery.icheck
+//= require underscore
+//= require gmaps/google
 
 
 
