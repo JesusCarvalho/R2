@@ -30,6 +30,7 @@
         <li><a href="#NarrativeTab" data-toggle="tab">Narrative</a></li>
         <li><a href="#UrlsTab" data-toggle="tab">URLs</a></li>
         <li><a href="#MultimediaTab" data-toggle="tab">Multimedia</a></li>
+        <li><a href="#CocoonTab" data-toggle="tab">Cocoon</a></li>
         <li>
           <div class="form-actions">
             <div>
@@ -81,6 +82,11 @@
         </div>
         <div class="tab-pane" id="MultimediaTab">
           <%= render 'sections/multimedia' %>
+        </div>
+        <div class="tab-pane" id="CocoonTab">
+          <%= link_to_add_association 'add task', f, :tasks, class: "fa fa-plus-circle fa-3x btn-transparent"%>
+
+
         </div>
       </div>
     </div>
