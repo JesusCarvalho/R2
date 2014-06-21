@@ -15,6 +15,7 @@ gem 'pg_search'
 
 # for offense panel to access Arrest and ChargeBook
 gem 'twitter-typeahead-rails'
+gem 'searchkick'
 
 # versioning and auditing database changes
 gem 'paper_trail', :github => 'airblade/paper_trail'
