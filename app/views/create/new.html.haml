@@ -1,0 +1,68 @@
+%html
+  %head
+    %title R2 - Create New IRF
+    %meta{:name => 'viewport', :content => 'width=device-width, initial-scale=1.0'}
+
+  %body.background-dark
+    .container
+      .row
+        .tabbable.tabs-left.col-md-pull-12
+          %ul.nav.nav-tabs
+            %li.active
+              =link_to 'Header', '#HeaderTab', 'data-toggle' => 'tab'
+            %li
+              =link_to 'Offenses', '#OffenseTab', 'data-toggle' => 'tab'
+            %li
+              =link_to 'Victim Info', '#VictimTab', 'data-toggle' => 'tab'
+            %li
+              =link_to 'Name List', '#NameListTab', 'data-toggle' => 'tab'
+            %li
+              =link_to 'Property Crime', '#PropertyCrimeTab', 'data-toggle' => 'tab'
+            %li
+              =link_to 'Missing Persons', '#MissingPersonTab', 'data-toggle' => 'tab'
+            %li
+              =link_to 'Person Description', '#PersonDescriptionTab', 'data-toggle' => 'tab'
+            %li
+              =link_to 'Officer Assaulted/Killed', '#OfficerAssaultedKilledTab', 'data-toggle' => 'tab'
+            %li
+              =link_to 'Vehicle/Vessel', '#VehicleVesselTab', 'data-toggle' => 'tab'
+            %li
+              =link_to 'Death Investigation', '#DeathInvestigationTab', 'data-toggle' => 'tab'
+            %li
+              =link_to 'Addt\'l Info', '#AdditionalInfoTab', 'data-toggle' => 'tab'
+            %li
+              =link_to 'Narrative', '#NarrativeTab', 'data-toggle' => 'tab'
+            %li
+              =link_to 'URLs', '#UrlsTab', 'data-toggle' => 'tab'
+            %li
+              =link_to 'Attachments', '#AttachmentsTab', 'data-toggle' => 'tab'
+
+          .tab-content
+            .tab-pane.active{:id => 'HeaderTab'}
+              =render 'sections/header'
+            .tab-pane{:id => 'OffenseTab'}
+              =render 'sections/offenses'
+            .tab-pane{:id => 'VictimTab'}
+              =render 'sections/victimInfo'
+            .tab-pane{:id => 'NameListTab'}
+              =render 'sections/nameList'
+            .tab-pane{:id => 'PropertyCrimeTab'}
+              =render 'sections/propertyCrimeDetails'
+            .tab-pane{:id => 'MissingPersonTab'}
+              =render 'sections/missingPerson'
+            .tab-pane{:id => 'PersonDescriptionTab'}
+              =render 'sections/personDescription'
+            .tab-pane{:id => 'OfficerAssaultedKilledTab'}
+              =render 'sections/officerAssaultedKilled'
+            .tab-pane{:id => 'VehicleVesselTab'}
+              =render 'sections/vehicleVessel'
+            .tab-pane{:id => 'DeathInvestigationTab'}
+              =render 'sections/deathInvestigation'
+            .tab-pane{:id => 'AdditionalInfoTab'}
+              =render 'sections/additionalInfo'
+            .tab-pane{:id => 'NarrativeTab'}
+              =render 'sections/narrative'
+            .tab-pane{:id => 'UrlsTab'}
+              =render 'sections/urls'
+            .tab-pane{:id => 'AttachmentsTab'}
+              =render 'sections/multimedia'
