@@ -70,12 +70,13 @@
         = ai.input :photos_taken_by,:label => false ,:include_blank => false,
             input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Photos Taken By',  placeholder:'Photos Taken By' },
             wrapper_html:{class:'col-xs-6'}
-        = ai.input :pbso_reference_case_nums,:label => false ,:include_blank => false,
-            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'PBSO Reference Cases (comma separated)',  placeholder:'PBSO Reference Cases (comma separated)' },
-            wrapper_html:{class:'col-xs-6'}
         = ai.input :weather,:label => false ,:include_blank => false,
             input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Weather',  placeholder:'Weather' },
+            wrapper_html:{class:'col-xs-6'}
+        = ai.input :pbso_reference_case_nums,:label => false ,:include_blank => false,
+            input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'PBSO Reference Cases (comma separated)',  placeholder:'PBSO Reference Cases (comma separated)' },
             wrapper_html:{class:'col-xs-12'}
+
 
 <script type="text/javascript">
 function icheck(){
