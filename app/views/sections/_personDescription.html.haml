@@ -6,52 +6,52 @@
       .row
         = pd.input :role, :collection =>TrifoldEnums::Roles.roles,:label => false,
           input_html: { :multiple => true ,id:'pdRolesMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Roles (select all that apply)" },
-          wrapper_html: { class: 'col-xs-4'}
+          wrapper_html: { class: 'col-xs-6'}
         = pd.input :facial_scars, :collection =>TrifoldEnums::FacialScars.facial_scars,:label => false,
           input_html: { :multiple => true ,id:'facialScarsMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Facial Scars (select all that apply)" },
-          wrapper_html: { class: 'col-xs-4'}
+          wrapper_html: { class: 'col-xs-6'}
         = pd.input :body_scars, :collection =>TrifoldEnums::BodyScars.body_scars,:label => false,
           input_html: { :multiple => true ,id:'bodyScarsMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Body Scars (select all that apply)" },
-          wrapper_html: { class: 'col-xs-4'}
+          wrapper_html: { class: 'col-xs-6'}
         = pd.input :facial_oddity, :collection =>TrifoldEnums::FacialOddity.facial_oddities,:label => false,
           input_html: { :multiple => true ,id:'facialOddityMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Facial Oddity (select all that apply)" },
-          wrapper_html: { class: 'col-xs-4'}
+          wrapper_html: { class: 'col-xs-6'}
         = pd.input :complexion, :collection =>TrifoldEnums::Complexion.complexion_codes,:label => false,
           input_html: { :multiple => true ,id:'complexionMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Complexion (select all that apply)" },
-          wrapper_html: { class: 'col-xs-4'}
+          wrapper_html: { class: 'col-xs-6'}
         = pd.input :facial_hair, :collection =>TrifoldEnums::FacialHair.facial_hairs,:label => false,
           input_html: { :multiple => true ,id:'facialHairMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Facial Hair (select all that apply)" },
-          wrapper_html: { class: 'col-xs-4'}
+          wrapper_html: { class: 'col-xs-6'}
         = pd.input :face, :collection =>TrifoldEnums::Face.faces,:label => false,
           input_html: { :multiple => true ,id:'faceMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Face (select all that apply)" },
-          wrapper_html: { class: 'col-xs-4'}
+          wrapper_html: { class: 'col-xs-6'}
         = pd.input :hair_type, :collection =>TrifoldEnums::HairType.hair_types,:label => false,
           input_html: { :multiple => true ,id:'hairTypeMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Hair Type (select all that apply)" },
-          wrapper_html: { class: 'col-xs-4'}
+          wrapper_html: { class: 'col-xs-6'}
         = pd.input :eyes, :collection =>TrifoldEnums::Eye.eyes,:label => false,
           input_html: { :multiple => true ,id:'eyesMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Eyes (select all that apply)" },
-          wrapper_html: { class: 'col-xs-4'}
+          wrapper_html: { class: 'col-xs-6'}
         = pd.input :ears, :collection =>TrifoldEnums::Ear.ears,:label => false,
           input_html: { :multiple => true ,id:'earsMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Ears (select all that apply)" },
-          wrapper_html: { class: 'col-xs-4'}
+          wrapper_html: { class: 'col-xs-6'}
         = pd.input :nose, :collection =>TrifoldEnums::Nose.noses,:label => false,
           input_html: { :multiple => true ,id:'noseMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Nose (select all that apply)" },
-          wrapper_html: { class: 'col-xs-4'}
+          wrapper_html: { class: 'col-xs-6'}
         = pd.input :teeth, :collection =>TrifoldEnums::Teeth.teeths,:label => false,
           input_html: { :multiple => true ,id:'teethMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Teeth (select all that apply)" },
-          wrapper_html: { class: 'col-xs-4'}
+          wrapper_html: { class: 'col-xs-6'}
         = pd.input :speech, :collection =>TrifoldEnums::Speech.speeches,:label => false,
           input_html: { :multiple => true ,id:'speechMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Speech (select all that apply)" },
-          wrapper_html: { class: 'col-xs-4'}
+          wrapper_html: { class: 'col-xs-6'}
         = pd.input :amuptee, :collection =>TrifoldEnums::Amputee.amputees,:label => false,
           input_html: { :multiple => true ,id:'amputeeMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Amputee (select all that apply)" },
-          wrapper_html: { class: 'col-xs-4'}
+          wrapper_html: { class: 'col-xs-6'}
         = pd.input :deformed, :collection =>TrifoldEnums::Deformed.deformeds,:label => false,
           input_html: { :multiple => true ,id:'deformedMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Deformity (select all that apply)" },
-          wrapper_html: { class: 'col-xs-4'}
+          wrapper_html: { class: 'col-xs-6'}
         = pd.input :tatoo,:collection =>TrifoldEnums::Tatoo.tatoos,:label => false,
           input_html: { :multiple => true ,id:'tatooMultiSelect', class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>"Tatoo (select all that apply)" },
-          wrapper_html: { class: 'col-xs-4'}
+          wrapper_html: { class: 'col-xs-6'}
 
 
 <script type="text/javascript">
