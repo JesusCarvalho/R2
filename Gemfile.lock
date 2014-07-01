@@ -1,14 +1,14 @@
 GIT
   remote: git://github.com/airblade/paper_trail.git
-  revision: 1880df9b618e783bce96cfd006a918b20b9833e2
+  revision: 44dcdbaaa3be0cbcd1e638cf6a5ef291f1f95b48
   specs:
-    paper_trail (3.0.2)
+    paper_trail (3.0.3)
       activerecord (>= 3.0, < 5.0)
       activesupport (>= 3.0, < 5.0)
 
 GIT
   remote: git://github.com/bokmann/font-awesome-rails.git
-  revision: 9f1fec73b7c0dd96c4e4b6ddf5a5f64f1c418b42
+  revision: d4cc84463a8df29e1d5fd534a53cb7ef62a80ef6
   specs:
     font-awesome-rails (4.1.0.0)
       railties (>= 3.2, < 5.0)
@@ -22,7 +22,7 @@ GIT
 
 GIT
   remote: git://github.com/kossnocorp/jquery.turbolinks.git
-  revision: 73b9cb57b99c45c04743b40280af0716096c29a9
+  revision: 83b44af5cf58e744f91462fcedbc3c82589bf862
   specs:
     jquery-turbolinks (2.0.2)
       railties (>= 3.1.0)
@@ -30,7 +30,7 @@ GIT
 
 GIT
   remote: git://github.com/plataformatec/simple_form.git
-  revision: 9196efd2562573aa08037034051fc8c924083e10
+  revision: 01ccfcebd45b8de0a6846d0f33b9daf74673dcc1
   specs:
     simple_form (3.1.0.rc1)
       actionpack (~> 4.0)
@@ -45,60 +45,43 @@ GIT
 
 GIT
   remote: git://github.com/rails/jquery-rails.git
-  revision: 469171f4f24bbca1c38e741dcb258ba885724e5d
+  revision: a3e9a29f17244d21fed705dfe85c17f91afdfe02
   specs:
-    jquery-rails (3.1.0)
+    jquery-rails (3.1.1)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
 
 GIT
-  remote: git://github.com/rails/sass-rails.git
-  revision: 3a9e47db7d769221157c82229fc1bade55b580f0
-  specs:
-    sass-rails (4.0.1)
-      railties (>= 4.0.0, < 5.0)
-      sass (~> 3.2)
-      sprockets (~> 2.12)
-      sprockets-rails (~> 2.0)
-
-GIT
   remote: git://github.com/rails/turbolinks.git
-  revision: 23e5937ca74d4e81f8322c7afb735d096186061d
+  revision: 42285201dfb3365dfabe87b4b66a8c7569a07b48
   specs:
     turbolinks (2.2.2)
       coffee-rails
 
-GIT
-  remote: git://github.com/twbs/bootstrap-sass.git
-  revision: a416cb86a3ddc6906892b2c0472deea306989fea
-  specs:
-    bootstrap-sass (3.1.1.1)
-      sass (~> 3.2)
-
 GEM
   remote: https://rubygems.org/
   specs:
-    actionmailer (4.1.1)
-      actionpack (= 4.1.1)
-      actionview (= 4.1.1)
+    actionmailer (4.1.2)
+      actionpack (= 4.1.2)
+      actionview (= 4.1.2)
       mail (~> 2.5.4)
-    actionpack (4.1.1)
-      actionview (= 4.1.1)
-      activesupport (= 4.1.1)
+    actionpack (4.1.2)
+      actionview (= 4.1.2)
+      activesupport (= 4.1.2)
       rack (~> 1.5.2)
       rack-test (~> 0.6.2)
-    actionview (4.1.1)
-      activesupport (= 4.1.1)
+    actionview (4.1.2)
+      activesupport (= 4.1.2)
       builder (~> 3.1)
       erubis (~> 2.7.0)
-    activemodel (4.1.1)
-      activesupport (= 4.1.1)
+    activemodel (4.1.2)
+      activesupport (= 4.1.2)
       builder (~> 3.1)
-    activerecord (4.1.1)
-      activemodel (= 4.1.1)
-      activesupport (= 4.1.1)
+    activerecord (4.1.2)
+      activemodel (= 4.1.2)
+      activesupport (= 4.1.2)
       arel (~> 5.0.0)
-    activesupport (4.1.1)
+    activesupport (4.1.2)
       i18n (~> 0.6, >= 0.6.9)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
@@ -112,7 +95,9 @@ GEM
     better_errors (1.1.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
-    bootstrap3-datetimepicker-rails (3.0.0)
+    bootstrap-sass (3.2.0.0)
+      sass (~> 3.2)
+    bootstrap3-datetimepicker-rails (3.0.0.1)
       momentjs-rails (~> 2.5.0)
     breadcrumbs_on_rails (2.3.0)
     builder (3.2.2)
@@ -137,19 +122,19 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.3)
     eventmachine (1.0.3-x86-mingw32)
-    execjs (2.0.2)
+    execjs (2.2.1)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
     faye-websocket (0.7.3)
       eventmachine (>= 0.12.0)
       websocket-driver (>= 0.3.1)
-    gibbon (1.1.2)
+    gibbon (1.1.3)
       httparty
       multi_json (>= 1.3.4)
     gmaps4rails (2.1.2)
     haml (4.0.5)
       tilt
-    hashie (3.0.0)
+    hashie (3.1.0)
     hike (1.2.3)
     httparty (0.13.1)
       json (~> 1.8)
@@ -158,63 +143,68 @@ GEM
     icheck-rails (0.9.0.2)
       jquery-rails
       rails (>= 3.1.0)
-    jbuilder (2.0.7)
+    jbuilder (2.1.1)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
     jquery-migrate-rails (1.2.1)
     json (1.8.1)
-    kaminari (0.15.1)
+    kaminari (0.16.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
-    minitest (5.3.4)
+    minitest (5.3.5)
     momentjs-rails (2.5.1)
       railties (>= 3.1)
-    multi_json (1.10.0)
+    multi_json (1.10.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
+    net-ldap (0.6.1)
     pdf-core (0.2.5)
     pg (0.17.1)
     pg (0.17.1-x86-mingw32)
-    pg_search (0.7.3)
+    pg_search (0.7.4)
       activerecord (>= 3.1)
       activesupport (>= 3.1)
       arel
     placeholder-gem (3.0.2)
       railties (>= 3.1)
-    polyglot (0.3.4)
-    prawn (1.0.0)
-      pdf-core (~> 0.2.2)
-      ttfunk (~> 1.1.1)
+    polyglot (0.3.5)
+    prawn (1.1.0)
+      pdf-core (~> 0.2.5)
+      ttfunk (~> 1.2.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
-    rails (4.1.1)
-      actionmailer (= 4.1.1)
-      actionpack (= 4.1.1)
-      actionview (= 4.1.1)
-      activemodel (= 4.1.1)
-      activerecord (= 4.1.1)
-      activesupport (= 4.1.1)
+    rails (4.1.2)
+      actionmailer (= 4.1.2)
+      actionpack (= 4.1.2)
+      actionview (= 4.1.2)
+      activemodel (= 4.1.2)
+      activerecord (= 4.1.2)
+      activesupport (= 4.1.2)
       bundler (>= 1.3.0, < 2.0)
-      railties (= 4.1.1)
+      railties (= 4.1.2)
       sprockets-rails (~> 2.0)
-    railties (4.1.1)
-      actionpack (= 4.1.1)
-      activesupport (= 4.1.1)
+    railties (4.1.2)
+      actionpack (= 4.1.2)
+      activesupport (= 4.1.2)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.3.2)
     rdoc (4.1.1)
       json (~> 1.4)
-    sass (3.3.7)
+    sass (3.3.9)
+    sass-rails (4.0.1)
+      railties (>= 4.0.0, < 5.0)
+      sass (>= 3.1.10)
+      sprockets-rails (~> 2.0.0)
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
-    searchkick (0.7.7)
+    searchkick (0.7.8)
       activemodel
       elasticsearch (~> 0.4.11)
       hashie
@@ -229,26 +219,25 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sprockets-rails (2.1.3)
+    sprockets-rails (2.0.1)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
     thor (0.19.1)
-    thread_safe (0.3.3)
+    thread_safe (0.3.4)
     tilt (1.4.1)
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    ttfunk (1.1.1)
+    ttfunk (1.2.0)
     twitter-typeahead-rails (0.10.2)
       actionpack (>= 3.1)
       jquery-rails
       railties (>= 3.1)
-    tzinfo (1.1.0)
+    tzinfo (1.2.1)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2014.3)
-      tzinfo (>= 1.0.0)
-    uglifier (2.5.0)
+    tzinfo-data (1.2013.8)
+    uglifier (2.5.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     underscore-rails (1.6.0)
@@ -261,7 +250,7 @@ DEPENDENCIES
   backgridjs-rails
   bcrypt
   better_errors
-  bootstrap-sass!
+  bootstrap-sass
   bootstrap3-datetimepicker-rails
   breadcrumbs_on_rails
   cancan
@@ -280,6 +269,7 @@ DEPENDENCIES
   jquery-ui-rails!
   masked_input-rails!
   momentjs-rails
+  net-ldap
   paper_trail!
   pg
   pg_search
@@ -287,12 +277,13 @@ DEPENDENCIES
   prawn
   rails
   railties
-  sass-rails!
+  sass-rails
   sdoc
   searchkick
   select2-rails
   simple_form!
   smart_listing
+  thread_safe
   turbolinks!
   twitter-typeahead-rails
   tzinfo-data

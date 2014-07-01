@@ -1,8 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-#gem 'rails', :github => 'rails'
-#gem 'railties', :github => 'rails'
+
 gem 'rails'
 gem 'railties'
 
@@ -19,21 +18,27 @@ gem 'searchkick'
 
 # versioning and auditing database changes
 gem 'paper_trail', :github => 'airblade/paper_trail'
+#gem 'paper_trail'
 
 # breadcrumb on rails
 gem 'breadcrumbs_on_rails'
 
 # Form builder dsl
+#gem 'simple_form'
 gem 'simple_form', :github => 'plataformatec/simple_form'
 
 # bootstrap for rails
-gem 'bootstrap-sass', :github => 'twbs/bootstrap-sass'
+#gem 'bootstrap-sass', :github => 'twbs/bootstrap-sass'
+gem 'bootstrap-sass'
 
 # for dropdowns that can hold multiple values simultaneously
 gem 'select2-rails'
 
 # gem for ACL
 gem 'cancan'
+
+# LDAP (integrate with PostgreSQL capability)
+gem 'net-ldap'
 
 # datetime picker for rails (https://github.com/Eonasdan/bootstrap-datetimepicker)
 gem 'momentjs-rails'
@@ -44,6 +49,7 @@ gem 'placeholder-gem'
 
 # masked inputs using jquery
 gem 'masked_input-rails', :github => 'rafaelmacedo/masked_input-rails'
+
 
 # for dynamic nested forms
 gem 'cocoon'
@@ -60,6 +66,7 @@ gem 'haml'
 
 # Use font-awesome-rails instead of bootstrap glyphicons
 gem 'font-awesome-rails', :github => 'bokmann/font-awesome-rails'
+#gem 'font-awesome-rails'
 
 # Comet for dispatch to deputy messages
 gem 'faye-websocket'
@@ -78,7 +85,8 @@ gem 'gmaps4rails'
 gem 'underscore-rails'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', :github => 'rails/sass-rails'
+#gem 'sass-rails', :github => 'rails/sass-rails'
+gem 'sass-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -91,19 +99,24 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails', :github => 'rails/jquery-rails'
+#gem 'jquery-rails'
+
+# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+gem 'turbolinks', :github =>'rails/turbolinks'
+#gem 'turbolinks'
 
 # not bundled by default anymore with above
 gem 'jquery-ui-rails', :github => 'joliss/jquery-ui-rails'
+#gem 'jquery-ui-rails'
 
 # for all the goddamn deprecated features used by the plugins i need
 # to make IE7 behave like a goddamn modern browser
 gem 'jquery-migrate-rails'
 
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks', :github =>'rails/turbolinks'
 
 # woe is Man
 gem 'jquery-turbolinks', :github => 'kossnocorp/jquery.turbolinks'
+#gem 'jquery-turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder'
@@ -125,3 +138,6 @@ gem 'bcrypt'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
+
+#2014-06-29 Added to upgrade rails server
+gem 'thread_safe'
