@@ -1,7 +1,7 @@
 .col-md-12
   %section.widget
     %legend.section
-      %h2 Missing Person(s)
+      %h1 Missing Person(s)
     = simple_form_for :missing_person do |mp|
       .row
         = mp.input :time_last_seen, :label=>false,
@@ -63,7 +63,7 @@
             wrapper_html: {class:'form-inline col-xs-2 iradio'}
         .col-md-12
           %legend.section
-            %h3.col-xs-offset-5 Contacts
+            %h2.col-xs-offset-5 Contacts
         = render :partial => "sections/associate"
 
 <script type="text/javascript">

@@ -1,7 +1,7 @@
 .col-md-12
   %section.widget
     %legend.section
-      %h3 Vehicle/Vessel Info
+      %h1 Vehicle/Vessel Info
     = simple_form_for :vehicle_vessel do |vv|
       .row
         = vv.input :vehicle_vessle_status,:collection => TrifoldEnums::VehicleVesselStatus.vehicle_vessel_status_codes,:label => false ,:include_blank => 'Vehicle/Vessel Status Code',

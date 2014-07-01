@@ -1,7 +1,7 @@
 .col-md-12
   %section.widget
     %legend.section
-      %h2 Property Crime
+      %h1 Property Crime
     = simple_form_for :property_crime_details do |pcd|
       .row
         = pcd.input :nature_of_larceny,:collection => TrifoldEnums::LarcenyNature.larceny_natures,:label => false ,:include_blank => 'Nature of Larceny',
