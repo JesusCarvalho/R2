@@ -5054,7 +5054,7 @@ input[type="button"].btn-block {
 /* line 11, ../sass/bootstrap-original/_navbar.scss */
 .navbar {
     position: relative;
-    min-height: 50px;
+    min-height: 30px;
     margin-bottom: 20px;
     border: 1px solid transparent;
 }
