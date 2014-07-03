@@ -17,16 +17,15 @@
 //= require placeholder
 //= require turbolinks
 //= require moment
-//= require bootstrap
 //= require bootstrap-datetimepicker
 //= require jquery-migrate-min
 //= require jquery.maskedinput-1.3
 //= require select2
 //= require twitter/typeahead
-//= require twitter/typeahead.min
 //= require jquery.icheck
 //= require underscore
 //= require gmaps/google
+//= require bootstrap
 
 
 
