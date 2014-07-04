@@ -4,9 +4,13 @@
     %meta{:name => 'viewport', :content => 'width=device-width, initial-scale=1.0'}
 
   %body.background-dark
-    .navbar.navbar-default
     .container
       .row
+        %widget
+          %ol.breadcrumb
+            <li><a href=""><i class="fa fa-home"></i> R2</a></li>
+            <li class="active">New IRF</li>
+
         .tabbable.tabs-left.col-md-pull-12
           %ul.nav.nav-tabs
             %li.active
