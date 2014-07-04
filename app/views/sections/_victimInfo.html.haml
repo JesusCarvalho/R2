@@ -1,7 +1,9 @@
 .col-md-12
   %section.widget
     %legend.section
+      %i.pull-right.fa.fa-plus-circle.fa-3x
       %h1 Victim Info
+
     = simple_form_for :victim_info do |v|
       .row
         = v.input :victim_type,:collection => TrifoldEnums::VictimType.victim_types,:label => false ,:include_blank => 'Victim Type',
