@@ -12,23 +12,22 @@ gem 'pg'
 # Full text search for pg and rails (commented out on 4/26/2014 because of failing startup for server)
 gem 'pg_search'
 
-# for offense panel to access Arrest and ChargeBook
+# for offense panel to search Arrest and ChargeBook tables dynamically
 gem 'twitter-typeahead-rails'
-gem 'searchkick'
+
 
 # versioning and auditing database changes
 gem 'paper_trail', :github => 'airblade/paper_trail'
-#gem 'paper_trail'
+
 
 # breadcrumb on rails
 gem 'breadcrumbs_on_rails'
 
 # Form builder dsl
-#gem 'simple_form'
+
 gem 'simple_form', :github => 'plataformatec/simple_form'
 
 # bootstrap for rails
-#gem 'bootstrap-sass', :github => 'twbs/bootstrap-sass'
 gem 'bootstrap-sass'
 
 # for dropdowns that can hold multiple values simultaneously
@@ -37,7 +36,7 @@ gem 'select2-rails'
 # gem for ACL
 gem 'cancan'
 
-# LDAP (integrate with PostgreSQL capability)
+# LDAP for single sign-on (integrate with PostgreSQL capability)
 gem 'net-ldap'
 
 # datetime picker for rails (https://github.com/Eonasdan/bootstrap-datetimepicker)
@@ -99,15 +98,15 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails', :github => 'rails/jquery-rails'
-#gem 'jquery-rails'
+
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks', :github =>'rails/turbolinks'
-#gem 'turbolinks'
+
 
 # not bundled by default anymore with above
 gem 'jquery-ui-rails', :github => 'joliss/jquery-ui-rails'
-#gem 'jquery-ui-rails'
+
 
 # for all the goddamn deprecated features used by the plugins i need
 # to make IE7 behave like a goddamn modern browser
@@ -116,7 +115,6 @@ gem 'jquery-migrate-rails'
 
 # woe is Man
 gem 'jquery-turbolinks', :github => 'kossnocorp/jquery.turbolinks'
-#gem 'jquery-turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder'
