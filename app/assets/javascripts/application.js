@@ -25,6 +25,7 @@
 //= require jquery.icheck
 //= require underscore
 //= require gmaps/google
+//= require cocoon
 //= require bootstrap
 
 
