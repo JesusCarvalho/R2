@@ -11,14 +11,14 @@ class CreateTrifoldsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:create)
   end
 
-  test "should get new" do
-    get :new
+  test "should get newIRF" do
+    get :newIRF
     assert_response :success
   end
 
   test "should create create" do
     assert_difference('CreateTrifold.count') do
-      post :create, create: { new: @create_trifold.new }
+      post :create, create: { newIRF: @create_trifold.new }
     end
 
     assert_redirected_to create_trifold_path(assigns(:create))
@@ -35,7 +35,7 @@ class CreateTrifoldsControllerTest < ActionController::TestCase
   end
 
   test "should update create" do
-    patch :update, id: @create_trifold, create: { new: @create_trifold.new }
+    patch :update, id: @create_trifold, create: { newIRF: @create_trifold.new }
     assert_redirected_to create_trifold_path(assigns(:create))
   end
 

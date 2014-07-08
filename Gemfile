@@ -12,6 +12,9 @@ gem 'pg'
 # Full text search for pg and rails (commented out on 4/26/2014 because of failing startup for server)
 gem 'pg_search'
 
+# Advanced search of existing IRFs or SARs (See https://ransack-demo.herokuapp.com/)
+gem 'ransack'
+
 # for offense panel to search Arrest and ChargeBook tables dynamically
 gem 'twitter-typeahead-rails'
 

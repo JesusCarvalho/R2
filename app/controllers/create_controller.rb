@@ -10,23 +10,26 @@ class CreateController < ApplicationController
       @header = Header.new
   end
 
-  def new
+  def test2
+    @header = Header.new
+  end
+
+  def newIRF
+
     @header         = Header.new
     @addtlInfo      = AdditionalInformation.new
     @narrative      = Narrative.new
-
-    # Instantiate arrays because these are n-ary
-    @offense        = Offense.Array.new
-    @vicInfo        = VictimInfo.Array.new
-    @nameList       = NameList.Array.new
-    @propCrime      = PropertyCrime.Array.new
-    @missingPersons = MissingPerson.Array.new
-    @personDesc     = PersonDescription.Array.new
-    @officerAK      = OfficerAssaultedOrKilled.Array.new
-    @vvInfo         = VehicleVessel.Array.new
-    @deathInv       = DeathInvestigation.Array.new
-    @links          = Url.Array.new
-    @files          = Multimedia.Array.new
+    @offenses       = Offense.new
+    @vicInfo        = VictimInfo.new
+    @nameList       = NamesList.new
+    @propCrime      = PropertyCrime.new
+    @missingPersons = MissingPerson.new
+    @personDesc     = PersonDescription.new
+    @officerAK      = OfficerAssaultedOrKilled.new
+    @vvInfo         = VehicleVessel.new
+    @deathInv       = DeathInvestigation.new
+    @links          = Url.new
+    @files          = Multimedia.new
 
 
   end
@@ -35,7 +38,7 @@ class CreateController < ApplicationController
     @header = Header.new
   end
 
-  def save
+  def search
 
   end
 

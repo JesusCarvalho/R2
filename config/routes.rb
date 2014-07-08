@@ -21,10 +21,11 @@ Rails.application.routes.draw do
   #match '/',                          to:'login#login',           via: [:get]
   #match '/login',                     to:'login#login',           via: [:get]
   #match '/menu',                      to:'application#menu',      via: [:get]
-  match '/new',                       to:'create#new',            via: [:get]
+  match '/newIRF',                    to:'create#newIRF',         via: [:get,:post]
   match '/old',                       to:'create#old',            via: [:get]
   match '/test',                      to:'create#test',           via: [:get,:post]
-  match '/menu',                      to:'login#menu',           via: [:get,:post]
+  match '/test2',                      to:'create#test2',           via: [:get,:post]
+  match '/menu',                      to:'login#menu',            via: [:get,:post]
   match '/vt',                        to:'create#vt',             via: [:get]
   #match '/search',                    to:'search#basicSearch',    via: [:get]
   #match '/view/:pbso_case_num',       to:'view#openIRF',          via: [:get]
@@ -34,7 +35,7 @@ Rails.application.routes.draw do
   #match '/mailbox/:msg_id',           to:'mailbox#open',          via: [:get]
   #
   #
-  #match '/new',                       to: 'create#save',          via: [:post]
+  #match '/newIRF',                       to: 'create#save',          via: [:post]
   #match '/update/:pbso_case_num',     to: 'create#update',        via: [:patch]
 
 

@@ -1,0 +1,48 @@
+!!!
+%html
+  %head
+    %title Light Blue - Admin Template
+    %link{:href => "css/application.min.css", :rel => "stylesheet"}
+      %link{:href => "img/favicon.png", :rel => "shortcut icon"}
+        %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+          %meta{:content => "", :name => "description"}
+            %meta{:content => "", :name => "author"}
+
+%body.background-dark
+  .container
+    .row
+      .col-md-12
+        %section.widget
+          %legend.section
+            %h1
+              Victim Info
+          %ul.nav.nav-tabs
+            %li.active
+              %a{"data-toggle" => "tab", href: "#contact_01"} Victim #1
+            %li
+              %a.add-contact{"data-toggle" => "tab", href: "#"}
+                %i.fa.fa-plus-square-o
+          .tab-content
+            #contact_01.tab-pane.active
+              =render 'sections/test'
+
+
+
+
+:javascript
+  $(".nav-tabs").on("click", "a", function(e){
+  e.preventDefault();
+  $(this).tab('show');
+  }).on("click", "span", function () {
+  var anchor = $(this).siblings('a');
+  $(anchor.attr('href')).remove();
+  $(this).parent().remove();
+  $(".tab-content tab-pane").children('a').first().click();
+  });
+  $('.add-contact').click(function(e) {
+  e.preventDefault();
+  var html = "<% =j(render(:partial => 'sections/test')) %>";
+  var id = $(".nav-tabs").children().length; //think about it ;)
+  $(this).closest('li').before('<li><a href="#contact_'+id+'">Victim #'+id+'<span> x </span></a></li>');
+  $('.tab-content').append('<div class="tab-pane" id="contact_'+id+'">'.html('html')+'</div>');
+  });

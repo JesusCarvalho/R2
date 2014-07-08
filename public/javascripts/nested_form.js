@@ -16,7 +16,7 @@
       // of each of the parent objects
       var context = ($(link).closest('.fields').closestChild('input, textarea, select').eq(0).attr('name') || '').replace(new RegExp('\[[a-z_]+\]$'), '');
 
-      // context will be something like this for a brand new form:
+      // context will be something like this for a brand newIRF form:
       // project[tasks_attributes][1255929127459][assignments_attributes][1255929128105]
       // or for an edit form:
       // project[tasks_attributes][0][assignments_attributes][1]
@@ -37,7 +37,7 @@
         }
       }
 
-      // Make a unique ID for the new child
+      // Make a unique ID for the newIRF child
       var regexp  = new RegExp('new_' + assoc, 'g');
       var new_id  = this.newId();
       content     = $.trim(content.replace(regexp, new_id));

@@ -1,0 +1,59 @@
+%span
+  %i.pull-right.fa.fa-times
+
+  .col-md-12
+    = simple_form_for :names_list do |nl|
+      .row
+        = nl.input :last_name,:label => false,
+            input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Last Name', placeholder:'Last Name'},
+            wrapper_html:{class:'col-xs-4'}
+        = nl.input :first_name,:label => false,
+            input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'First Name', placeholder:'First Name'},
+            wrapper_html:{class:'col-xs-4'}
+        = nl.input :middle_name,:label => false,
+            input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Middle Name', placeholder:'Middle Name'},
+            wrapper_html:{class:'col-xs-4'}
+        = nl.input :race,:collection => TrifoldEnums::RaceCode.race_codes,:label => false ,:include_blank => 'Race',
+            input_html: { class: 'btn-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Race' },
+            wrapper_html:{class:'col-xs-4'}
+
+
+<script type="text/javascript">
+$("#rolesMultiSelect").select2({
+placeholder: "Roles (select all that apply)",
+allowClear: true
+});
+</script>
+<script type="text/javascript">
+$(function () {
+$('#nl_date_of_birth').datetimepicker({
+pickTime: false,
+icons: {
+time: "fa fa-clock-o",
+date: "fa fa-calendar",
+up: "fa fa-arrow-up",
+down: "fa fa-arrow-down"
+}
+});
+});
+</script>
+
+<script type="text/javascript">
+$(function(){
+$('#business_phone').mask("(999) 999-9999? x99999");
+});
+</script>
+
+<script type="text/javascript">
+$(function(){
+$('#home_phone').mask("(999) 999-9999");
+});
+</script>
+
+<script type="text/javascript">
+$(function(){
+$('#mobile_phone').mask("(999) 999-9999");
+});
+</script>
+
+

@@ -50,7 +50,14 @@
             .tab-pane{:id => 'OffenseTab'}
               =render 'sections/offenses'
             .tab-pane{:id => 'VictimTab'}
-              =render 'sections/victimInfo'
+              .col-md-12
+                %section.widget
+                  %legend.section
+                    %i.pull-right.fa.fa-plus-circle.fa-2x
+                    %h1
+                      Victim Info
+
+                  =render 'sections/victimInfo'
             .tab-pane{:id => 'NameListTab'}
               =render 'sections/nameList'
             .tab-pane{:id => 'PropertyCrimeTab'}

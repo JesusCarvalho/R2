@@ -4,6 +4,6 @@
       %h1 Offense List
     = simple_form_for :offense do |o|
       .row
-        = o.input :search, as: :search,:label => false,
+        = o.input :offense, as: :search,:label => false,
             input_html: { class: 'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Search Arrest and Charge Book', placeholder:'Search Arrest / Charge Book' },
             wrapper_html:{class:'col-xs-12'}
