@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-
+# Bundle stable Rails instead of edge
 gem 'rails'
 gem 'railties'
 
@@ -15,19 +14,19 @@ gem 'pg_search'
 # Advanced search of existing IRFs or SARs (See https://ransack-demo.herokuapp.com/)
 gem 'ransack'
 
+# option for storing FDLE statutes and zip codes outside of database
+#gem 'soulmate'
+
 # for offense panel to search Arrest and ChargeBook tables dynamically
 gem 'twitter-typeahead-rails'
 
-
 # versioning and auditing database changes
 gem 'paper_trail', :github => 'airblade/paper_trail'
-
 
 # breadcrumb on rails
 gem 'breadcrumbs_on_rails'
 
 # Form builder dsl
-
 gem 'simple_form', :github => 'plataformatec/simple_form'
 
 # bootstrap for rails
@@ -35,9 +34,6 @@ gem 'bootstrap-sass'
 
 # for dropdowns that can hold multiple values simultaneously
 gem 'select2-rails'
-
-# gem for ACL
-gem 'cancan'
 
 # LDAP for single sign-on (integrate with PostgreSQL capability)
 gem 'net-ldap'
@@ -52,9 +48,8 @@ gem 'placeholder-gem'
 # masked inputs using jquery
 gem 'masked_input-rails', :github => 'rafaelmacedo/masked_input-rails'
 
-
 # for dynamic nested forms
-gem 'cocoon'
+gem 'nested_form'
 
 # for ajax pagination/sorting on table data
 gem 'smart_listing'
@@ -101,7 +96,6 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails', :github => 'rails/jquery-rails'
-
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks', :github =>'rails/turbolinks'
