@@ -90,6 +90,7 @@ GEM
     arel (5.0.1.20140414130214)
     backgridjs-rails (0.3.5)
       rails (>= 3.2.11)
+    bcrypt (3.1.7)
     bcrypt (3.1.7-x86-mingw32)
     better_errors (1.1.0)
       coderay (>= 1.0.0)
@@ -100,7 +101,6 @@ GEM
       momentjs-rails (~> 2.5.0)
     breadcrumbs_on_rails (2.3.0)
     builder (3.2.2)
-    cocoon (1.2.6)
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -110,6 +110,7 @@ GEM
       execjs
     coffee-script-source (1.7.0)
     erubis (2.7.0)
+    eventmachine (1.0.3)
     eventmachine (1.0.3-x86-mingw32)
     execjs (2.2.1)
     faye-websocket (0.7.3)
@@ -146,8 +147,10 @@ GEM
       railties (>= 3.1)
     multi_json (1.10.1)
     multi_xml (0.5.5)
+    nested_form (0.3.2)
     net-ldap (0.6.1)
     pdf-core (0.2.5)
+    pg (0.17.1)
     pg (0.17.1-x86-mingw32)
     pg_search (0.7.4)
       activerecord (>= 3.1)
@@ -241,7 +244,6 @@ DEPENDENCIES
   bootstrap-sass
   bootstrap3-datetimepicker-rails
   breadcrumbs_on_rails
-  cocoon
   coffee-rails (~> 4.0.0)
   faye-websocket
   font-awesome-rails!
@@ -256,6 +258,7 @@ DEPENDENCIES
   jquery-ui-rails!
   masked_input-rails!
   momentjs-rails
+  nested_form
   net-ldap
   paper_trail!
   pg
