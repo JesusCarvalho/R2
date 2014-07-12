@@ -1,0 +1,85 @@
+!!!
+%html
+  %head
+    %title Light Blue - Admin Template
+    %link{:href => "css/application.min.css", :rel => "stylesheet"}
+      %link{:href => "img/favicon.png", :rel => "shortcut icon"}
+        %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+          %meta{:content => "", :name => "description"}
+            %meta{:content => "", :name => "author"}
+
+%body.background-dark
+  .container
+    .row
+      .col-md-12
+        %section.widget
+          %legend.section
+            %h1
+              Victim Info
+          %ul.nav.nav-tabs
+            %li.active
+              %a{"data-toggle" => "tab", href: "#victim_01"} Victim 1
+            %li
+              %a.add-victim{"data-toggle" => "tab", href: "#"}
+                %i.fa.fa-plus
+          .tab-content
+            #contact_01.tab-pane.active
+              =render 'sections/test'
+
+
+
+
+:javascript
+  var vicTabNum =1;
+  /**
+  * Add a Tab
+  */
+  $('#.add-victim').click(function() {
+  vicTabNum++;
+  $('.tab-content').append(
+  $('</pre><ul><li><a href="#victim_' + vicTabNum + '">' +
+  'Page ' + vicTabNum +
+  '<button class="close" title="Remove this page" type="button">×</button>' +
+  '</a></li></ul><pre>'
+  ));
+  $('#pageTabContent').append(
+  $('</pre>  <div class="tab-pane" id="page' + pageNum + '">Content page' + pageNum + '</div><pre>'
+  ));
+  $('#page' + pageNum).tab('show');
+  });
+
+  /**
+  * Remove a Tab
+  */
+  $('#pageTab').on('click', ' li a .close', function() {
+  var tabId = $(this).parents('li').children('a').attr('href');
+  $(this).parents('li').remove('li');
+  $(tabId).remove();
+  reNumberPages();
+  $('#pageTab a:first').tab('show');
+  });
+
+  /**
+   * Click Tab to show its contents
+   */
+  $("#pageTab").on("click", "a", function(e) {
+  e.preventDefault();
+  $(this).tab('show');
+  });
+
+  /**
+  * Reset numbering on tab buttons
+  */
+  function reNumberPages() {
+  pageNum = 1;
+  var tabCount = $('#pageTab > li').length;
+  $('#pageTab > li').each(function() {
+  var pageId = $(this).children('a').attr('href');
+  if (pageId == "#page1") {
+  return true;
+  }
+  pageNum++;
+  $(this).children('a').html('Page ' + pageNum +
+  '<button class="close" title="Remove this page" type="button">×</button>');
+  });
+  }

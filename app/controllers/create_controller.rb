@@ -14,6 +14,10 @@ class CreateController < ApplicationController
     @header = Header.new
   end
 
+  def test3
+    @header = Header.new
+  end
+
   def newIRF
 
     @header         = Header.new
