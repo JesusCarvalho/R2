@@ -1,85 +1,328 @@
 !!!
 %html
   %head
-    %title Light Blue - Admin Template
-    %link{:href => "css/application.min.css", :rel => "stylesheet"}
-      %link{:href => "img/favicon.png", :rel => "shortcut icon"}
-        %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
-          %meta{:content => "", :name => "description"}
-            %meta{:content => "", :name => "author"}
+    %link{href: "/favicon.ico", rel: "shortcut icon", type: "image/x-icon"}/
+    %title Example application with SimpleForm and Twitter Bootstrap
+    %link{href: "/assets/application-fa808ec839c5aed09bc4d38433d134c2.css", media: "screen", rel: "stylesheet"}/
+    %meta{content: "authenticity_token", name: "csrf-param"}/
+    %meta{content: "Q3e0wGm+VY6eBn++FDVknMJiV7sWFhA0Z8sQoCMeaQc=", name: "csrf-token"}/
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-8268430-4']);
+      _gaq.push(['_setDomainName', 'simple-form-bootstrap.plataformatec.com.br']);
+      _gaq.push(['_trackPageview']);
 
-%body.background-dark
-  .container
-    .row
-      .col-md-12
-        %section.widget
-          %legend.section
-            %h1
-              Victim Info
-          %ul.nav.nav-tabs
-            %li.active
-              %a{"data-toggle" => "tab", href: "#victim_01"} Victim 1
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    :javascript
+      (function(d,s,i,r) {
+        if (d.getElementById(i)){return;}
+        var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+        n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/378213.js';
+        e.parentNode.insertBefore(n, e);
+      })(document,"script","hs-analytics",300000);
+  %body
+    %header.navbar.navbar-inverse.navbar-fixed-top{role: "navigation"}
+      .navbar-inner
+        %a{href: "http://github.com/rafaelfranca/simple_form-bootstrap/tree/bootstrap2"}
+          %img{alt: "Fork me on GitHub", src: "http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png", style: "position: absolute; top: 0; right: 0; border: 0;"}/
+        .container
+          .navbar-header
+            %a.navbar-brand{href: "#"} Simple Form & Bootstrap
+          %ul.nav.navbar-nav
             %li
-              %a.add-victim{"data-toggle" => "tab", href: "#"}
-                %i.fa.fa-plus
-          .tab-content
-            #contact_01.tab-pane.active
-              =render 'sections/test'
-
-
-
-
-:javascript
-  var vicTabNum =1;
-  /**
-  * Add a Tab
-  */
-  $('#.add-victim').click(function() {
-  vicTabNum++;
-  $('.tab-content').append(
-  $('</pre><ul><li><a href="#victim_' + vicTabNum + '">' +
-  'Page ' + vicTabNum +
-  '<button class="close" title="Remove this page" type="button">×</button>' +
-  '</a></li></ul><pre>'
-  ));
-  $('#pageTabContent').append(
-  $('</pre>  <div class="tab-pane" id="page' + pageNum + '">Content page' + pageNum + '</div><pre>'
-  ));
-  $('#page' + pageNum).tab('show');
-  });
-
-  /**
-  * Remove a Tab
-  */
-  $('#pageTab').on('click', ' li a .close', function() {
-  var tabId = $(this).parents('li').children('a').attr('href');
-  $(this).parents('li').remove('li');
-  $(tabId).remove();
-  reNumberPages();
-  $('#pageTab a:first').tab('show');
-  });
-
-  /**
-   * Click Tab to show its contents
-   */
-  $("#pageTab").on("click", "a", function(e) {
-  e.preventDefault();
-  $(this).tab('show');
-  });
-
-  /**
-  * Reset numbering on tab buttons
-  */
-  function reNumberPages() {
-  pageNum = 1;
-  var tabCount = $('#pageTab > li').length;
-  $('#pageTab > li').each(function() {
-  var pageId = $(this).children('a').attr('href');
-  if (pageId == "#page1") {
-  return true;
-  }
-  pageNum++;
-  $(this).children('a').html('Page ' + pageNum +
-  '<button class="close" title="Remove this page" type="button">×</button>');
-  });
-  }
+              %a{href: "/"} Home
+            %li
+              %a{href: "/examples"} Examples
+            %li
+              %a{href: "/documentation"} Documentation
+    .container.master-container
+      %ul.breadcrumb
+        %li
+          %a{href: "/"} Home
+        %li.active Examples
+      .alert.alert-info.fade.in{"data-alert" => "alert"}
+        %h3
+          %strong
+            %a{href: "https://github.com/plataformatec/simple_form"} Simple Form
+            and
+            %a{href: "http://getbootstrap.com/"} Bootstrap
+            sample application.
+        %p
+          Here you'll see the usage of
+          %a{href: "https://github.com/plataformatec/simple_form"} Simple Form
+          and the
+          %a{href: "http://getbootstrap.com/"} Bootstrap
+          toolkit on a Rails 4 application.
+        %p
+          You can check the source code on
+          = succeed "." do
+            %a{href: "https://github.com/rafaelfranca/simple_form-bootstrap"} GitHub
+      .row
+        .col-md-6
+          .panel.panel-info
+            .panel-heading Bootstrap: Basic Form
+            .panel-body
+              %form{role: "form"}
+                .form-group
+                  %label{for: "exampleInputEmail1"} Email
+                  %input#exampleInputEmail1.form-control{placeholder: "Enter email", type: "email"}/
+                  %p.help-block Lorem ipsum dolor sit amet
+                .form-group
+                  %label{for: "exampleInputPassword1"} Password
+                  %input#exampleInputPassword1.form-control{placeholder: "Password", type: "password"}/
+                  %p.help-block Lorem ipsum dolor sit amet
+                .form-group
+                  %label{for: "exampleInputFile"} File
+                  %input#exampleInputFile{type: "file"}/
+                  %p.help-block Example block-level help text here.
+                .form-group
+                  .checkbox
+                    %label
+                      %input{type: "checkbox"}/
+                      Active
+                  %p.help-block Lorem ipsum dolor sit amet
+                .form-group
+                  %label Choices
+                  .checkbox
+                    %label
+                      %input#optionsCheckbox1{checked: "checked", name: "optionsRadios", type: "checkbox", value: "option1"}/
+                      Option one is this and that—be sure to include why it's great
+                  .checkbox
+                    %label
+                      %input#optionsCheckbox2{name: "optionsRadios", type: "checkbox", value: "option2"}/
+                      Option two can be something else and selecting it will deselect option one
+                .form-group
+                  %label Sex
+                  .radio
+                    %label
+                      %input#optionsRadios1{checked: "checked", name: "optionsRadios", type: "radio", value: "option1"}/
+                      Male
+                  .radio
+                    %label
+                      %input#optionsRadios2{name: "optionsRadios", type: "radio", value: "option2"}/
+                      Female
+                  %p.help-block Lorem ipsum dolor sit amet
+                %button.btn.btn-default{type: "submit"} Create User
+        .col-md-6
+          .panel.panel-primary
+            .panel-heading Simple Form: Basic Form
+            .panel-body
+              %form#new_user_basic.simple_form.new_user_basic{"accept-charset" => "UTF-8", action: "http://simple-form-bootstrap.plataformatec.com.br/examples/create_basic", enctype: "multipart/form-data", method: "post", novalidate: "novalidate"}
+                %div{style: "display:none"}
+                  %input{name: "utf8", type: "hidden", value: "✓"}/
+                  %input{name: "authenticity_token", type: "hidden", value: "Q3e0wGm+VY6eBn++FDVknMJiV7sWFhA0Z8sQoCMeaQc="}/
+                .form-group.email.required.user_basic_email
+                  %label.email.required.control-label{for: "user_basic_email"}
+                    %abbr{title: "required"} *
+                    Email
+                  %div
+                    %input#user_basic_email.string.email.required.form-control{name: "user_basic[email]", placeholder: "Enter email", type: "email"}/
+                    %p.help-block Lorem ipsum dolor sit amet
+                .form-group.password.required.user_basic_password
+                  %label.password.required.control-label{for: "user_basic_password"}
+                    %abbr{title: "required"} *
+                    Password
+                  %div
+                    %input#user_basic_password.password.required.form-control{name: "user_basic[password]", placeholder: "Password", type: "password"}/
+                    %p.help-block Lorem ipsum dolor sit amet
+                .form-group.file.optional.user_basic_file
+                  %label.file.optional.control-label{for: "user_basic_file"} File
+                  %div
+                    %input#user_basic_file.file.optional{name: "user_basic[file]", type: "file"}/
+                    %p.help-block Example block-level help text here.
+                .form-group.boolean.optional.user_basic_active
+                  .checkbox
+                    %input{name: "user_basic[active]", type: "hidden", value: "0"}/
+                    %label.boolean.optional{for: "user_basic_active"}
+                      %input#user_basic_active.boolean.optional{name: "user_basic[active]", type: "checkbox", value: "1"}>/
+                      Active
+                  %p.help-block Lorem ipsum dolor sit amet
+                .form-group.check_boxes.optional.user_basic_choices
+                  %label.check_boxes.optional Choices
+                  %span.checkbox
+                    %label{for: "user_basic_choices_option_one_is_this_and_thatbe_sure_to_include_why_its_great", name: "user_basic[choices]"}
+                      %input#user_basic_choices_option_one_is_this_and_thatbe_sure_to_include_why_its_great.check_boxes.optional{name: "user_basic[choices][]", type: "checkbox", value: "Option one is this and that—be sure to include why it's great"}>/
+                      Option one is this and that—be sure to include why it's great
+                  %span.checkbox
+                    %label{for: "user_basic_choices_option_two_can_be_something_else_and_selecting_it_will_deselect_option_one", name: "user_basic[choices]"}
+                      %input#user_basic_choices_option_two_can_be_something_else_and_selecting_it_will_deselect_option_one.check_boxes.optional{name: "user_basic[choices][]", type: "checkbox", value: "Option two can be something else and selecting it will deselect option one"}>/
+                      Option two can be something else and selecting it will deselect option one
+                  %input{name: "user_basic[choices][]", type: "hidden", value: ""}/
+                .form-group.radio_buttons.optional.user_basic_sex
+                  %label.radio_buttons.optional Sex
+                  %span.radio
+                    %label{for: "user_basic_sex_male", name: "user_basic[sex]"}
+                      %input#user_basic_sex_male.radio_buttons.optional{name: "user_basic[sex]", type: "radio", value: "Male"}>/
+                      Male
+                  %span.radio
+                    %label{for: "user_basic_sex_female", name: "user_basic[sex]"}
+                      %input#user_basic_sex_female.radio_buttons.optional{name: "user_basic[sex]", type: "radio", value: "Female"}>/
+                      Female
+                  %p.help-block Lorem ipsum dolor sit amet
+                %input.btn.btn-default{name: "commit", type: "submit", value: "Create User"}/
+      .row
+        .col-md-6
+          .panel.panel-info
+            .panel-heading Bootstrap: Inline Form
+            .panel-body
+              %form.form-inline{role: "form"}
+                .form-group
+                  %label.sr-only{for: "exampleInputEmail2"} Email address
+                  %input#exampleInputEmail2.form-control{placeholder: "Enter email", type: "email"}/
+                .form-group
+                  %label.sr-only{for: "exampleInputPassword2"} Password
+                  %input#exampleInputPassword2.form-control{placeholder: "Password", type: "password"}/
+                .checkbox
+                  %label
+                    %input{type: "checkbox"}/
+                    Remember me
+                %button.btn.btn-default{type: "submit"} Create User
+        .col-md-6
+          .panel.panel-primary
+            .panel-heading Simple Form: Inline Form
+            .panel-body
+              %form#new_user_inline.simple_form.form-inline{"accept-charset" => "UTF-8", action: "http://simple-form-bootstrap.plataformatec.com.br/examples/create_inline", method: "post", novalidate: "novalidate"}
+                %div{style: "display:none"}
+                  %input{name: "utf8", type: "hidden", value: "✓"}/
+                  %input{name: "authenticity_token", type: "hidden", value: "Q3e0wGm+VY6eBn++FDVknMJiV7sWFhA0Z8sQoCMeaQc="}/
+                .form-group.email.required.user_inline_email
+                  %div
+                    %input#user_inline_email.string.email.required.form-control{name: "user_inline[email]", placeholder: "Enter email", type: "email"}/
+                .form-group.password.required.user_inline_password
+                  %div
+                    %input#user_inline_password.password.required.form-control{name: "user_inline[password]", placeholder: "Password", type: "password"}/
+                .form-group.boolean.optional.user_inline_active
+                  .checkbox
+                    %input{name: "user_inline[active]", type: "hidden", value: "0"}/
+                    %label
+                      %input#user_inline_active.boolean.optional{name: "user_inline[active]", type: "checkbox", value: "1"}/
+                      Remember me
+                %input.btn.btn-default{name: "commit", type: "submit", value: "Create User"}/
+      .row
+        .col-md-6
+          .panel.panel-info
+            .panel-heading Bootstrap: Horizontal Form
+            .panel-body
+              %form.form-horizontal{role: "form"}
+                .form-group
+                  %label.col-sm-3.control-label{for: "inputEmail3"} Email
+                  .col-sm-9
+                    %input#inputEmail3.form-control{placeholder: "Email", type: "email"}/
+                    %p.help-block Lorem ipsum dolor sit amet
+                .form-group
+                  %label.col-sm-3.control-label{for: "inputPassword3"} Password
+                  .col-sm-9
+                    %input#inputPassword3.form-control{placeholder: "Password", type: "password"}/
+                    %p.help-block Lorem ipsum dolor sit amet
+                .form-group
+                  %label.col-sm-3.control-label{for: "exampleInputFile"} File
+                  .col-sm-9
+                    %input#exampleInputFile{type: "file"}/
+                    %p.help-block Example block-level help text here.
+                .form-group
+                  .col-sm-offset-3.col-sm-9
+                    .checkbox
+                      %label
+                        %input{type: "checkbox"}/
+                        Active
+                    %p.help-block Lorem ipsum dolor sit amet
+                .form-group
+                  %label.col-sm-3.control-label Choices
+                  .col-sm-9
+                    .checkbox
+                      %label
+                        %input#optionsCheckbox1{checked: "checked", name: "optionsRadios", type: "checkbox", value: "option1"}/
+                        Option one is this and that—be sure to include why it's great
+                    .checkbox
+                      %label
+                        %input#optionsCheckbox2{name: "optionsRadios", type: "checkbox", value: "option2"}/
+                        Option two can be something else and selecting it will deselect option one
+                .form-group
+                  %label.col-sm-3.control-label Sex
+                  .col-sm-9
+                    .radio
+                      %label
+                        %input#optionsRadios1{checked: "checked", name: "optionsRadios", type: "radio", value: "option1"}/
+                        Male
+                    .radio
+                      %label
+                        %input#optionsRadios2{name: "optionsRadios", type: "radio", value: "option2"}/
+                        Female
+                    %p.help-block Lorem ipsum dolor sit amet
+                %button.btn.btn-default{type: "submit"} Create User
+        .col-md-6
+          .panel.panel-primary
+            .panel-heading Simple Form: Horizontal Form
+            .panel-body
+              %form#new_user_horizontal.simple_form.form-horizontal{"accept-charset" => "UTF-8", action: "http://simple-form-bootstrap.plataformatec.com.br/examples/create_horizontal", enctype: "multipart/form-data", method: "post", novalidate: "novalidate"}
+                %div{style: "display:none"}
+                  %input{name: "utf8", type: "hidden", value: "✓"}/
+                  %input{name: "authenticity_token", type: "hidden", value: "Q3e0wGm+VY6eBn++FDVknMJiV7sWFhA0Z8sQoCMeaQc="}/
+                .form-group.email.required.user_horizontal_email
+                  %label.email.required.col-sm-3.control-label{for: "user_horizontal_email"}
+                    %abbr{title: "required"} *
+                    Email
+                  .col-sm-9
+                    %input#user_horizontal_email.string.email.required.form-control{name: "user_horizontal[email]", placeholder: "Email", type: "email"}/
+                    %p.help-block Lorem ipsum dolor sit amet
+                .form-group.password.required.user_horizontal_password
+                  %label.password.required.col-sm-3.control-label{for: "user_horizontal_password"}
+                    %abbr{title: "required"} *
+                    Password
+                  .col-sm-9
+                    %input#user_horizontal_password.password.required.form-control{name: "user_horizontal[password]", placeholder: "Password", type: "password"}/
+                    %p.help-block Lorem ipsum dolor sit amet
+                .form-group.file.optional.user_horizontal_file
+                  %label.file.optional.col-sm-3.control-label{for: "user_horizontal_file"} File
+                  .col-sm-9
+                    %input#user_horizontal_file.file.optional{name: "user_horizontal[file]", type: "file"}/
+                    %p.help-block Example block-level help text here.
+                .form-group.boolean.optional.user_horizontal_active
+                  .col-sm-offset-3.col-sm-9
+                    .checkbox
+                      %input{name: "user_horizontal[active]", type: "hidden", value: "0"}/
+                      %label.boolean.optional{for: "user_horizontal_active"}
+                        %input#user_horizontal_active.boolean.optional{name: "user_horizontal[active]", type: "checkbox", value: "1"}>/
+                        Active
+                    %p.help-block Lorem ipsum dolor sit amet
+                .form-group.check_boxes.optional.user_horizontal_choices
+                  %label.check_boxes.optional.col-sm-3.control-label Choices
+                  .col-sm-9
+                    %span.checkbox
+                      %label{for: "user_horizontal_choices_option_one_is_this_and_thatbe_sure_to_include_why_its_great", name: "user_horizontal[choices]"}
+                        %input#user_horizontal_choices_option_one_is_this_and_thatbe_sure_to_include_why_its_great.check_boxes.optional{name: "user_horizontal[choices][]", type: "checkbox", value: "Option one is this and that—be sure to include why it's great"}>/
+                        Option one is this and that—be sure to include why it's great
+                    %span.checkbox
+                      %label{for: "user_horizontal_choices_option_two_can_be_something_else_and_selecting_it_will_deselect_option_one", name: "user_horizontal[choices]"}
+                        %input#user_horizontal_choices_option_two_can_be_something_else_and_selecting_it_will_deselect_option_one.check_boxes.optional{name: "user_horizontal[choices][]", type: "checkbox", value: "Option two can be something else and selecting it will deselect option one"}>/
+                        Option two can be something else and selecting it will deselect option one
+                    %input{name: "user_horizontal[choices][]", type: "hidden", value: ""}/
+                .form-group.radio_buttons.optional.user_horizontal_sex
+                  %label.radio_buttons.optional.col-sm-3.control-label Sex
+                  .col-sm-9
+                    %span.radio
+                      %label{for: "user_horizontal_sex_male", name: "user_horizontal[sex]"}
+                        %input#user_horizontal_sex_male.radio_buttons.optional{name: "user_horizontal[sex]", type: "radio", value: "Male"}>/
+                        Male
+                    %span.radio
+                      %label{for: "user_horizontal_sex_female", name: "user_horizontal[sex]"}
+                        %input#user_horizontal_sex_female.radio_buttons.optional{name: "user_horizontal[sex]", type: "radio", value: "Female"}>/
+                        Female
+                    %p.help-block Lorem ipsum dolor sit amet
+                %input.btn.btn-default{name: "commit", type: "submit", value: "Create User"}/
+    %footer.footer
+      .container
+        %p
+          Copyright 2009-2014
+          %a{href: "http://plataformatec.com.br"} Plataformatec
+        %ul.footer-links
+          %li
+            %a{href: "http://blog.plataformatec.com.br"} Plataformatec Blog
+          %li.muted ·
+          %li
+            %a{href: "https://github.com/plataformatec/simple_form"} Simple Form @ GitHub
+    %script{src: "/assets/application-56bf069ceddf29d01656752489ff9d1e.js"}

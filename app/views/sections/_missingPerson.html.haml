@@ -1,7 +1,6 @@
 .col-md-12
   %section.widget
     %legend.section
-      %i.pull-right.fa.fa-plus-circle.fa-3x
       %h1 Missing Person(s)
     = simple_form_for :missing_person do |mp|
       .row
@@ -51,14 +50,14 @@
             input_html: {class:'input-transparent', placeholder:'Mental Condition','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Mental Condition', 'rows'=>2},
             wrapper_html:{class:'col-md-6'}
         = mp.input :school_last_attended,:label => false,
-            input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Name of School', placeholder:'Name of School (if student)'},
+            input_html: {class:'input-transparent','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Name of School', placeholder:'Name of School'},
             wrapper_html:{class:'col-xs-3'}
         = mp.input :foul_play_suspected,:label => false,as: :radio_buttons, :label => 'Foul Play Suspected?',
             input_html: {class:'btn-transparent iradio','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Foul Play Suspected?'},
             wrapper_html: {class:'form-inline col-xs-2 iradio'}
         = mp.input :documentation_submitted,:label => false,as: :radio_buttons, :label => 'Documentation Submitted?',
             input_html: {class:'btn-transparent iradio','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Documentation Submitted?'},
-            wrapper_html: {class:'form-inline col-xs-2 iradio'}
+            wrapper_html: {class:'form-inline col-xs-3 iradio'}
         = mp.input :fingerprints_available,:label => false,as: :radio_buttons, :label => 'Fingerprints Available?',
             input_html: {class:'btn-transparent iradio','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Fingerprints Available?'},
             wrapper_html: {class:'form-inline col-xs-2 iradio'}

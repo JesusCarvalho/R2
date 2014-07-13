@@ -14,8 +14,8 @@ gem 'pg_search'
 # Advanced search of existing IRFs or SARs (See https://ransack-demo.herokuapp.com/)
 gem 'ransack'
 
-# option for storing FDLE statutes and zip codes outside of database
-#gem 'soulmate'
+# redis-backed autocomplete service for FDLE statutes and chargebook and zip code database
+gem 'soulmate'
 
 # for offense panel to search Arrest and ChargeBook tables dynamically
 gem 'twitter-typeahead-rails'
