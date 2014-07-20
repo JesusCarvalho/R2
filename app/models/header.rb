@@ -33,6 +33,7 @@ class Header < ActiveRecord::Base
   accepts_nested_attributes_for :victim_info,                                           :allow_destroy => true
 
 
+  validates_presence_of :pbso_case_num
 
 
 

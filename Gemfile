@@ -68,9 +68,6 @@ gem 'font-awesome-rails', :github => 'bokmann/font-awesome-rails'
 # Comet for dispatch to deputy messages
 gem 'faye-websocket'
 
-# for human readable errors
-gem 'better_errors'
-
 # every web-app eventually is required to speak email
 gem 'gibbon'
 
@@ -136,3 +133,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 #2014-06-29 Added to upgrade rails server
 gem 'thread_safe'
+
+group :development do
+  # for human readable errors
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
