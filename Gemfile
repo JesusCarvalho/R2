@@ -138,4 +138,13 @@ group :development do
   # for human readable errors
   gem 'better_errors'
   gem 'binding_of_caller'
+  #for rails panel chrome plugin
+  gem 'meta_request'
+end
+
+platform :jruby do
+  gem 'activerecord-jdbcpostgresql-adapter'
+  gem 'jruby-openssl'
+  gem 'torqbox'
+  gem 'therubyrhino', group: :assets
 end

@@ -90,17 +90,19 @@ GEM
     arel (5.0.1.20140414130214)
     backgridjs-rails (0.3.5)
       rails (>= 3.2.11)
-    bcrypt (3.1.7)
     bcrypt (3.1.7-x86-mingw32)
     better_errors (1.1.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
     bootstrap-sass (3.2.0.0)
       sass (~> 3.2)
     bootstrap3-datetimepicker-rails (3.0.0.1)
       momentjs-rails (~> 2.5.0)
     breadcrumbs_on_rails (2.3.0)
     builder (3.2.2)
+    callsite (0.0.11)
     coderay (1.1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
@@ -109,8 +111,8 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
+    debug_inspector (0.0.2)
     erubis (2.7.0)
-    eventmachine (1.0.3)
     eventmachine (1.0.3-x86-mingw32)
     execjs (2.2.1)
     faye-websocket (0.7.3)
@@ -141,6 +143,10 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    meta_request (0.3.3)
+      callsite (~> 0.0, >= 0.0.11)
+      rack-contrib (~> 1.1)
+      railties (>= 3.0.0, < 5.0.0)
     mime-types (1.25.1)
     minitest (5.3.5)
     momentjs-rails (2.5.1)
@@ -150,7 +156,6 @@ GEM
     nested_form (0.3.2)
     net-ldap (0.6.1)
     pdf-core (0.2.5)
-    pg (0.17.1)
     pg (0.17.1-x86-mingw32)
     pg_search (0.7.4)
       activerecord (>= 3.1)
@@ -165,6 +170,8 @@ GEM
       pdf-core (~> 0.2.5)
       ttfunk (~> 1.2.0)
     rack (1.5.2)
+    rack-contrib (1.1.0)
+      rack (>= 0.9.1)
     rack-protection (1.5.3)
       rack
     rack-test (0.6.2)
@@ -252,9 +259,11 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  activerecord-jdbcpostgresql-adapter
   backgridjs-rails
   bcrypt
   better_errors
+  binding_of_caller
   bootstrap-sass
   bootstrap3-datetimepicker-rails
   breadcrumbs_on_rails
@@ -270,7 +279,9 @@ DEPENDENCIES
   jquery-rails!
   jquery-turbolinks!
   jquery-ui-rails!
+  jruby-openssl
   masked_input-rails!
+  meta_request
   momentjs-rails
   nested_form
   net-ldap
@@ -288,7 +299,9 @@ DEPENDENCIES
   simple_form!
   smart_listing
   soulmate
+  therubyrhino
   thread_safe
+  torqbox
   turbolinks!
   twitter-typeahead-rails
   tzinfo-data
