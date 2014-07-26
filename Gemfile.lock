@@ -290,6 +290,7 @@ DEPENDENCIES
   pg_search
   placeholder-gem
   prawn
+  rack
   rails
   railties
   ransack

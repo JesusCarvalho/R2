@@ -1077,6 +1077,42 @@ pre code {
     }
 }
 
+/* TJ */
+/* 2014-07-26 Created to remove gap between side-nav with tab names and container body, visually reinforcing tab-effect */
+.container-no-left-padding {
+    margin-right: auto;
+    margin-left: auto;
+
+}
+.container-no-left-padding:before, .container:after {
+    content: " ";
+    display: table;
+}
+/* line 25, ../sass/bootstrap-original/_mixins.scss */
+.container-no-left-padding:after {
+    clear: both;
+}
+@media (min-width: 768px) {
+    /* line 10, ../sass/bootstrap-original/_grid.scss */
+    .container-no-left-padding {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    /* line 10, ../sass/bootstrap-original/_grid.scss */
+    .container-no-left-padding {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    /* line 10, ../sass/bootstrap-original/_grid.scss */
+    .container-no-left-padding {
+        width: 1170px;
+    }
+}
+
+
+
 /* line 30, ../sass/bootstrap-original/_grid.scss */
 .container-fluid {
     margin-right: auto;

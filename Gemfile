@@ -147,4 +147,5 @@ platform :jruby do
   gem 'jruby-openssl'
   gem 'torqbox'
   gem 'therubyrhino', group: :assets
+  gem 'rack'
 end
