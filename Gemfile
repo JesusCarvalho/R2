@@ -20,6 +20,9 @@ gem 'soulmate'
 # for offense panel to search Arrest and ChargeBook tables dynamically
 gem 'twitter-typeahead-rails'
 
+# natural order sorter for FDLE statutes
+gem 'naturally'
+
 # versioning and auditing database changes
 gem 'paper_trail', :github => 'airblade/paper_trail'
 

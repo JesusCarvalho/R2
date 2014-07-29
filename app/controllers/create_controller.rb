@@ -1,28 +1,16 @@
 class CreateController < ApplicationController
 
 
-  def vt
-      @header = Header.new
-  end
-
 
   def test
       @header = Header.new
   end
 
-  def test2
-    @header = Header.new
-  end
-
-  def test3
-    @header = Header.new
-  end
 
 
 
 
   def newIRF
-
     @header           = Header.new
     @addtlInfo        = AdditionalInformation.new
     @narrative        = Narrative.new
@@ -36,18 +24,9 @@ class CreateController < ApplicationController
     @vvInfo           = []
     @deathInv         = []
     @links            = []
-
-
-
   end
 
-  def old
-    @header = Header.new
-  end
 
-  def search
-
-  end
 
 
 
