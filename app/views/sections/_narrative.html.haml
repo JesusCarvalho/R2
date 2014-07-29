@@ -4,7 +4,7 @@
       %h1 Narrative
     = simple_form_for :narrative do |n|
       .row
-        = n.input :narrative_text,:label => false,as: :text,
+        = n.input :text,:label => false,as: :text,
            input_html: {class:'input-transparent', placeholder:'Narrative','data-toggle'=>'tooltip', 'data-placement'=>'top', 'title'=>'Narrative', 'rows'=>8},
            wrapper_html:{class:'col-xs-9'}
         = n.input :reporting_member_full_name,:label => false,
