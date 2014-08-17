@@ -145,10 +145,3 @@ group :development do
   gem 'meta_request'
 end
 
-platform :jruby do
-  gem 'activerecord-jdbcpostgresql-adapter'
-  gem 'jruby-openssl'
-  gem 'torqbox'
-  gem 'therubyrhino', group: :assets
-  gem 'rack'
-end

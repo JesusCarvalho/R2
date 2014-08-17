@@ -90,7 +90,6 @@ GEM
     arel (5.0.1.20140414130214)
     backgridjs-rails (0.3.5)
       rails (>= 3.2.11)
-    bcrypt (3.1.7)
     bcrypt (3.1.7-x86-mingw32)
     better_errors (1.1.0)
       coderay (>= 1.0.0)
@@ -114,7 +113,6 @@ GEM
     coffee-script-source (1.7.0)
     debug_inspector (0.0.2)
     erubis (2.7.0)
-    eventmachine (1.0.3)
     eventmachine (1.0.3-x86-mingw32)
     execjs (2.2.1)
     faye-websocket (0.7.3)
@@ -159,7 +157,6 @@ GEM
     nested_form (0.3.2)
     net-ldap (0.6.1)
     pdf-core (0.2.5)
-    pg (0.17.1)
     pg (0.17.1-x86-mingw32)
     pg_search (0.7.4)
       activerecord (>= 3.1)
@@ -263,7 +260,6 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  activerecord-jdbcpostgresql-adapter
   backgridjs-rails
   bcrypt
   better_errors
@@ -283,7 +279,6 @@ DEPENDENCIES
   jquery-rails!
   jquery-turbolinks!
   jquery-ui-rails!
-  jruby-openssl
   masked_input-rails!
   meta_request
   momentjs-rails
@@ -295,7 +290,6 @@ DEPENDENCIES
   pg_search
   placeholder-gem
   prawn
-  rack
   rails
   railties
   ransack
@@ -305,9 +299,7 @@ DEPENDENCIES
   simple_form!
   smart_listing
   soulmate
-  therubyrhino
   thread_safe
-  torqbox
   turbolinks!
   twitter-typeahead-rails
   tzinfo-data
