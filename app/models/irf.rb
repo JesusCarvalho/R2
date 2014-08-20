@@ -1,14 +1,16 @@
-class Header < ActiveRecord::Base
+class IRF < ActiveRecord::Base
 
-  #has_one :additional_information
-  #has_one :narrative
 
+  has_one :header
+  has_one :additional_information
+  has_one :narrative
+
+  has_many :offense
   has_many :associate
   has_many :death_investigation
   has_many :missing_person
   has_many :multimedias
   has_many :names_list
-  has_many :offense
   has_many :officer_assaulted_or_killed
   has_many :person_description
   has_many :property_crime
@@ -17,9 +19,9 @@ class Header < ActiveRecord::Base
   has_many :victim_info
 
 
-  #accepts_nested_attributes_for :additional_information,      :reject_if => :all_blank, :allow_destroy => true
-  #accepts_nested_attributes_for :narrative,                   :reject_if => :all_blank, :allow_destroy => true
-  #accepts_nested_attributes_for :offense,                     :reject_if => :all_blank, :allow_destroy => true
+  accepts_nested_attributes_for :additional_information,      :reject_if => :all_blank, :allow_destroy => true
+  accepts_nested_attributes_for :narrative,                   :reject_if => :all_blank, :allow_destroy => true
+  accepts_nested_attributes_for :offense,                     :reject_if => :all_blank, :allow_destroy => true
   accepts_nested_attributes_for :associate,                                             :allow_destroy => true
   accepts_nested_attributes_for :death_investigation,                                   :allow_destroy => true
   accepts_nested_attributes_for :missing_person,                                        :allow_destroy => true
@@ -34,7 +36,4 @@ class Header < ActiveRecord::Base
 
 
   validates_presence_of :pbso_case_num
-
-
-
 end

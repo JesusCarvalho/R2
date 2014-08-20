@@ -1,7 +1,9 @@
-class TrifoldEnums < ActiveRecord::Base
+class IrfEnums < ActiveRecord::Base
 
-  class Day < ActiveRecord::Base
-    enum day: [
+  class Day
+    extend Enumerize
+
+    enumerize :day, in: [
 
         :'Sunday',
         :'Monday',
@@ -10,11 +12,13 @@ class TrifoldEnums < ActiveRecord::Base
         :'Thursday',
         :'Friday',
         :'Saturday'
-    ] 
+    ]
   end
 
-  class Unit < ActiveRecord::Base
-    enum unit_code: [
+  class Unit
+    extend Enumerize
+
+    enumerize :unit_code, in: [
 
         :'Airport',
         :'Reserves',
@@ -44,11 +48,13 @@ class TrifoldEnums < ActiveRecord::Base
         :'Central Records',
         :'SIS',
         :'ECO'
-  ] 
+    ]
   end
 
-  class Disposition < ActiveRecord::Base
-    enum disposition_code: [
+  class Disposition
+    extend Enumerize
+
+    enumerize :disposition_code, in: [
 
         :'Cleared By Arrest',
         :'Exceptionally Cleared',
@@ -56,11 +62,13 @@ class TrifoldEnums < ActiveRecord::Base
         :'Inactive',
         :'Open',
         :'Zulu'
-    ] 
+    ]
   end
 
-  class ExceptionType < ActiveRecord::Base
-    enum exception_type_code: [
+  class ExceptionType
+    extend Enumerize
+
+    enumerize :exception_type_code, in: [
 
         :'Extradition Declined',
         :'Arrested on Primary Offense',
@@ -69,11 +77,13 @@ class TrifoldEnums < ActiveRecord::Base
         :'Victim Witness Refused to Cooperate',
         :'Prosecution Declined',
         :'Juvenile No Custody'
-    ] 
+    ]
   end
 
-  class Crime < ActiveRecord::Base
-    enum crime_code: [
+  class Crime
+    extend Enumerize
+
+    enumerize :crime_code, in: [
 
         'Crime Person',
         'Crime Property',
@@ -82,11 +92,13 @@ class TrifoldEnums < ActiveRecord::Base
         'Hate Crimes',
         'Gang Crimes',
         'Animal Cruelty'
-    ] 
+    ]
   end
 
-  class Weapon < ActiveRecord::Base
-    enum weapon_type: [
+  class Weapon
+    extend Enumerize
+
+    enumerize :weapon_type, in: [
 
         :'Not Applicable',
         :'Handgun',
@@ -104,11 +116,13 @@ class TrifoldEnums < ActiveRecord::Base
         :'Drugs',
         :'Unknown',
         :'Other',
-    ] 
+    ]
   end
 
-  class NonCrime < ActiveRecord::Base
-    enum non_crime_code: [
+  class NonCrime
+    extend Enumerize
+
+    enumerize :non_crime_code, in: [
 
         :'Assist Other Dept',
         :'Assist PBSO Unit',
@@ -124,11 +138,13 @@ class TrifoldEnums < ActiveRecord::Base
         :'Homeless Intervention',
         :'Animal Related',
         :'Agriculture'
-    ] 
+    ]
   end
 
-  class LocationType < ActiveRecord::Base
-    enum location_type_code: [
+  class LocationType
+    extend Enumerize
+
+    enumerize :location_type_code, in: [
 
         :'Residence Single Family',
         :'Apartment Condo',
@@ -139,7 +155,7 @@ class TrifoldEnums < ActiveRecord::Base
         :'Liquor Store',
         :'Bar Night Club',
         :'Supermarket',
-        :'Department Discount Store',
+        :'Department/Discount Store',
         :'Speciality Store',
         :'Drug Store Hospital',
         :'Bank Financial Inst',
@@ -160,11 +176,13 @@ class TrifoldEnums < ActiveRecord::Base
         :'Motor Vehicle',
         :'Other Mobile',
         :'Other'
-    ] 
+    ]
   end
 
-  class DrugActivity < ActiveRecord::Base
-    enum drug_activity: [
+  class DrugActivity
+    extend Enumerize
+
+    enumerize :drug_activity, in: [
 
         :'Not Applicable',
         :'Buy',
@@ -178,11 +196,13 @@ class TrifoldEnums < ActiveRecord::Base
         :'Traffic',
         :'Unknown',
         :'Other'
-    ] 
+    ]
   end
 
-  class DrugType < ActiveRecord::Base
-    enum drug_type: [
+  class DrugType
+    extend Enumerize
+
+    enumerize :drug_type, in: [
 
         :'Not Applicable',
         :'Amphetamine',
@@ -196,30 +216,36 @@ class TrifoldEnums < ActiveRecord::Base
         :'Synthetic',
         :'Unknown',
         :'Other'
-    ] 
+    ]
   end
 
-  class Attempt < ActiveRecord::Base
-    enum attempt_code: [
+  class Attempt
+    extend Enumerize
+
+    enumerize :attempt_code, in: [
 
         :'Attempted',
         :'Committed'
-    ] 
+    ]
   end
 
-  class OffenseIndicator < ActiveRecord::Base
-    enum offense_indicator: [
+  class OffenseIndicator
+    extend Enumerize
+
+    enumerize :offense_indicator, in: [
 
         :'Offense 1',
         :'Offense 2',
         :'Offense 3',
         :'Offense 4',
         :'Both Offense 1 and 2'
-    ] 
+    ]
   end
 
-  class VictimType < ActiveRecord::Base
-    enum victim_type: [
+  class VictimType
+    extend Enumerize
+
+    enumerize :victim_type, in: [
 
         :'Juvenile',
         :'Law Enforcement Officer',
@@ -228,20 +254,24 @@ class TrifoldEnums < ActiveRecord::Base
         :'Government',
         :'Church',
         :'Other'
-    ] 
+    ]
   end
 
-  class SexCrimeObject < ActiveRecord::Base
-    enum sex_crime_object: [
+  class SexCrimeObject
+    extend Enumerize
+
+    enumerize :sex_crime_object, in: [
 
         :'Sex Organ',
         :'Other',
         :'Both'
-    ] 
+    ]
   end
 
-  class InjuryType < ActiveRecord::Base
-    enum injury_type: [
+  class InjuryType
+    extend Enumerize
+
+    enumerize :injury_type, in: [
 
         :'Not Applicable',
         :'Gunshot',
@@ -254,11 +284,13 @@ class TrifoldEnums < ActiveRecord::Base
         :'Burns',
         :'Abrasions Bruises',
         :'Other'
-    ] 
+    ]
   end
 
-  class VictimRelationship < ActiveRecord::Base
-    enum victims_relationship: [
+  class VictimRelationship
+    extend Enumerize
+
+    enumerize :victims_relationship, in: [
 
         :'Not Applicable',
         :'Undetermined',
@@ -285,43 +317,51 @@ class TrifoldEnums < ActiveRecord::Base
         :'Landlord Tenant',
         :'Acquaintance',
         :'Other Known'
-    ] 
+    ]
   end
 
-  class ResidenceType < ActiveRecord::Base
-    enum residence_type: [
+  class ResidenceType
+    extend Enumerize
+
+    enumerize :residence_type, in: [
 
         :'Not Applicable',
         :'City',
         :'County',
         :'Florida',
         :'Out of State',
-    ] 
+    ]
   end
 
-  class ResidenceStatus < ActiveRecord::Base
-    enum residence_status: [
+  class ResidenceStatus
+    extend Enumerize
+
+    enumerize :residence_status, in: [
 
         :'Not Applicable',
         :'Full Time Resident',
         :'Part Time Resident',
         :'Non Resident'
-    ] 
+    ]
   end
 
-  class InjuryExtent < ActiveRecord::Base
-    enum injury_extent: [
+  class InjuryExtent
+    extend Enumerize
+
+    enumerize :injury_extent, in: [
 
         :'None',
         :'Minor',
         :'Moderate',
         :'Serious',
         :'Fatal'
-    ] 
+    ]
   end
 
-  class Premises < ActiveRecord::Base
-    enum premises: [
+  class Premises
+    extend Enumerize
+
+    enumerize :premises, in: [
 
         :'Highway',
         :'Convenience Store',
@@ -333,11 +373,13 @@ class TrifoldEnums < ActiveRecord::Base
         :'Drugstore',
         :'Residence',
         :'Miscellaneous'
-    ] 
+    ]
   end
 
-  class LarcenyNature < ActiveRecord::Base
-    enum larceny_nature: [
+  class LarcenyNature
+    extend Enumerize
+
+    enumerize :larceny_nature, in: [
 
         :'Pocket Picking',
         :'Purse Snatching',
@@ -348,11 +390,13 @@ class TrifoldEnums < ActiveRecord::Base
         :'From Bldg not C or K',
         :'Coin Operated Machine',
         :'All Others'
-    ] 
+    ]
   end
 
-  class EntryPoint < ActiveRecord::Base
-    enum entry_point: [
+  class EntryPoint
+    extend Enumerize
+
+    enumerize :entry_point, in: [
 
         :'Front Door',
         :'Rear Door',
@@ -369,11 +413,13 @@ class TrifoldEnums < ActiveRecord::Base
         :'Gate Fence',
         :'Construction Area',
         :'Floor'
-    ] 
+    ]
   end
 
-  class EntryMethod < ActiveRecord::Base
-    enum entry_method: [
+  class EntryMethod
+    extend Enumerize
+
+    enumerize :entry_method, in: [
 
         :'Prying Tool',
         :'Forced In',
@@ -393,11 +439,13 @@ class TrifoldEnums < ActiveRecord::Base
         :'Left Unlocked',
         :'Left Open',
         :'Used Key'
-    ] 
+    ]
   end
 
-  class ModusOperandi < ActiveRecord::Base
-    enum modus_operandi: [
+  class ModusOperandi
+    extend Enumerize
+
+    enumerize :modus_operandi, in: [
 
         :'Safe or Vault',
         :'Bypass or Disarm Alarm',
@@ -420,11 +468,13 @@ class TrifoldEnums < ActiveRecord::Base
         :'Day Burglary',
         :'Night Burglary',
         :'Human Defecation or Urine Left at Scene'
-    ] 
+    ]
   end
 
-  class PropertyStatus < ActiveRecord::Base
-    enum property_status: [
+  class PropertyStatus
+    extend Enumerize
+
+    enumerize :property_status, in: [
 
         :'Stolen',
         :'Recovered',
@@ -434,12 +484,14 @@ class TrifoldEnums < ActiveRecord::Base
         :'Drug Purchases',
         :'Evidence Seized',
         :'Damaged Property Arson Vandalism'
-    ] 
+    ]
   end
 
-  class PropertyType < ActiveRecord::Base
-    enum property_type: [
-  
+  class PropertyType
+    extend Enumerize
+
+    enumerize :property_type, in: [
+
         :'Auto Accessory Parts',
         :'Bicycle',
         :'Camera Photo Equipment',
@@ -467,23 +519,27 @@ class TrifoldEnums < ActiveRecord::Base
         :'Farm Equipment',
         :'Miscellaneous',
         :'Drug Para Equip'
-    ] 
+    ]
   end
-  
-  class IncidentType < ActiveRecord::Base
-    enum incident_type: [
-  
+
+  class IncidentType
+    extend Enumerize
+
+    enumerize :incident_type, in: [
+
         :'Officer Killed Felonious',
         :'Officer Killed Accident or Negligence',
         :'Officer Assaulted No Injury',
         :'Officer Assaulted Minor Injury',
         :'Officer Assaulted Serious Injury'
-    ] 
+    ]
   end
-  
-  class OfficerActivity < ActiveRecord::Base
-    enum officer_activity: [
-  
+
+  class OfficerActivity
+    extend Enumerize
+
+    enumerize :officer_activity, in: [
+
         :'Responding to Disturbance',
         :'B and E in Progress or Pursuing B and E Suspect',
         :'Robbery in Progress or Pursuing Robbery Suspect',
@@ -497,11 +553,13 @@ class TrifoldEnums < ActiveRecord::Base
         :'Assailant Mentally Deranged',
         :'Traffic Pursuit or Stop',
         :'Other'
-    ] 
+    ]
   end
 
-  class AssignmentTyoe < ActiveRecord::Base
-    enum assignment_type: [
+  class AssignmentTyoe
+    extend Enumerize
+
+    enumerize :assignment_type, in: [
 
         :'One Person Vehicle Alone',
         :'One Person Vehicle Assisted',
@@ -513,8 +571,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class MissingPersonType < ActiveRecord::Base
-    enum missing_person_type: [
+  class MissingPersonType
+    extend Enumerize
+
+    enumerize :missing_person_type, in: [
 
         :'Runaway',
         :'Kidnapping Parental',
@@ -526,9 +586,11 @@ class TrifoldEnums < ActiveRecord::Base
         :'Unknown Other'
     ]
   end
- 
-  class MissingPersonCode < ActiveRecord::Base
-    enum missing_person_code: [
+
+  class MissingPersonCode
+    extend Enumerize
+
+    enumerize :missing_person_code, in: [
 
         :'Missing',
         :'Recovered After 24 hrs',
@@ -536,8 +598,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class RecoveryInformation < ActiveRecord::Base
-    enum recovery_information: [
+  class RecoveryInformation
+    extend Enumerize
+
+    enumerize :recovery_information, in: [
 
         :'Not Applicable',
         :'Voluntary',
@@ -551,8 +615,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class FacialScars < ActiveRecord::Base
-    enum facial_scars: [
+  class FacialScars
+    extend Enumerize
+
+    enumerize :facial_scars, in: [
 
         :'Cheek',
         :'Chin',
@@ -564,8 +630,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class BodyScars < ActiveRecord::Base
-    enum body_scars: [
+  class BodyScars
+    extend Enumerize
+
+    enumerize :body_scars, in: [
 
         :'Arm',
         :'Hand',
@@ -576,8 +644,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class FacialOddity < ActiveRecord::Base
-    enum facial_oddity: [
+  class FacialOddity
+    extend Enumerize
+
+    enumerize :facial_oddity, in: [
 
         :'Birthmark',
         :'Pockmarks',
@@ -592,8 +662,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class Complexion < ActiveRecord::Base
-    enum complexion_code: [
+  class Complexion
+    extend Enumerize
+
+    enumerize :complexion_code, in: [
 
         :'Dark',
         :'Sallow',
@@ -603,8 +675,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class FacialHair < ActiveRecord::Base
-    enum facial_hair: [
+  class FacialHair
+    extend Enumerize
+
+    enumerize :facial_hair, in: [
 
         :'Mustache Chinese',
         :'Mustache Heavy',
@@ -617,8 +691,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class Face < ActiveRecord::Base
-    enum face: [
+  class Face
+    extend Enumerize
+
+    enumerize :face, in: [
 
         :'Black Caus',
         :'Hi Cheekbones',
@@ -627,10 +703,12 @@ class TrifoldEnums < ActiveRecord::Base
         :'Thin',
         :'Round'
     ]
- end
+  end
 
-  class HairType < ActiveRecord::Base
-    enum hair_type: [
+  class HairType
+    extend Enumerize
+
+    enumerize :hair_type, in: [
 
         :'Dyed',
         :'Processed',
@@ -648,8 +726,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class Eye < ActiveRecord::Base
-    enum eyes: [
+  class Eye
+    extend Enumerize
+
+    enumerize :eyes, in: [
 
         :'Missing',
         :'Crossed',
@@ -659,10 +739,12 @@ class TrifoldEnums < ActiveRecord::Base
         :'Blink',
         :'Slanted'
     ]
- end
+  end
 
-  class Ear < ActiveRecord::Base
-    enum ears: [
+  class Ear
+    extend Enumerize
+
+    enumerize :ears, in: [
 
         :'Cauliflower',
         :'Pierced',
@@ -673,8 +755,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class Nose < ActiveRecord::Base
-    enum nose: [
+  class Nose
+    extend Enumerize
+
+    enumerize :nose, in: [
 
         :'Crooked',
         :'Hooked',
@@ -687,8 +771,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class Teeth < ActiveRecord::Base
-    enum teeth: [
+  class Teeth
+    extend Enumerize
+
+    enumerize :teeth, in: [
 
         :'Missing',
         :'Gold',
@@ -701,8 +787,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class Speech < ActiveRecord::Base
-    enum speech: [
+  class Speech
+    extend Enumerize
+
+    enumerize :speech, in: [
 
         :'Impediment',
         :'Accent',
@@ -716,8 +804,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class Amputee < ActiveRecord::Base
-    enum amputee: [
+  class Amputee
+    extend Enumerize
+
+    enumerize :amputee, in: [
 
         :'Leg',
         :'Arm',
@@ -728,8 +818,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class Deformed < ActiveRecord::Base
-    enum deformed: [
+  class Deformed
+    extend Enumerize
+
+    enumerize :deformed, in: [
 
         :'Leg',
         :'Arm',
@@ -741,8 +833,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class Tatoo < ActiveRecord::Base
-    enum tatoo: [
+  class Tatoo
+    extend Enumerize
+
+    enumerize :tatoo, in: [
 
         :'Arm',
         :'Hand',
@@ -756,8 +850,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class VehicleVesselStatus < ActiveRecord::Base
-    enum vehicle_vessel_status_code: [
+  class VehicleVesselStatus
+    extend Enumerize
+
+    enumerize :vehicle_vessel_status_code, in: [
 
         :'Stolen',
         :'Recovered',
@@ -778,8 +874,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class VehicleVesselType < ActiveRecord::Base
-    enum vehicle_vessel_type: [
+  class VehicleVesselType
+    extend Enumerize
+
+    enumerize :vehicle_vessel_type, in: [
 
         :'Auto',
         :'Truck Van',
@@ -793,8 +891,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class CautionField < ActiveRecord::Base
-    enum caution_field: [
+  class CautionField
+    extend Enumerize
+
+    enumerize :caution_field, in: [
 
         :'Occupants Armed',
         :'Hold for Prints',
@@ -802,8 +902,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class RecoveryCode < ActiveRecord::Base
-    enum recovery_code: [
+  class RecoveryCode
+    extend Enumerize
+
+    enumerize :recovery_code, in: [
 
         :'Stolen Locally Recovered Locally',
         :'Stolen Locally Recovered Other',
@@ -811,8 +913,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class LicenseTagType < ActiveRecord::Base
-    enum license_tag_type: [
+  class LicenseTagType
+    extend Enumerize
+
+    enumerize :license_tag_type, in: [
 
         :'City Owned',
         :'County Owned',
@@ -833,8 +937,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class VehicleStyle < ActiveRecord::Base
-    enum vehicle_style: [
+  class VehicleStyle
+    extend Enumerize
+
+    enumerize :vehicle_style, in: [
 
         :'Four Door',
         :'Two Door',
@@ -851,8 +957,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class LicenseBackgroundColor < ActiveRecord::Base
-    enum license_background_color: [
+  class LicenseBackgroundColor
+    extend Enumerize
+
+    enumerize :license_background_color, in: [
 
         :'Red',
         :'Green',
@@ -864,8 +972,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class JustifiableCircumstances < ActiveRecord::Base
-    enum justifiable_circumstances: [
+  class JustifiableCircumstances
+    extend Enumerize
+
+    enumerize :justifiable_circumstances, in: [
 
         :'Not Applicable',
         :'Felon Killed by Private Citizen',
@@ -873,8 +983,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class JustifiableHomicide < ActiveRecord::Base
-    enum justifiable_homicide_code: [
+  class JustifiableHomicide
+    extend Enumerize
+
+    enumerize :justifiable_homicide_code, in: [
 
         :'Not Applicable',
         :'Felon Attacked Police Officer',
@@ -887,8 +999,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class MurderType < ActiveRecord::Base
-    enum murder_type: [
+  class MurderType
+    extend Enumerize
+
+    enumerize :murder_type, in: [
 
         :'Drinking Argument',
         :'Narcotics Related Argument',
@@ -903,8 +1017,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class DeathBy < ActiveRecord::Base
-    enum death_by_code: [
+  class DeathBy
+    extend Enumerize
+
+    enumerize :death_by_code, in: [
 
         :'Child Playing with Weapon',
         :'Gun Cleaning Accident',
@@ -915,16 +1031,20 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class Gender < ActiveRecord::Base
-    enum gender: [
+  class Gender
+    extend Enumerize
+
+    enumerize :gender, in: [
 
         :'Male',
         :'Female'
     ]
   end
 
-  class RaceCode < ActiveRecord::Base
-    enum race_code: [
+  class RaceCode
+    extend Enumerize
+
+    enumerize :race_code, in: [
 
         :'White',
         :'Black',
@@ -934,8 +1054,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class Other < ActiveRecord::Base
-    enum other: [
+  class Other
+    extend Enumerize
+
+    enumerize :other, in: [
 
         :'Alias',
         :'Armed',
@@ -946,8 +1068,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class Roles < ActiveRecord::Base
-    enum roles: [
+  class Roles
+    extend Enumerize
+
+    enumerize :roles, in: [
 
         :'Arrestee',
         :'Loss Sustained By',
@@ -969,8 +1093,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class MaritalStatus < ActiveRecord::Base
-    enum marital_status: [
+  class MaritalStatus
+    extend Enumerize
+
+    enumerize :marital_status, in: [
 
         :'Single',
         :'Married',
@@ -978,8 +1104,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class YesNoUknownNA < ActiveRecord::Base
-    enum NA_Yes_No_Unknown: [
+  class YesNoUknownNA
+    extend Enumerize
+
+    enumerize :NA_Yes_No_Unknown, in: [
 
         :'Not Applicable',
         :'Yes',
@@ -988,8 +1116,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class YesNoAttempted < ActiveRecord::Base
-    enum yna_code: [
+  class YesNoAttempted
+    extend Enumerize
+
+    enumerize :yna_code, in: [
 
         :'Yes',
         :'No',
@@ -998,24 +1128,30 @@ class TrifoldEnums < ActiveRecord::Base
   end
 
 
-  class YesNo < ActiveRecord::Base
-    enum yn_code: [
+  class YesNo
+    extend Enumerize
+
+    enumerize :yn_code, in: [
 
         :'Yes',
         :'No'
     ]
   end
 
-  class OffenseLevel < ActiveRecord::Base
-    enum offense_level: [
+  class OffenseLevel
+    extend Enumerize
+
+    enumerize :offense_level, in: [
 
         :'Misdemeanor',
         :'Felony'
     ]
   end
 
-  class OffenseDegree < ActiveRecord::Base
-    enum offense_degree: [
+  class OffenseDegree
+    extend Enumerize
+
+    enumerize :offense_degree, in: [
 
         :'First',
         :'Second',
@@ -1025,8 +1161,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class Associates < ActiveRecord::Base
-    enum associate_role: [
+  class Associates
+    extend Enumerize
+
+    enumerize :associate_role, in: [
 
         :'Relative',
         :'Employer',
@@ -1045,8 +1183,10 @@ class TrifoldEnums < ActiveRecord::Base
     ]
   end
 
-  class USStates < ActiveRecord::Base
-    enum state: [
+  class USStates
+    extend Enumerize
+
+    enumerize :state, in: [
 
         :'Alabama',
         :'Alaska',

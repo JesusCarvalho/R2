@@ -32,6 +32,9 @@ gem 'breadcrumbs_on_rails'
 # Form builder dsl
 gem 'simple_form', :github => 'plataformatec/simple_form'
 
+# enums for string backed db values
+gem 'enumerize'
+
 # bootstrap for rails
 gem 'bootstrap-sass'
 
@@ -43,7 +46,7 @@ gem 'net-ldap'
 
 # datetime picker for rails (https://github.com/Eonasdan/bootstrap-datetimepicker)
 gem 'momentjs-rails'
-gem 'bootstrap3-datetimepicker-rails'
+gem 'bootstrap3-datetimepicker-rails', :github=> 'trevors/bootstrap3-datetimepicker-rails'
 
 # placeholder hack for IE
 gem 'placeholder-gem'

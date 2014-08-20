@@ -1,33 +1,7 @@
 Rails.application.routes.draw do
-  get 'sar/index'
 
-  get 'sar/show'
-
-  get 'sar/new'
-
-  get 'sar/create'
-
-  get 'sar/edit'
-
-  get 'sar/update'
-
-  get 'sar/destroy'
-
-  get 'irf/index'
-
-  get 'irf/show'
-
-  get 'irf/new'
-
-  get 'irf/create'
-
-  get 'irf/edit'
-
-  get 'irf/update'
-
-  get 'irf/destroy'
-
-  resources :header
+  resources :irf
+  resources :sar
   #  resources :urls
   #  resources :multimedia
   #  resources :offense
