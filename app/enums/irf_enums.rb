@@ -71,12 +71,11 @@ class IrfEnums < ActiveRecord::Base
     enumerize :exception_type_code, in: [
 
         :'Extradition Declined',
-        :'Arrested on Primary Offense',
-        :'Secondary Offense Without Prosecution',
+        :'Arrested on Primary Offense, Secondary Offense w/o Prosecution',
         :'Death of Offender',
-        :'Victim Witness Refused to Cooperate',
+        :'Victim/Witness Refused to Cooperate',
         :'Prosecution Declined',
-        :'Juvenile No Custody'
+        :'Juvenile/No Custody'
     ]
   end
 
@@ -88,7 +87,7 @@ class IrfEnums < ActiveRecord::Base
         'Crime Person',
         'Crime Property',
         'Agricultural',
-        'Financial Economic Crimes',
+        'Financial/Economic Crimes',
         'Hate Crimes',
         'Gang Crimes',
         'Animal Cruelty'
@@ -105,12 +104,12 @@ class IrfEnums < ActiveRecord::Base
         :'Rifle',
         :'Shotgun',
         :'Firearm',
-        :'Knife Cutting Instrument',
+        :'Knife/Cutting Instrument',
         :'Blunt Object',
-        :'Hands Fist Feet',
+        :'Hands/Fist/Feet',
         :'Poison',
         :'Explosives',
-        :'Fire Incendiary',
+        :'Fire/Incendiary',
         :'Threat Intimidation',
         :'Simulated Weapon',
         :'Drugs',
@@ -146,33 +145,33 @@ class IrfEnums < ActiveRecord::Base
 
     enumerize :location_type_code, in: [
 
-        :'Residence Single Family',
-        :'Apartment Condo',
-        :'Residence Other',
-        :'Hotel Motel',
+        :'Residence-Single Family',
+        :'Apartment/Condo',
+        :'Residence - Other',
+        :'Hotel/Motel',
         :'Convenience Store',
         :'Gas Station',
         :'Liquor Store',
-        :'Bar Night Club',
+        :'Bar/Night Club',
         :'Supermarket',
         :'Department/Discount Store',
         :'Speciality Store',
-        :'Drug Store Hospital',
-        :'Bank Financial Inst',
-        :'Commercial Office Bldg',
-        :'Indust Manufacturing',
+        :'Drug Store/Hospital',
+        :'Bank/Financial Inst.',
+        :'Commercial Office Bldg.',
+        :'Indust/Manufacturing',
         :'Storage',
-        :'Govmnt Public Bldg',
-        :'Jail Prison',
-        :'Religious Bldg',
+        :'Govt/Public Bldg',
+        :'Jail/Prison',
+        :'Religious Bldg.',
         :'Airport',
-        :'Bus Rail Terminal',
+        :'Bus/Rail Terminal',
         :'Construction Site',
         :'Other Structure',
-        :'Parking Lot Garage',
-        :'Highway Roadway',
-        :'Park Woodland Field',
-        :'Lake Waterway',
+        :'Parking Lot/Garage',
+        :'Highway/Roadway',
+        :'Park/Woodland/Field',
+        :'Lake/Waterway',
         :'Motor Vehicle',
         :'Other Mobile',
         :'Other'
@@ -188,8 +187,8 @@ class IrfEnums < ActiveRecord::Base
         :'Buy',
         :'Deliver',
         :'Use',
-        :'Dispense Distribute',
-        :'Manufacture Produce Cultivate',
+        :'Dispense/Distribute',
+        :'Manufacture/Produce/Cultivate',
         :'Possess',
         :'Smuggle',
         :'Sell',
@@ -211,8 +210,8 @@ class IrfEnums < ActiveRecord::Base
         :'Heroin',
         :'Hallucinogen',
         :'Marijuana',
-        :'Opium Derivative',
-        :'Paraphernalia Equip',
+        :'Opium/Derivative',
+        :'Paraphernalia/Equip.',
         :'Synthetic',
         :'Unknown',
         :'Other'
@@ -282,7 +281,7 @@ class IrfEnums < ActiveRecord::Base
         :'Poss Internal Injuries',
         :'Loss of Teeth',
         :'Burns',
-        :'Abrasions Bruises',
+        :'Abrasions/Bruises',
         :'Other'
     ]
   end
@@ -296,25 +295,25 @@ class IrfEnums < ActiveRecord::Base
         :'Undetermined',
         :'Stranger',
         :'Spouse',
-        :'Ex Spouse',
-        :'Co habitant',
+        :'Ex-Spouse',
+        :'Co-habitant',
         :'Parent',
-        :'Brother Sister',
+        :'Brother/Sister',
         :'Child',
-        :'Step Parent',
-        :'Step Child',
-        :'In law',
+        :'Step-Parent',
+        :'Step-Child',
+        :'In-law',
         :'Other Family',
         :'Student',
         :'Teacher',
-        :'Child of Boyfriend Girlfriend',
-        :'Boyfriend Girlfriend',
+        :'Child of Boyfriend/Girlfriend',
+        :'Boyfriend/Girlfriend',
         :'Friend',
         :'Neighbor',
-        :'Sitter Daycare',
+        :'Sitter/Daycare',
         :'Employee',
         :'Employer',
-        :'Landlord Tenant',
+        :'Landlord/Tenant',
         :'Acquaintance',
         :'Other Known'
     ]
@@ -339,9 +338,9 @@ class IrfEnums < ActiveRecord::Base
     enumerize :residence_status, in: [
 
         :'Not Applicable',
-        :'Full Time Resident',
-        :'Part Time Resident',
-        :'Non Resident'
+        :'Full-Time Resident',
+        :'Part-Time Resident',
+        :'Non-Resident'
     ]
   end
 
@@ -385,9 +384,9 @@ class IrfEnums < ActiveRecord::Base
         :'Purse Snatching',
         :'Shoplifting',
         :'Theft from Vehicle',
-        :'Theft Vehicle Parts Accessories',
+        :'Theft Vehicle Parts/Accessories',
         :'Bicycles',
-        :'From Bldg not C or K',
+        :'From Bldg (not C or K)',
         :'Coin Operated Machine',
         :'All Others'
     ]
@@ -409,8 +408,8 @@ class IrfEnums < ActiveRecord::Base
         :'Roof',
         :'Garage Door',
         :'Balcony',
-        :'Screen Patio',
-        :'Gate Fence',
+        :'Screen/Patio',
+        :'Gate/Fence',
         :'Construction Area',
         :'Floor'
     ]
@@ -423,18 +422,18 @@ class IrfEnums < ActiveRecord::Base
 
         :'Prying Tool',
         :'Forced In',
-        :'Slipped Locked',
+        :'Slipped Lock',
         :'Picked Lock',
         :'Drilled Lock',
         :'Punched Lock',
         :'Twisted Lock',
         :'Remove Glass',
-        :'Cut Break Glass',
-        :'Cut Tear Screen',
-        :'Axe Sledge Hammer',
+        :'Cut/Break Glass',
+        :'Cut/Tear Screen',
+        :'Ax, Sledge Hammer',
         :'Saw',
         :'Hydraulic Jack',
-        :'AC Unit Ductwork',
+        :'A/C Unit/Ductwork',
         :'Skylight',
         :'Left Unlocked',
         :'Left Open',
@@ -457,7 +456,7 @@ class IrfEnums < ActiveRecord::Base
         :'Wanton Vandalism Only',
         :'Explosive Used',
         :'Acetylene Torch',
-        :'Human Defecation Urine Left at Scene',
+        :'Human Defecation/Urine Left at Scene',
         :'Consumption of Food at Scene',
         :'Removal or Destruction of Female Clothing',
         :'Cat Burglary',
@@ -480,10 +479,10 @@ class IrfEnums < ActiveRecord::Base
         :'Recovered',
         :'Stolen and Recovered',
         :'Recovered for Other Jurisdiction',
-        :'Lost Found Property',
+        :'Lost/Found Property',
         :'Drug Purchases',
         :'Evidence Seized',
-        :'Damaged Property Arson Vandalism'
+        :'Damaged Property (Arson/Vandalism)'
     ]
   end
 
@@ -492,33 +491,33 @@ class IrfEnums < ActiveRecord::Base
 
     enumerize :property_type, in: [
 
-        :'Auto Accessory Parts',
+        :'Auto Accessory/Parts',
         :'Bicycle',
-        :'Camera Photo Equipment',
+        :'Camera/Photo Equipment',
         :'Drug',
-        :'Equipment Tool',
-        :'Food Liquor Consumable',
+        :'Equipment/Tool',
+        :'Food/Liquor/Consumable',
         :'Gun',
-        :'Household Appliance Goods',
-        :'Plant Citrus',
-        :'Jewelry Precious Metal',
-        :'Clothing Fur',
+        :'Household Appliance/Goods',
+        :'Plant/Citrus',
+        :'Jewelry/Precious Metal',
+        :'Clothing/Fur',
         :'Livestock',
         :'Musical Instrument',
-        :'Construction Equipment over 10k USD',
+        :'Construction Equipment (value over $10,000)',
         :'Office Equipment',
-        :'Art Collection',
+        :'Art/Collection',
         :'Computer Equipment',
-        :'Radio Stereo Cell Phone',
+        :'Radio/Stereo/Cell Phone',
         :'Sports Equipment',
-        :'TV Video VCR DVD',
-        :'Currency Negotiable',
-        :'Credit Card Non Negotiable',
+        :'TV/Video/VCR/DVD',
+        :'Currency/Negotiable',
+        :'Credit Card/Non-Negotiable',
         :'Boat Motor',
         :'Structure',
         :'Farm Equipment',
         :'Miscellaneous',
-        :'Drug Para Equip'
+        :'Drug Para/Equip'
     ]
   end
 
@@ -527,11 +526,11 @@ class IrfEnums < ActiveRecord::Base
 
     enumerize :incident_type, in: [
 
-        :'Officer Killed Felonious',
-        :'Officer Killed Accident or Negligence',
-        :'Officer Assaulted No Injury',
-        :'Officer Assaulted Minor Injury',
-        :'Officer Assaulted Serious Injury'
+        :'Officer Killed, Felonious',
+        :'Officer Killed, Accident or Negligence',
+        :'Officer Assaulted, No Injury',
+        :'Officer Assaulted, Minor Injury',
+        :'Officer Assaulted, Serious Injury'
     ]
   end
 
@@ -541,15 +540,14 @@ class IrfEnums < ActiveRecord::Base
     enumerize :officer_activity, in: [
 
         :'Responding to Disturbance',
-        :'B and E in Progress or Pursuing B and E Suspect',
+        :'B&E in Progress or Pursuing B&E Suspect',
         :'Robbery in Progress or Pursuing Robbery Suspect',
         :'Attempting Other Arrest',
         :'Civil Disorder',
         :'Domestic Disturbance',
-        :'Handling Transporting Custody of Prisoner',
+        :'Handling/Transporting/Custody of Prisoner',
         :'Investigating Suspicious Person or Circumstance',
-        :'Ambush',
-        :'No Warning',
+        :'Ambush, No Warning',
         :'Assailant Mentally Deranged',
         :'Traffic Pursuit or Stop',
         :'Other'
@@ -561,13 +559,13 @@ class IrfEnums < ActiveRecord::Base
 
     enumerize :assignment_type, in: [
 
-        :'One Person Vehicle Alone',
-        :'One Person Vehicle Assisted',
+        :'One Person Vehicle, Alone',
+        :'One Person Vehicle, Assisted',
         :'Two Person Vehicle',
-        :'Detective or Special Assignment Alone',
-        :'Detective or Special Assignment Assisted',
-        :'Other Alone',
-        :'Other Assisted'
+        :'Detective or Special Assignment, Alone',
+        :'Detective or Special Assignment, Assisted',
+        :'Other, Alone',
+        :'Other, Assisted'
     ]
   end
 
@@ -577,13 +575,13 @@ class IrfEnums < ActiveRecord::Base
     enumerize :missing_person_type, in: [
 
         :'Runaway',
-        :'Kidnapping Parental',
+        :'Kidnapping (Parental)',
         :'Involuntary',
         :'Disabled',
         :'Endangered',
         :'Disaster Victim',
         :'Voluntary Adult',
-        :'Unknown Other'
+        :'Unknown/Other'
     ]
   end
 
@@ -605,9 +603,9 @@ class IrfEnums < ActiveRecord::Base
 
         :'Not Applicable',
         :'Voluntary',
-        :'Located Not Returned',
+        :'Located - Not Returned',
         :'Hospitalized',
-        :'DCF HRS Custody',
+        :'DCF (HRS) Custody',
         :'Law Enforcement Custody',
         :'Returned to Parent',
         :'Deceased',
@@ -654,10 +652,10 @@ class IrfEnums < ActiveRecord::Base
         :'Moles',
         :'Freckles',
         :'Pimples',
-        :'Lips Thick',
-        :'Lips Thin',
-        :'Chin Protruding',
-        :'Chin Receding',
+        :'Lips/Thick',
+        :'Lips/Thin',
+        :'Chin/Protruding',
+        :'Chin/Receding',
         :'Hollow Cheeks'
     ]
   end
@@ -670,7 +668,7 @@ class IrfEnums < ActiveRecord::Base
         :'Dark',
         :'Sallow',
         :'Ruddy',
-        :'Light Fair',
+        :'Light/Fair',
         :'Medium'
     ]
   end
@@ -680,13 +678,13 @@ class IrfEnums < ActiveRecord::Base
 
     enumerize :facial_hair, in: [
 
-        :'Mustache Chinese',
-        :'Mustache Heavy',
-        :'Mustache Thin',
-        :'Mustache Medium',
+        :'Mustache - Chinese',
+        :'Mustache - Heavy',
+        :'Mustache - Thin',
+        :'Mustache - Medium',
         :'Goatee',
         :'Beard',
-        :'Brows Heavy',
+        :'Brows/Heavy',
         :'Unshaven'
     ]
   end
@@ -696,7 +694,7 @@ class IrfEnums < ActiveRecord::Base
 
     enumerize :face, in: [
 
-        :'Black Caus',
+        :'Black/Caus',
         :'Hi Cheekbones',
         :'Long',
         :'Broad',
@@ -712,7 +710,7 @@ class IrfEnums < ActiveRecord::Base
 
         :'Dyed',
         :'Processed',
-        :'Wig Toupee',
+        :'Wig/Toupee',
         :'Crew Cut',
         :'Bald',
         :'Afro',
@@ -799,7 +797,7 @@ class IrfEnums < ActiveRecord::Base
         :'Hare Lip',
         :'Mumbles',
         :'Rapid',
-        :'Soft Low',
+        :'Soft/Low',
         :'Refined'
     ]
   end
@@ -829,7 +827,7 @@ class IrfEnums < ActiveRecord::Base
         :'Hand',
         :'Fingers',
         :'Limp',
-        :'Bow legged'
+        :'Bowlegged'
     ]
   end
 
@@ -860,15 +858,15 @@ class IrfEnums < ActiveRecord::Base
         :'Stolen and Recovered',
         :'Recovered for Other Jurisdiction',
         :'Impounded',
-        :'Offenders',
+        :'Offender''s',
         :'Failure to Return',
         :'Evidence Seized',
-        :'Damaged Arson',
-        :'Misc Other',
+        :'Damaged/Arson',
+        :'Misc/Other',
         :'Repossessed',
         :'Suspicious Vehicle',
         :'Towed',
-        :'Victims',
+        :'Victim''s',
         :'Seized Tag',
         :'Abandoned'
     ]
@@ -880,9 +878,9 @@ class IrfEnums < ActiveRecord::Base
     enumerize :vehicle_vessel_type, in: [
 
         :'Auto',
-        :'Truck Van',
+        :'Truck/Van',
         :'Motorcycle',
-        :'Camper RV',
+        :'Camper/RV',
         :'Bus',
         :'Trailer',
         :'Boat',
@@ -953,7 +951,7 @@ class IrfEnums < ActiveRecord::Base
         :'Van',
         :'Other',
         :'Bus',
-        :'Carry all Sport Utility'
+        :'SUV'
     ]
   end
 
@@ -995,7 +993,7 @@ class IrfEnums < ActiveRecord::Base
         :'Felon Attempted Flight from Crime',
         :'Felon Killed in Commission of Crime',
         :'Felon Resisted Arrest',
-        :'Unable to Determine Not Enough Information'
+        :'Unable to Determine/Not Enough Information'
     ]
   end
 
@@ -1009,7 +1007,7 @@ class IrfEnums < ActiveRecord::Base
         :'Other Felony Involved',
         :'Gangland',
         :'Juvenile Gang',
-        :'Lovers Quarrel',
+        :'Lover''s Quarrel',
         :'Money Argument',
         :'While Incarcerated',
         :'Unknown Circumstance',
@@ -1022,7 +1020,7 @@ class IrfEnums < ActiveRecord::Base
 
     enumerize :death_by_code, in: [
 
-        :'Child Playing with Weapon',
+        :'Child Playing w/ Weapon',
         :'Gun Cleaning Accident',
         :'Hunting Accident',
         :'Other Negligent Weapon Handling',
@@ -1049,7 +1047,7 @@ class IrfEnums < ActiveRecord::Base
         :'White',
         :'Black',
         :'American Indian',
-        :'Oriental Asian',
+        :'Oriental/Asian',
         :'Unknown'
     ]
   end
@@ -1171,7 +1169,7 @@ class IrfEnums < ActiveRecord::Base
         :'Dentist',
         :'Doctor',
         :'Friend',
-        :'Coworker',
+        :'Co-Worker',
         :'Other',
         :'Employee',
         :'Supervisor',
