@@ -14,7 +14,6 @@
  *= require_self
  *= require bootstrap
  *= require font-awesome
-
  *= require select2
  *= require select2-bootstrap
 
@@ -4345,7 +4344,7 @@ input[type="button"].btn-block {
     margin: 2px 0 0;
     list-style: none;
     font-size: 13px;
-    background-color: white;
+    background-color: #333;
     border: 1px solid #cccccc;
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 1px;
@@ -11237,7 +11236,7 @@ a.thumbnail:focus {
     left: 0;
     padding: 4px;
     margin-top: 1px;
-    color: #555555;
+    color: white;
     -moz-border-radius: 1px;
     -webkit-border-radius: 1px;
     border-radius: 1px;
@@ -11289,16 +11288,16 @@ a.thumbnail:focus {
 }
 /* line 53, ../sass/lib/_datepicker.scss */
 .datepicker td.day:hover {
-    background: #f8f8f8;
+    background: black;
     cursor: pointer;
 }
 /* line 57, ../sass/lib/_datepicker.scss */
 .datepicker td.day.disabled {
-    color: #f8f8f8;
+    color: #999;
 }
 /* line 60, ../sass/lib/_datepicker.scss */
 .datepicker td.old, .datepicker td.new {
-    color: white;
+    color: #999;
 }
 /* line 64, ../sass/lib/_datepicker.scss */
 .datepicker td.active, .datepicker td.active:hover {
@@ -11329,7 +11328,7 @@ a.thumbnail:focus {
 }
 /* line 92, ../sass/lib/_datepicker.scss */
 .datepicker td span.old {
-    color: #999999;
+    color: #f8f8f8;
 }
 /* line 99, ../sass/lib/_datepicker.scss */
 .datepicker th.switch {

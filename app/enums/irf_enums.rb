@@ -858,7 +858,7 @@ class IrfEnums < ActiveRecord::Base
         :'Stolen and Recovered',
         :'Recovered for Other Jurisdiction',
         :'Impounded',
-        :'Offender''s',
+        :'Offender\s',
         :'Failure to Return',
         :'Evidence Seized',
         :'Damaged/Arson',
@@ -866,7 +866,7 @@ class IrfEnums < ActiveRecord::Base
         :'Repossessed',
         :'Suspicious Vehicle',
         :'Towed',
-        :'Victim''s',
+        :'Victim\'s',
         :'Seized Tag',
         :'Abandoned'
     ]
@@ -1007,7 +1007,7 @@ class IrfEnums < ActiveRecord::Base
         :'Other Felony Involved',
         :'Gangland',
         :'Juvenile Gang',
-        :'Lover''s Quarrel',
+        :'Lover\'s Quarrel',
         :'Money Argument',
         :'While Incarcerated',
         :'Unknown Circumstance',
